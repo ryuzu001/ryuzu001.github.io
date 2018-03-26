@@ -1,6 +1,6 @@
 body{
     background:url("../images/main-bg.png") no-repeat;
-    background-size:1300px 1900px;
+    background-size:cover; 
     background-position: center; 
     background-position:top;
 }
