@@ -21,11 +21,15 @@ h3{
     font-family:"Arial Black", Gadget, sans-serif;
     text-align: center;
     border:2px solid lightblue;
+    color:white;
+    background-color:rgba(0, 0, 0,0.4);
 }
 #id1{
     display:block;
     margin: auto;
     width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
     padding: 25px;
     border:2px solid lightblue;
