@@ -10,5 +10,9 @@ h1{
     margin: 25px;
     margin-bottom:50px;
     border:2px solid Tomato;
-    color:white;
+    color:black;
+}
+#picsID{
+    text-align: center;
+    border:2px solid lightblue;
 }
