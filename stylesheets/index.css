@@ -1,6 +1,5 @@
 body{
-    background-image: url("../images/main-bg.png");
-    background-repeat: no-repeat;
+    background:url("img_tree.png") no-repeat;
 }
 h1{
     text-align: center;
