@@ -4,6 +4,9 @@ body{
     background-position: center; 
     background-position:top;
 }
+hr {
+  color: blue;
+}
 h1{
     font-family:"Arial Black", Gadget, sans-serif;
     text-align: center;
@@ -13,6 +16,7 @@ h1{
     color:black;
 }
 #picsID{
+    margin: auto;
     width: 80%;
     text-align: center;
     padding: 25px;
