@@ -64,7 +64,7 @@ h3{
     margin-right: 10%;
     padding: 25px;
     border:2px solid black;
-    background-size: 200px 100px;
+    background-size: 30%;
     background:rgba(255,255,255,0.3) url("../images/youtube-logo.png") no-repeat fixed center;
 }
 .button {
