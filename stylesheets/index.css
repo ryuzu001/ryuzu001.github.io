@@ -17,6 +17,11 @@ h1{
     border:2px solid Tomato;
     color:black;
 }
+h3{
+    font-family:"Arial Black", Gadget, sans-serif;
+    text-align: center;
+    border:2px solid lightblue;
+}
 #picsID{
     display:block;
     margin: auto;
@@ -28,7 +33,7 @@ h1{
     background-color:rgba(66, 134, 244,0.4);
 }
 .button {
-    margin-top:25px;
+    margin:10px;
     width:80%;
     padding: 25px;
     outline: none;
