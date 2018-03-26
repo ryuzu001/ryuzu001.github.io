@@ -14,5 +14,6 @@ h1{
 }
 #picsID{
     text-align: center;
+    margin: 10px 100px;
     border:2px solid lightblue;
 }
