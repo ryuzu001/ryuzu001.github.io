@@ -56,6 +56,7 @@ h3{
 #id3{
     display:block;
     margin: auto;
+    height:300px;
     width: 80%;
     margin-bottom: 25px;
     color:white;
@@ -63,7 +64,8 @@ h3{
     margin-right: 10%;
     padding: 25px;
     border:2px solid black;
-    background:url("../images/youtube-logo.png") no-repeat fixed center;
+    background-size: 200px 100px;
+    background:rgba(255,255,255,0.3) url("../images/youtube-logo.png") no-repeat fixed center;
 }
 .button {
     margin:10px;
