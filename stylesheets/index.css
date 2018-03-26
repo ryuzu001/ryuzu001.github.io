@@ -18,6 +18,7 @@ h1{
     color:black;
 }
 #picsID{
+    display:block;
     margin: auto;
     width: 80%;
     text-align: center;
