@@ -1,8 +1,9 @@
 body{
-    background:lightblue;
+    background-image: url("../images/main-bg.png");
 }
 h1{
     text-align: center;
+    margin: 25px;
     border:2px solid Tomato;
     color:white;
 }
