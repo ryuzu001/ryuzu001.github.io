@@ -58,15 +58,12 @@ h3{
     margin: auto;
     width: 80%;
     margin-bottom: 25px;
-    font-size:150%;
     color:white;
     margin-left: 10%;
     margin-right: 10%;
-    text-align: center;
     padding: 25px;
     border:2px solid black;
-    background-color:white;    /* backup incase */
-    background-color:rgba(255, 255, 255,0.4);
+    background:url("../images/youtube-logo.png") no-repeat fixed center;
 }
 .button {
     margin:10px;
