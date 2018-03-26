@@ -31,6 +31,7 @@ h1{
     margin-top:25px;
     width:80%;
     padding: 25px;
+    outline: none;
     margin-left: 10%;
     margin-right: 10%;
     font-size: 24px;
@@ -39,4 +40,10 @@ h1{
     color: #fff;
     background-color: #4CAF50;
     border: none;
+}
+.button:hover {background-color: #3e8e41}
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
