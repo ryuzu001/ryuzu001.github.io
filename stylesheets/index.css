@@ -29,9 +29,10 @@ h1{
 }
 .button {
     margin-top:25px;
-    width:50%;
-    margin-left: 25%;
-    margin-right: 25%;
+    width:80%;
+    padding: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size: 24px;
     text-align: center;
     cursor: pointer;
