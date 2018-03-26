@@ -1,6 +1,8 @@
 body{
     background:url("../images/main-bg.png") no-repeat;
-    background-size:1100px 1600px;
+    background-size:1300px 1900px;
+    background-position: center; 
+    background-position:top;
 }
 h1{
     text-align: center;
