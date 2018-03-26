@@ -5,7 +5,8 @@ body{
     background-position:top;
 }
 hr {
-    border-color: blue;
+    border-color: black;
+    background-color:black;
     height:2px;
 }
 h1{
