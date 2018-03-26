@@ -1,4 +1,7 @@
 body{
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-color:rgba(0, 0, 0, 0.5);
     background-image: url("../images/main-bg.png");
 }
 h1{
