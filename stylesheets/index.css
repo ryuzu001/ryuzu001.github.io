@@ -3,5 +3,6 @@ body{
 }
 h1{
     text-align: center;
+    border:2px solid Tomato;
     color:white;
 }
