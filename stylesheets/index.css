@@ -52,6 +52,9 @@ h3{
     border:2px solid red;
     background-color:rgb(209, 54, 85);    /* backup incase */
     background-color:rgba(209, 54, 85,0.4);
+    background:url("../images/hellothere.png") no-repeat;
+    background-position: right top;
+    background-size: 128px 72px;
 }
 #id3{
     display:block;
