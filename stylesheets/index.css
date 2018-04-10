@@ -98,15 +98,14 @@ table{
     margin-top: 25px;
     margin-bottom:25px;
     color:white;
-    background:rgb(255,255,255);
     background:url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
-    transition: background 2s;
+    transition: background 1s;
 }
 #table1:hover{
-    transition: background 2s;
     color:white;
     font-size:20px;
     content:"/r/ImaginaryMindscapes";
+    background:url("../images/mindscape.jpg") no-repeat;
     background:black;
 }
