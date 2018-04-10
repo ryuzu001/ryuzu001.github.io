@@ -99,7 +99,7 @@ table{
     margin-bottom:25px;
     color:white;
     background:rgb(255,255,255);
-    background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat;
+    background:url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
     transition: background 2s;
 }
@@ -109,5 +109,4 @@ table{
     font-size:20px;
     content:"/r/ImaginaryMindscapes";
     background:black;
-    background:rgba(0,0,0,0.5);
 }
