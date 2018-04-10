@@ -99,7 +99,7 @@ table{
     margin-bottom:25px;
     background:url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
-    transition: all 1s;
+    transition: background-image 1s;
 }
 #table1:hover{
     /*color:white;*/
