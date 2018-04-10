@@ -87,5 +87,6 @@ h3{
 }
 .button:hover {background-color: #3e8e41}
 table{
+    text-align:center;
     width:100%;
 }
