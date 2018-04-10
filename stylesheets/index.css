@@ -94,11 +94,11 @@ table{
     display:block;
     margin: auto;
     height:100px;
-    width: 80%;
+    width: 70%;
     margin-bottom: 25px;
     color:white;
     margin-left: 10%;
     margin-right: 10%;
-    background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat;
-    background-size: 100px 50px;
+    background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat fixed center;
+    background-size: cover;
 }
