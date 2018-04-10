@@ -94,9 +94,9 @@ table{
     display:block;
     height:300px;
     width:70%;
-    margin-top: 25px;
-    margin-bottom:25px;
-    color:white;
-    background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat center;
-    background-size: cover;
+    /*margin-top: 25px;*/
+    /*margin-bottom:25px;*/
+    /*color:white;*/
+    /*background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat center;*/
+    /*background-size: cover;*/
 }
