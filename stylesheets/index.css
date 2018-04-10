@@ -92,6 +92,7 @@ table{
 }
 #table1{
     display:block;
+    font-size:0px;
     margin:auto;
     height:300px;
     width:70%;
@@ -103,6 +104,5 @@ table{
 #table1:hover{
     color:white;
     font-size:20px;
-    content:"/r/ImaginaryMindscapes";
     background:black;
 }
