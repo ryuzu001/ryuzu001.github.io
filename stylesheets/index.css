@@ -104,9 +104,10 @@ table{
     transition: background 2s;
 }
 #table1:hover{
-    color:black;
+    transition: background 2s;
+    color:white;
     font-size:20px;
     content:"/r/ImaginaryMindscapes";
-    background:white;
-    background:rgba(255,255,255,0.5);
+    background:black;
+    background:rgba(0,0,0,0.5);
 }
