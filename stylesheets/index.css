@@ -95,7 +95,9 @@ table{
     font-size:0px;
     margin:auto;
     height:300px;
+    line-height:300px;
     width:70%;
+    max-width:70%;
     margin-top: 25px;
     margin-bottom:25px;
     background:url("../images/mindscape.jpg") no-repeat;
