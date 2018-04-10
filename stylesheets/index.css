@@ -87,6 +87,7 @@ h3{
 }
 .button:hover {background-color: #3e8e41}
 table{
+    border: 1px solid black;
     text-align:center;
     width:100%;
 }
