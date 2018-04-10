@@ -91,7 +91,6 @@ table{
     width:100%;
 }
 #table1{
-    transition-duration: 1s;
     display:block;
     margin:auto;
     height:300px;
@@ -102,9 +101,10 @@ table{
     background:rgb(255,255,255);
     background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
+    transition: 2s;
 }
 #table1:hover{
-    color:white;
+    color:black;
     font-size:20px;
     content:"/r/ImaginaryMindscapes";
     background:white;
