@@ -86,6 +86,6 @@ h3{
     border: none;
 }
 .button:hover {background-color: #3e8e41}
-#table1{
-    width: 100%;
+table{
+    width:100%;
 }
