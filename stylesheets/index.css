@@ -95,7 +95,8 @@ table{
     margin: auto;
     height:300px;
     width: 300px;
-    margin: 25px;
+    margin-top: 25px;
+    margin-bottom:25px;
     color:white;
     margin-left: 10%;
     margin-right: 10%;
