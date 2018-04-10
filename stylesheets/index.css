@@ -97,16 +97,12 @@ table{
     width:70%;
     margin-top: 25px;
     margin-bottom:25px;
-    background:black;
     background:url("../images/mindscape.jpg") no-repeat;
-    opacity:1;
     background-size: cover;
-    transition: all 1s;
 }
 #table1:hover{
-    /*color:white;*/
-    /*font-size:20px;*/
-    /*content:"/r/ImaginaryMindscapes";*/
-    opacity:0;
+    color:white;
+    font-size:20px;
+    content:"/r/ImaginaryMindscapes";
     background:black;
 }
