@@ -97,6 +97,6 @@ table{
     margin-top: 25px;
     margin-bottom:25px;
     color:white;
-    background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat center;
+    background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
 }
