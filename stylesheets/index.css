@@ -91,6 +91,7 @@ table{
     width:100%;
 }
 #table1{
+    text-decoration:none;
     display:block;
     font-size:0px;
     margin:auto;
