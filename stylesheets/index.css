@@ -93,12 +93,12 @@ table{
 #table1{
     display:block;
     margin: auto;
-    height:100px;
+    height:300px;
     width: 70%;
     margin-bottom: 25px;
     color:white;
     margin-left: 10%;
     margin-right: 10%;
-    background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat fixed center;
+    background:rgba(255,255,255,0.3) url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
 }
