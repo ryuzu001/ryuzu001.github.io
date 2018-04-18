@@ -129,8 +129,8 @@ table{
     background:black;
 }
 .box{
-  height:450px;
-  width:450px;
+  height:300px;
+  width:400px;
   border:1px solid black;
   margin-top:50px;
   display:block;
