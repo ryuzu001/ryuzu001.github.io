@@ -103,7 +103,7 @@ table{
     margin-bottom:25px;
     background:url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
-    transition: width 0.5s, font-size 0.5s;
+    transition: 0.5s;
 }
 #table1:hover{
     transition: width 0.5s, font-size 0.5s;
