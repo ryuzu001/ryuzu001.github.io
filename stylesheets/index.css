@@ -128,3 +128,8 @@ table{
     font-size:20px;
     background:black;
 }
+#table3:hover > .notext{
+  background-color:black;
+  opacity:0.5;
+  display:inline-block;
+}
