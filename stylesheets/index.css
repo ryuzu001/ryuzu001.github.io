@@ -143,8 +143,6 @@ table{
 }
 .inner{
   position:relative;
-  width:100%;
-  height:100%;
   display:none; 
   color:white;
   font-size:xx-large;
@@ -152,14 +150,6 @@ table{
 }
 .box:hover > .inner{
   display:inline-block;
-}
-.notext{
-  height:30px;
-  width:30px;
-  position:absolute;
-  top:0px;
-  left:0px;
-  display:none;
 }
 .box:hover > .notext{
   background-color:black;
