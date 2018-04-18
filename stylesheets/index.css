@@ -106,7 +106,7 @@ table{
     transition: 0.5s;
 }
 #table1:hover{
-    transition: width 0.5s, font-size 0.5s;
+    margin-top: 17px;
     width:420px;
     height:315px;
     max-width:420px;
