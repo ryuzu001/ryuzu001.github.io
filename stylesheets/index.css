@@ -131,21 +131,19 @@ table{
 .box{
   height:300px;
   width:400px;
-  border:1px solid black;
   margin-top:50px;
   display:block;
   margin-left:50px;
   transition: width 1s, height 1s;
-  position:relative;
   text-align: center;
-    background:url('https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG');
+  background:url('https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG');
   background-size:cover;
   background-position:center;
   
 }
 .box:hover{
-  width:490px;
-  height:490px;
+  width:310px;
+  height:410px;
 }
 .inner{
   border:1px solid red;
