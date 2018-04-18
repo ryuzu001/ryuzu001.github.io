@@ -109,6 +109,25 @@ table{
     font-size:20px;
     background:black;
 }
+#table2{
+    text-decoration:none;
+    display:block;
+    font-size:0px;
+    margin:auto;
+    height:300px;
+    line-height:300px;
+    width:400px;
+    max-width:400px;
+    margin-top: 25px;
+    margin-bottom:25px;
+    background:url("../images/mindscape.jpg") no-repeat;
+    background-size: cover;
+}
+#table2:hover{
+    color:white;
+    font-size:20px;
+    background:black;
+}
 #table3{
     text-decoration:none;
     display:block;
@@ -128,8 +147,8 @@ table{
     font-size:20px;
     background:black;
 }
-.box{
-  text-decoration:none;
+#table4{
+    text-decoration:none;
     display:block;
     font-size:0px;
     margin:auto;
@@ -139,45 +158,11 @@ table{
     max-width:400px;
     margin-top: 25px;
     margin-bottom:25px;
-    transition: width 1s, height 1s;
-    /*position:relative;*/
-    background:url('https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG');
-  background-size:cover;
-  background-position:center;
-  
+    background:url("../images/sliceoflife.png") no-repeat;
+    background-size: cover;
 }
-.box:hover{
-  width:310px;
-  height:410px;
-}
-.inner{
-  border:1px solid red;
-  /*position:relative;*/
-  width:100%;
-  height:100%;
-  top:0px;
-  left:0px;
-  display:none; 
-  color:white;
-  font-size:xx-large;
-  z-index:10;
-}
-.box:hover > .inner{
-  display:inline-block;
-}
-.notext{
-  height:30px;
-  width:30px;
-  border:1px solid blue;
-  /*position:absolute;*/
-  top:0px;
-  left:0px;
-  width:100%;
-  height:100%;
-  display:none;
-}
-.box:hover > .notext{
-  background-color:black;
-  opacity:0.5;
-  display:inline-block;
+#table4:hover{
+    color:white;
+    font-size:20px;
+    background:black;
 }
