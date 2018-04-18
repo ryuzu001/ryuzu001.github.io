@@ -98,7 +98,7 @@ table{
     height:300px;
     line-height:300px;
     width:400px;
-    max-width:400px;
+    /*max-width:400px;*/
     margin-top: 25px;
     margin-bottom:25px;
     background:url("../images/mindscape.jpg") no-repeat;
