@@ -133,7 +133,7 @@ table{
   width:450px;
   border:1px solid black;
   margin-top:50px;
-  display:inline-block;
+  display:block;
   margin-left:50px;
   transition: width 1s, height 1s;
   position:relative;
