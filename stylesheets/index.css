@@ -103,11 +103,11 @@ table{
     margin-bottom:25px;
     background:url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
-    transition:1s;
+    transition: width 0.5s, font-size 0.5s;
 }
 #table1:hover{
-    width:410px;
-    max-width:410px;
+    width:420px;
+    max-width:420px;
     color:white;
     font-size:20px;
     background:black;
