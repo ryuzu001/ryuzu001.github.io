@@ -54,14 +54,15 @@ th, td {
     padding: 10px;
 }
 #table1{
-    /*text-decoration:none;*/
+    text-decoration:none;
     display:block;
     color:black;
     font-size:20px;
     margin:auto;
     height:100%;
     width:100%;
-    background:url("../images/mindscape.jpg") no-repeat;
+    /*background:url("../images/mindscape.jpg") no-repeat;*/
+    background:white;
     background-size: cover;
 }
 #table1:hover{
