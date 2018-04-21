@@ -56,13 +56,12 @@ th, td {
 #table1{
     text-decoration:none;
     display:block;
-    color:black;
+    color:rgba(0,0,0,0);
     font-size:20px;
     margin:auto;
     height:100%;
     width:100%;
-    /*background:url("../images/mindscape.jpg") no-repeat;*/
-    background:white;
+    background:url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
 }
 #table1:hover{
