@@ -43,3 +43,87 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
+table{
+    border: 1px solid black;
+    text-align:center;
+    width:100%;
+}
+#table1{
+    text-decoration:none;
+    display:block;
+    font-size:0px;
+    margin:auto;
+    height:300px;
+    line-height:300px;
+    width:400px;
+    /*max-width:400px;*/
+    margin-top: 25px;
+    margin-bottom:25px;
+    background:url("../images/mindscape.jpg") no-repeat;
+    background-size: cover;
+    transition: width 0.3s;
+}
+#table1:hover{
+    width:420px;
+    max-width:420px;
+    color:white;
+    font-size:20px;
+    background:black;
+}
+#table2{
+    text-decoration:none;
+    display:block;
+    font-size:0px;
+    margin:auto;
+    height:300px;
+    line-height:300px;
+    width:400px;
+    max-width:400px;
+    margin-top: 25px;
+    margin-bottom:25px;
+    background:url("../images/mindscape.jpg") no-repeat;
+    background-size: cover;
+}
+#table2:hover{
+    color:white;
+    font-size:20px;
+    background:black;
+}
+#table3{
+    text-decoration:none;
+    display:block;
+    font-size:0px;
+    margin:auto;
+    height:300px;
+    line-height:300px;
+    width:400px;
+    max-width:400px;
+    margin-top: 25px;
+    margin-bottom:25px;
+    background:url("../images/cityscape.jpg") no-repeat;
+    background-size: cover;
+}
+#table3:hover{
+    color:white;
+    font-size:20px;
+    background:black;
+}
+#table4{
+    text-decoration:none;
+    display:block;
+    font-size:0px;
+    margin:auto;
+    height:300px;
+    line-height:300px;
+    width:400px;
+    max-width:400px;
+    margin-top: 25px;
+    margin-bottom:25px;
+    background:url("../images/sliceoflife.png") no-repeat;
+    background-size: cover;
+}
+#table4:hover{
+    color:white;
+    font-size:20px;
+    background:black;
+}
