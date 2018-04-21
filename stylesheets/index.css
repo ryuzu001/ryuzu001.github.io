@@ -53,6 +53,7 @@ table{
     /*padding:15px;*/
 }
 th, td {
+    border-spacing: 0px;
     border-collapse: collapse;
     /*padding: 10px;*/
 }
