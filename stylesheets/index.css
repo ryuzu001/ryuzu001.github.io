@@ -9,7 +9,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 /* Aestetics */
 .container { width: 100%; height: 100%; }
 .footer { padding: 10px 20px; background: #f7f7f7; }
-.header { padding: 20px 0px; }
+.header { padding: 25px 0px; }
 .content-body { padding: 20px; background: #e7e7e7; }
 body {margin:0;}
 
@@ -53,10 +53,9 @@ table{
     display:block;
     font-size:0px;
     margin:auto;
-    height:300px;
-    line-height:300px;
-    width:400px;
-    /*max-width:400px;*/
+    height:150px;
+    line-height:150px;
+    width:200px;
     margin-top: 25px;
     margin-bottom:25px;
     background:url("../images/mindscape.jpg") no-repeat;
@@ -72,10 +71,9 @@ table{
     display:block;
     font-size:0px;
     margin:auto;
-    height:300px;
-    line-height:300px;
-    width:400px;
-    max-width:400px;
+    height:150px;
+    line-height:150px;
+    width:200px;
     margin-top: 25px;
     margin-bottom:25px;
     background:url("../images/mindscape.jpg") no-repeat;
@@ -91,10 +89,9 @@ table{
     display:block;
     font-size:0px;
     margin:auto;
-    height:300px;
-    line-height:300px;
-    width:400px;
-    max-width:400px;
+    height:150px;
+    line-height:150px;
+    width:200px;
     margin-top: 25px;
     margin-bottom:25px;
     background:url("../images/cityscape.jpg") no-repeat;
@@ -110,10 +107,9 @@ table{
     display:block;
     font-size:0px;
     margin:auto;
-    height:300px;
-    line-height:300px;
-    width:400px;
-    max-width:400px;
+    height:150px;
+    line-height:150px;
+    width:200px;
     margin-top: 25px;
     margin-bottom:25px;
     background:url("../images/sliceoflife.png") no-repeat;
