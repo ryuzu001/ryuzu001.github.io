@@ -54,10 +54,10 @@ th, td {
     padding: 10px;
 }
 #table1{
-    text-decoration:none;
-    display:block;
-    font-size:0px;
-    margin:auto;
+    /*text-decoration:none;*/
+    /*display:block;*/
+    /*font-size:0px;*/
+    /*margin:auto;*/
     height:100%;
     width:100%;
     background:url("../images/mindscape.jpg") no-repeat;
@@ -65,8 +65,8 @@ th, td {
 }
 #table1:hover{
     max-width:50%;
-    color:white;
-    font-size:20px;
+    /*color:white;*/
+    /*font-size:20px;*/
     background:black;
 }
 /*#table2{*/
