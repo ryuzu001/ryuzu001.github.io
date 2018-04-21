@@ -60,7 +60,7 @@ th, td {
     font-size:20px;
     margin:auto;
     height:100%;
-    line-height:100%;
+    line-height:50%;
     width:100%;
     background:url("../images/mindscape.jpg") no-repeat;
     background-size: cover;
