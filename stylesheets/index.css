@@ -70,11 +70,6 @@ th, td {
     background-size: cover;
 }
 #table1:hover{
-    position: relative;
-  float: left;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
     color:white;
     font-size:20px;
     background:black;
