@@ -60,6 +60,8 @@ table{
     background-size: cover;
 }
 #table1:hover{
+    height:50%;
+    width:50%;
     color:white;
     font-size:20px;
     background:black;
