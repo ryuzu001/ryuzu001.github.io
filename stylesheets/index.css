@@ -50,6 +50,9 @@ table{
     height:100%;
     padding:15px;
 }
+th, td {
+    padding: 10px;
+}
 #table1{
     text-decoration:none;
     display:block;
@@ -61,56 +64,53 @@ table{
     background-size: cover;
 }
 #table1:hover{
-    height:50%;
-    width:50%;
-    max-height:50%;
     max-width:50%;
     color:white;
     font-size:20px;
     background:black;
 }
-#table2{
-    text-decoration:none;
-    display:block;
-    font-size:0px;
-    margin:auto;
-    height:100%;
-    width:100%;
-    background:url("../images/mindscape.jpg") no-repeat;
-    background-size: cover;
-}
-#table2:hover{
-    color:white;
-    font-size:20px;
-    background:black;
-}
-#table3{
-    text-decoration:none;
-    display:block;
-    font-size:0px;
-    margin:auto;
-    height:100%;
-    width:100%;
-    background:url("../images/cityscape.jpg") no-repeat;
-    background-size: cover;
-}
-#table3:hover{
-    color:white;
-    font-size:20px;
-    background:black;
-}
-#table4{
-    text-decoration:none;
-    display:block;
-    font-size:0px;
-    margin:auto;
-    height:100%;
-    width:100%;
-    background:url("../images/sliceoflife.png") no-repeat;
-    background-size: cover;
-}
-#table4:hover{
-    color:white;
-    font-size:20px;
-    background:black;
-}
+/*#table2{*/
+/*    text-decoration:none;*/
+/*    display:block;*/
+/*    font-size:0px;*/
+/*    margin:auto;*/
+/*    height:100%;*/
+/*    width:100%;*/
+/*    background:url("../images/mindscape.jpg") no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+/*#table2:hover{*/
+/*    color:white;*/
+/*    font-size:20px;*/
+/*    background:black;*/
+/*}*/
+/*#table3{*/
+/*    text-decoration:none;*/
+/*    display:block;*/
+/*    font-size:0px;*/
+/*    margin:auto;*/
+/*    height:100%;*/
+/*    width:100%;*/
+/*    background:url("../images/cityscape.jpg") no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+/*#table3:hover{*/
+/*    color:white;*/
+/*    font-size:20px;*/
+/*    background:black;*/
+/*}*/
+/*#table4{*/
+/*    text-decoration:none;*/
+/*    display:block;*/
+/*    font-size:0px;*/
+/*    margin:auto;*/
+/*    height:100%;*/
+/*    width:100%;*/
+/*    background:url("../images/sliceoflife.png") no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+/*#table4:hover{*/
+/*    color:white;*/
+/*    font-size:20px;*/
+/*    background:black;*/
+/*}*/
