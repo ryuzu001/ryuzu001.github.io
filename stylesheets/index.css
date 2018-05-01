@@ -23,7 +23,7 @@ body {margin:0;}
   height:200px;
   line-height: 200px;
   font-size: 30px;
-  font-family: "Webdings";
+  font-family: "Webdings", "Helvetica", sans-serif;
   /* background-image: url(); */
   background: skyblue;
   background-size: cover;
