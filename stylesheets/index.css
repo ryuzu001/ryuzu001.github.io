@@ -29,6 +29,7 @@ body {margin:0;}
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 #header2{
   color:white;
@@ -42,7 +43,7 @@ ul {
     overflow: hidden;
     background-color: #333;
     position: sticky!important;
-    top: -1px;
+    top: 0px;
     width: 100%;
 }
 
