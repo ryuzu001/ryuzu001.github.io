@@ -19,7 +19,7 @@ body {margin:0;}
 #header{
   margin:0px;
   text-align: center;
-  color:white;
+  color:lightgrey;
   height:200px;
   line-height: 200px;
   font-size: 30px;
@@ -29,6 +29,10 @@ body {margin:0;}
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+#header2{
+  color:white;
+  font-family:"Segoe UI", sans-serif, serif;
 }
 
 ul {
