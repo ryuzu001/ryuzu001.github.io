@@ -12,16 +12,24 @@ html, body { height: 100%; margin: 0; padding: 0; }
   font-family: "Segoe UI", sans-serif, serif;
 }
 .footer { padding: 10px 20px; color:white; background: #333; text-align: center; }
-.header { padding: 23px 0px; }
 .content-body { padding: 10px 20px; background: #e7e7e7; }
 /* .content-body{ height:1000px; } */
 body {margin:0;}
 
 #header{
+  margin:0px;
   text-align: center;
+  color:white;
   height:200px;
-  line-height:160px;
+  line-height: 200px;
   font-size: 30px;
+  /* font-family: monospace; */
+  /* background-image: url("../images/lis.jpg"); */
+  /* background-image: url("../images/haha.jpg"); */
+  background: skyblue;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 ul {
