@@ -11,11 +11,18 @@ html, body { height: 100%; margin: 0; padding: 0; }
   width: 100%;
   font-family: "Segoe UI", sans-serif, serif;
 }
-.footer { padding: 10px 20px; background: #f7f7f7; text-align: center; }
+.footer { padding: 10px 20px; color:white; background: #333; text-align: center; }
 .header { padding: 23px 0px; }
 .content-body { padding: 10px 20px; background: #e7e7e7; }
 /* .content-body{ height:1000px; } */
 body {margin:0;}
+
+#header{
+  text-align: center;
+  height:200px;
+  line-height:160px;
+  font-size: 30px;
+}
 
 ul {
     list-style-type: none;
@@ -23,8 +30,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: fixed;
-    top: 0;
+    position: sticky!important;
+    top: -1px;
     width: 100%;
 }
 
@@ -45,7 +52,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: green;
+    background-color: #3b75d3;
 }
 table{
     border: 1px solid black;
