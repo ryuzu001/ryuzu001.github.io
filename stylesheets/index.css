@@ -19,13 +19,13 @@ body {margin:0;}
 #header{
   margin:0px;
   text-align: center;
-  color:white;
+  color:black;
   height:200px;
   line-height: 200px;
-  font-size: 30px;
+  font-size: 40px;
   /* font-family: "Webdings", "Helvetica", sans-serif; */
-  /* background-image: url(); */
-  background: skyblue;
+  background-image: url("../images/cityscape.jpg");
+  /* background: skyblue; */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
