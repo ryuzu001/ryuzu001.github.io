@@ -3,8 +3,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 
 /* Essentials */
 .container { display: table; }
-.content { display: table-row; height: 100%; }
-/* .content-body { display: table-cell; } */
+.content { display: table-row; height: 100%; } */
 
 /* Aestetics */
 .container {
@@ -13,24 +12,61 @@ html, body { height: 100%; margin: 0; padding: 0; }
 }
 .footer { padding: 10px 20px; color:white; background: #333; text-align: center; }
 .content-body { padding: 10px 20px; background: #e7e7e7; }
-/* .content-body{ height:1000px; } */
-body {margin:0;}
 
 #header{
+  font-family: "Segoe UI", sans-serif, serif;
+  color:white;
   margin:0px;
   text-align: center;
-  color:black;
-  height:200px;
-  line-height: 200px;
+  height:100%;
   font-size: 40px;
-  /* font-family: "Webdings", "Helvetica", sans-serif; */
-  background-image: url("../images/cityscape.jpg");
-  /* background: skyblue; */
+  background:#111;
+  /* background: url("http://i.stack.imgur.com/SBv4T.gif"); */
+  /* background: url("https://giant.gfycat.com/BonyReliableAmazonparrot.webm"); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
 }
+#name{
+  margin-top:calc(30vh);
+}
+#header-text{
+  font-size: 0.6em;
+}
+
+.chevron-icon {
+  font-size: 10px;
+  display: inline-block;
+  border-style: solid;
+	border-width: 0.35em 0.35em 0 0;
+  width: .5em;
+	height: .5em;
+	position: relative;
+  /* bottom:calc(10vh); */
+	transform: rotate(135deg);
+  color: #F5F5F5;
+
+  animation-name: chevron-animation;
+	animation-duration: 3000ms;
+  transform-origin:50% 50%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes chevron-animation {
+	0% { transform: rotate(135deg) scale(1); }
+	30% { transform: rotate(135deg) scale(1); }
+	40% { transform: rotate(135deg) scale(2); }
+	50% { transform: rotate(135deg) scale(1); }
+	60% { transform: rotate(135deg) scale(1); }
+	70% { transform: rotate(135deg) scale(2); }
+	80% { transform: rotate(135deg) scale(1); }
+	100% { transform: rotate(135deg) scale(1); }
+}
+
+
+
 
 ul {
     list-style-type: none;
