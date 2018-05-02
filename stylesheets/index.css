@@ -86,6 +86,13 @@ th, td {
 #gr{
   color:green;
 }
+
+@media (max-width: 600px) {
+  .container{
+    font-family: "Webdings", "Segoe UI", sans-serif, serif;
+  }
+}
+
 /* #table1{
     text-decoration:none;
     display:block;
