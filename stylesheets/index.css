@@ -87,6 +87,10 @@ th, td {
   color:green;
 }
 
+#footer2{
+  color:#5b5b5b;
+}
+
 /* @media (max-width: 600px) {
   .container{
     font-family: "Webdings", "Segoe UI", sans-serif, serif;
