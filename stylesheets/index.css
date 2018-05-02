@@ -87,11 +87,16 @@ th, td {
   color:green;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .container{
     font-family: "Webdings", "Segoe UI", sans-serif, serif;
   }
 }
+@media (min-width:0px) {
+  .container{
+    color:orange;
+  }
+} */
 
 /* #table1{
     text-decoration:none;
