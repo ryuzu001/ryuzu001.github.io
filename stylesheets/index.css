@@ -1,17 +1,18 @@
 /* Reset */
 html, body { height: 100%; margin: 0; padding: 0; }
 
-/* Essentials */
-.container { display: table; }
-.content { display: table-row; height: 100%; } */
+#footer { padding: 10px 20px; color:white; background: #333; text-align: center; }
 
-/* Aestetics */
-.container {
-  width: 100%;
-  font-family: "Segoe UI", sans-serif, serif;
-}
-.footer { padding: 10px 20px; color:white; background: #333; text-align: center; }
 .content-body { padding: 10px 20px; background: #e7e7e7; }
+
+.h{
+  font-family:"Segoe UI", "Webdings";
+}
+
+.container {
+  font-family: "Segoe UI", Helvetica, sans-serif, serif;
+}
+
 
 #header{
   font-family: "Segoe UI", sans-serif, serif;
@@ -20,9 +21,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
   text-align: center;
   height:100%;
   font-size: 40px;
-  background:#111;
-  /* background: url("http://i.stack.imgur.com/SBv4T.gif"); */
-  /* background: url("https://giant.gfycat.com/BonyReliableAmazonparrot.webm"); */
+  background:#222;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -35,7 +34,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
   font-size: 0.6em;
 }
 
-.chevron-icon {
+.down {
   font-size: 10px;
   display: inline-block;
   border-style: solid;
@@ -43,18 +42,17 @@ html, body { height: 100%; margin: 0; padding: 0; }
   width: .5em;
 	height: .5em;
 	position: relative;
-  /* bottom:calc(10vh); */
 	transform: rotate(135deg);
   color: #F5F5F5;
 
-  animation-name: chevron-animation;
+  animation-name: down-animation;
 	animation-duration: 3000ms;
   transform-origin:50% 50%;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
 
-@keyframes chevron-animation {
+@keyframes down-animation {
 	0% { transform: rotate(135deg) scale(1); }
 	30% { transform: rotate(135deg) scale(1); }
 	40% { transform: rotate(135deg) scale(2); }
@@ -64,7 +62,6 @@ html, body { height: 100%; margin: 0; padding: 0; }
 	80% { transform: rotate(135deg) scale(1); }
 	100% { transform: rotate(135deg) scale(1); }
 }
-
 
 
 
@@ -79,15 +76,11 @@ ul {
     width: 100%;
 }
 
-li {
-    float: left;
-}
-
 li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 20px;
     text-decoration: none;
 }
 
@@ -126,79 +119,3 @@ th, td {
 #footer2{
   color:#5b5b5b;
 }
-
-/* @media (max-width: 600px) {
-  .container{
-    font-family: "Webdings", "Segoe UI", sans-serif, serif;
-  }
-}
-@media (min-width:0px) {
-  .container{
-    color:orange;
-  }
-} */
-
-/* #table1{
-    text-decoration:none;
-    display:block;
-    color:rgba(0,0,0,0);
-    font-size:20px;
-    margin:auto;
-    height:100%;
-    width:100%;
-    background:url("../images/mindscape.jpg") no-repeat;
-    background-size: cover;
-}
-#table1:hover{
-    color:white;
-    font-size:20px;
-    background:black;
-}
-#table2{
-    text-decoration:none;
-    display:block;
-    color:rgba(0,0,0,0);
-    font-size:20px;
-    margin:auto;
-    height:100%;
-    width:100%;
-    background:url("../images/mindscape.jpg") no-repeat;
-    background-size: cover;
-}
-#table2:hover{
-    color:white;
-    font-size:20px;
-    background:black;
-}
-#table3{
-    text-decoration:none;
-    display:block;
-    color:rgba(0,0,0,0);
-    font-size:20px;
-    margin:auto;
-    height:100%;
-    width:100%;
-    background:url("../images/cityscape.jpg") no-repeat;
-    background-size: cover;
-}
-#table3:hover{
-    color:white;
-    font-size:20px;
-    background:black;
-}
-#table4{
-    text-decoration:none;
-    display:block;
-    color:rgba(0,0,0,0);
-    font-size:20px;
-    margin:auto;
-    height:100%;
-    width:100%;
-    background:url("../images/sliceoflife.png") no-repeat;
-    background-size: cover;
-}
-#table4:hover{
-    color:white;
-    font-size:20px;
-    background:black;
-} */
