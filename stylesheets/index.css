@@ -3,7 +3,12 @@ html, body { height: 100%; margin: 0; padding: 0; }
 
 #footer { padding: 10px 20px; color:white; background: #333; text-align: center; }
 
-.content-body { padding: 10px 20px; background: #e7e7e7; }
+.content-body {
+  padding: 10px 20px;
+  background: #e7e7e7;
+  /* background:url("../images/cityscape.jpg"); */
+  background-attachment: fixed;
+}
 
 .h{
   font-family:"Segoe UI", "Webdings";
@@ -22,6 +27,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
   height:100%;
   font-size: 40px;
   background:#222;
+  /* background:url("../images/mindscape.jpg"); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -32,6 +38,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 }
 #header-text{
   font-size: 0.6em;
+  margin: 0px 30px;
 }
 
 .down {
@@ -106,6 +113,37 @@ th, td {
     border-collapse: collapse;
     padding: 10px;
 }
+#pr{
+  margin: -10px -20px;
+  height:150px;
+  display:block;
+  background-color: #333;
+}
+#profile-pic{
+  margin-top:-135px;    /* Half of the height/width, plus border*2 cause it messes with */
+  height: 250px;
+  width: 250px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 50%;
+  border:10px solid #333;
+}
+.bodypara {
+  border-radius: 7px;
+  overflow: auto;
+  padding:1.2em;
+  background:black;
+  background:rgba(0,0,0,0.3);
+  margin: 1em 3em;
+  font-size: 1.2em;
+}
+.pic {
+  padding:1.2em;
+  margin-right: 3em;
+  float:right;
+}
+
 #bl{
   color:blue;
 }
