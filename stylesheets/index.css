@@ -175,7 +175,7 @@ h1{
 .proj{
   width:27%;
   overflow:auto;
-  max-height: 275px;
+  max-height: 300px;
   background:grey;
   border:3px solid #333;
 }
