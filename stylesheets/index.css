@@ -26,8 +26,8 @@ html, body { height: 100%; margin: 0; padding: 0; }
   text-align: center;
   height:100%;
   font-size: 40px;
-  background:#222;
-  /* background:url("../images/mindscape.jpg"); */
+  background:#222;    /* background color, just in case */
+  background:url("../images/main-bg-bw.gif");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -79,7 +79,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: sticky!important;
+    position: sticky;
+    position: -webkit-sticky;     /* For safari */
     top: 0px;
     width: 100%;
 }
