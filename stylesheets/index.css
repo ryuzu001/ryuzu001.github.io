@@ -11,16 +11,16 @@ html, body { height: 100%; margin: 0; padding: 0; }
 }
 
 .h{
-  font-family:"Segoe UI", Helvetica, sans-serif, serif;
+  font-family:"Montserrat", "Segoe UI", Helvetica, sans-serif, serif;
 }
 
 .container {
-  font-family: "Segoe UI", Helvetica, sans-serif, serif;
+  font-family:"Montserrat", "Segoe UI", Helvetica, sans-serif, serif;
 }
 
 
 #header{
-  font-family: "Segoe UI", sans-serif, serif;
+  font-family:"Montserrat", "Segoe UI", Helvetica, sans-serif, serif;
   color:white;
   margin:0px;
   text-align: center;
