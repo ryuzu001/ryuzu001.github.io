@@ -191,4 +191,7 @@ h1{
     ul {
         display:none;
     }
+    .bodypara{
+      margin: 0px 0px;
+    }
 }
