@@ -73,7 +73,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 
 
 ul {
-  z-index: 1;
+    z-index: 1;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -185,4 +185,10 @@ h1{
 }
 #footer2{
   color:#5b5b5b;
+}
+/* Phone screens */
+@media only screen and (orientation: portrait) {
+    ul {
+        display:none;
+    }
 }
