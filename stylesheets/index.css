@@ -143,7 +143,8 @@ h1{
   font-size: 1.2em;
 }
 .center {
-  margin: 0px 6em;
+  /* margin: 0px 6em; */
+  padding: 0px 6em;
   display: flex;
   justify-content: space-around;
 }
@@ -155,7 +156,7 @@ h1{
   text-decoration: none;
 }
 .center a:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .tb-30 {
   padding-top:20px;
@@ -169,12 +170,19 @@ h1{
   height:50px;
   margin:30px 0em;
 }
+.bg-proj{
+  background:#0069ff;
+}
 .proj{
   width:27%;
   overflow:auto;
   max-height: 300px;
-  background:grey;
-  border:3px solid #333;
+  background:#5b9aff;
+  border:3px solid rgb(0, 0, 0);
+}
+.proj:hover{
+  color:black;
+  background:white;
 }
 .wid:hover {
   transform: scale(1.1);
@@ -192,5 +200,8 @@ h1{
     }
     .center{
       margin: 0px 0px;
+    }
+    .bg-proj{
+      padding:10px 10px;
     }
 }
