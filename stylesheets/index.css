@@ -14,7 +14,6 @@ html, body { height: 100%; margin: 0; padding: 0; }
   font-family: "Segoe UI", Helvetica, sans-serif, serif;
 }
 
-
 #header{
   font-family: "Montserrat", "Segoe UI", Helvetica, sans-serif, serif;
   color:white;
@@ -22,13 +21,63 @@ html, body { height: 100%; margin: 0; padding: 0; }
   text-align: center;
   height:100%;
   font-size: 40px;
-  background:#222;    /* background color, just in case */
-  background:url("../images/main-bg-bw.gif");
+  background:black;
+  /*
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
+  */
+  animation-name: banner-animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
+@keyframes banner-animation{
+  0% { 
+    background: black url("../images/banner2.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  20% { 
+    background: black url("../images/banner1.png"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;  
+  }
+  40% { 
+    background: black url("../images/banner3.png"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;  
+  }
+  60% { 
+    background: black url("../images/banner4.png"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;  
+  }
+  80% { 
+    background: black url("../images/banner5.png"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;  
+  }
+  100% { 
+    background: black url("../images/banner2.png"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;  
+  }
+}
+
 #name{
   margin-top:calc(30vh);
 }
