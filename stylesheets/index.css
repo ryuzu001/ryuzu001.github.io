@@ -21,17 +21,19 @@ html, body { height: 100%; margin: 0; padding: 0; }
   text-align: center;
   height:100%;
   font-size: 40px;
-  background:black;
-  /*
+  background: black;
+  /*background:black url("../images/banner4.png");*/
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
-  */
+
+  /*
   animation-name: banner-animation;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  */
 }
 @keyframes banner-animation{
   0% { 
