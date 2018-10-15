@@ -22,7 +22,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
   height:100%;
   font-size: 40px;
   background: black;
-  /*background:black url("../images/banner4.png");*/
+  background:black url("../images/banner.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -36,47 +36,47 @@ html, body { height: 100%; margin: 0; padding: 0; }
   */
 }
 @keyframes banner-animation{
-  0% { 
+  0% {
     background: black url("../images/banner2.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     overflow: hidden;
   }
-  20% { 
-    background: black url("../images/banner1.png"); 
+  20% {
+    background: black url("../images/banner1.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;  
+    overflow: hidden;
   }
-  40% { 
-    background: black url("../images/banner3.png"); 
+  40% {
+    background: black url("../images/banner3.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;  
+    overflow: hidden;
   }
-  60% { 
-    background: black url("../images/banner4.png"); 
+  60% {
+    background: black url("../images/banner4.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;  
+    overflow: hidden;
   }
-  80% { 
-    background: black url("../images/banner5.png"); 
+  80% {
+    background: black url("../images/banner5.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;  
+    overflow: hidden;
   }
-  100% { 
-    background: black url("../images/banner2.png"); 
+  100% {
+    background: black url("../images/banner2.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;  
+    overflow: hidden;
   }
 }
 
