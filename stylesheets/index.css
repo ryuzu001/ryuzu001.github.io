@@ -178,6 +178,15 @@ th, td {
   border-radius: 50%;
   border:10px solid #333;
 }
+#topbar-menu-tgthr{
+  background-color:#9E5EE8;
+}
+#who-tgthr{
+  color:#9E5EE8;
+}
+#what-tgthr{
+  color:#9E5EE8;
+}
 h1{
   font-weight: 800;
   color:#ff7214;
