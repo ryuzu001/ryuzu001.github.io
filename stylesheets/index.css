@@ -207,6 +207,7 @@ h1{
   padding: 0px 6em;
   display: flex;
   justify-content: space-around;
+  overflow-y: hidden;
 }
 .center a{
   padding:10px;
@@ -226,7 +227,7 @@ h1{
   z-index: 0;
   display: inline-block;
   vertical-align: middle;
-  /* transition-duration: 0.1s; */
+  transition-duration: 0.1s;
   height:50px;
   margin:30px 0em;
 }
@@ -259,7 +260,7 @@ h1{
       margin: 0px 0px;
     }
     .center{
-      margin: 0px 0px;
+      padding: 0px 0px;
     }
     .bg-proj{
       padding:10px 10px;
