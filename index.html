@@ -34,8 +34,8 @@ It's Calvin and Hobbes!
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/index.css" >
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
-
     <meta charset="utf-8">
     <title>Ryan Yuzuki</title>
   </head>
@@ -43,7 +43,7 @@ It's Calvin and Hobbes!
     <div id="header">
       <h2 id="name">Ryan Yuzuki</h2>
       <p id="header-text">
-          cs undergraduate, budding software engineer, avid pokemon player
+          <text>cs undergraduate, </text><text>budding software engineer, </text><text>avid pokemon player</text>
       </p>
 
       <span class="down"></span>
@@ -66,7 +66,7 @@ It's Calvin and Hobbes!
         <h1 id="who">Who am I</h1>
         <hr />
 
-        <p class="bodypara">
+        <p class="bodypara" data-aos="fade-up">
          I am a current undergraduate studying <strong>Computer Science</strong> at the <a target="_blank" href="http://www.ucr.edu/">University of California, Riverside.</a>
          My interests range from <strong>programming</strong> and <strong>web development</strong> to solving twisty puzzles.
          I love dogs (shibas in particular), good food (chawanmushi) and thinking of complex solutions to simple problems.
@@ -78,7 +78,7 @@ It's Calvin and Hobbes!
         <h1 id="what">What do I do</h1>
         <hr />
 
-        <p class="bodypara">
+        <p class="bodypara" data-aos="fade-up">
           I code. I program. I software-engineer.
           I've worked at the system level with C, completed ray tracing simulations with OpenGL and C++, and taught myself HTML and CSS just to tell you about it.
           <!-- When do CS180 project, add stuff, like java android application, React native etc.. here -->
@@ -99,7 +99,6 @@ It's Calvin and Hobbes!
         <hr />
       </div>
     </section>
-
     <div class="center tb-30 bg-proj">
           <a href="https://github.com/ryuzu001/rshell" target="_blank" class="proj">
             <proj>
@@ -150,7 +149,7 @@ It's Calvin and Hobbes!
           </a>
           <a href="https://www.youtube.com/watch?v=7vbUvhCPI4E" target="_blank" class="proj">
             <proj>
-              <img src="images/project.jpg" alt="countdown" width="80%" />
+              <img src="images/project.jpg" alt="countdown" width="70%" />
               <p class="proj-text">
                 <strong>Countdown | Microcontroller, C</strong><br />
                 Custom implementation of the game show Countdown, programmed to an ATMEGA 1284 Microcontroller.
@@ -165,7 +164,7 @@ It's Calvin and Hobbes!
         <!-- Relevant coursework here -->
         <h1 id="experience">Relevant coursework/experience</h1>
         <hr />
-        <p class="bodypara">
+        <p class="bodypara" data-aos="fade-up">
 
           <b>Software Engineer intern at Raytheon</b> - June-September 2018<br />
 
@@ -186,7 +185,7 @@ It's Calvin and Hobbes!
         <h1 id="contact">Contact</h1>
         <hr />
 
-        <p class="bodypara center">
+        <p class="bodypara center" data-aos="fade-up">
           <item>
             <a href="mailto:ryuzu001@ucr.edu" target="_blank"><img src="images/email.png" alt="Github logo" class="wid"></a>
             Email
@@ -212,7 +211,9 @@ It's Calvin and Hobbes!
         </p>
     </footer>
   </div>
-
 </html>
-
 <script src="scripts/index.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({once:true});
+  </script>
