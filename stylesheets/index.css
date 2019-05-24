@@ -262,6 +262,13 @@ h1{
     .center{
       padding: 0px 0px;
     }
+    .contact-item{
+      text-align: center;
+      padding-bottom:5px;
+    }
+    .center a{
+      text-align: center;
+    }
     .bg-proj{
       padding:10px 10px;
     }

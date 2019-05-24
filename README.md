@@ -1,3 +1,4 @@
-HeLp PeOpLe IntEreSTed in ThIS rePosiTORy UNderSTanD yOUr ProJect by ADdInG a ReAdmE.
+My personal static site, deployed by netlify and certified by Let's Encrypt
 
-*squawking spongebob*
+
+https://ryanyuzuki.com
