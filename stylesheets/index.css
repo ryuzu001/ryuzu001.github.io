@@ -263,4 +263,5 @@ h1{
     .bg-proj{
       padding:10px 10px;
     }
+    #date{ opacity:0; }
 }
