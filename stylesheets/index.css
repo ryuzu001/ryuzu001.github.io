@@ -237,8 +237,7 @@ h1{
 .wid:hover {
   transform: scale(1.1);
 }
-#footer { padding-top:20px; color:white; background: #333; text-align: center; }
-#date { padding-top:5px; display: block; text-align:right; font-size: 0.75em; }
+#footer { padding:20px; color:white; background: #333; text-align: center; }
 #footer2{
   color:#5b5b5b;
 }
@@ -263,5 +262,4 @@ h1{
     .bg-proj{
       padding:10px 10px;
     }
-    #date{ opacity:0; }
 }
