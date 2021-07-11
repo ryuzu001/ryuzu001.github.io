@@ -228,7 +228,7 @@ h1{
 }
 .proj{
   width:27%;
-  overflow:auto;
+  overflow:hidden;
   max-height: 300px;
   background:#5b9aff;
   border:3px solid rgb(0, 0, 0);
