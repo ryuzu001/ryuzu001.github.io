@@ -223,6 +223,9 @@ h1{
 .bg-proj{
   background:#0069ff;
 }
+.no-scrollbar{
+  overflow: hidden;
+}
 .proj{
   width:27%;
   overflow:auto;
