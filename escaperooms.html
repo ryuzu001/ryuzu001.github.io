@@ -1,4 +1,6 @@
 <!DOCTYPE HTML>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="scripts/jquery.simpleLoadMore.js"></script>
 <html lang="en-US">
     <head>
         <meta charset="utf-8">
@@ -11,7 +13,7 @@
         <section class="jumbotron jumbotron-fluid text-center mb-0">
             <div class="container">
                 <h1>Ryan's Escape Room Résumé</h1>
-                <p class="lead text-muted">105 Escapes of 109 attempts = <b>95% Escape rate</b></p>
+                <p class="lead text-muted">106 Escapes of 110 attempts = <b>95% Escape rate</b></p>
                 <p class="lead text-muted">Gold = Ryan's Gold Standard</p>
                 <a href="/" class="btn btn-primary my-2">Back to main site</a>
                 </p>
@@ -19,18 +21,36 @@
         </section>
 
         <div class="album py-5 bg-light">
-            <div class="container">
+            <div class="container list-room">
                 <div class="row">
 
                     <!-- Update your percentage! -->
                     <!-- tinypng -> simpleimageresizer -> tinypng -->
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em">No picture</text></svg>
-                            <div class="card-body">
+                            <a href="images/escaperooms/full/erla2.jpg" target="_blank">
+                            <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/erla2.jpg"  />
+                            </a>
+                            <div class="card-body" background-color="green">
                                 <p class="card-text" align="center" >
-                                    <b >July 9th, 2023 [109]<br />Great Room Escape - Spellbound<br />Tempe, CA</b>
+                                    <b >July 14th, 2023 [110]<br />Escape Room LA - The Pyramid<br />Los Angeles, CA</b>
+                                </p>
+                                <p class="card-text">
+                                    Escaped in 40:00, with Ashlyn, Susan, Larry
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 item-room">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="images/escaperooms/full/gre1.jpg" target="_blank">
+                            <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/gre1.jpg"  />
+                            </a>
+                            <div class="card-body" background-color="green">
+                                <p class="card-text" align="center" >
+                                    <b >July 9th, 2023 [109]<br />Great Room Escape - Spellbound<br />Tempe, AZ</b>
                                 </p>
                                 <p class="card-text">
                                     Vampire Killed in 52:27, with Ashlyn, Keilyn, Casby
@@ -39,7 +59,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/international2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/international2.jpg"  />
@@ -55,7 +75,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/international1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/international1.jpg"  />
@@ -71,7 +91,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" style="background-color:gold">
                             <a href="images/escaperooms/full/paragon1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/paragon1.jpg"  />
@@ -87,7 +107,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/nemesis2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/nemesis2.jpg"  />
@@ -103,7 +123,7 @@
                         </div>
                     </div>
                 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/escapology1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/escapology1.jpg"  />
@@ -119,7 +139,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/northvalley3.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/northvalley3.jpg"  />
@@ -135,7 +155,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/northvalley2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/northvalley2.jpg"  />
@@ -151,7 +171,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/northvalley1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/northvalley1.jpg"  />
@@ -167,7 +187,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" style="background-color:gold">
                             <a href="images/escaperooms/full/nemesis1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/nemesis1.jpg"  />
@@ -183,7 +203,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" style="background-color:gold">
                             <a href="images/escaperooms/full/immersivemachine1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/immersivemachine1.jpg"  />
@@ -199,7 +219,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/escapement2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/escapement2.jpg"  />
@@ -215,7 +235,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/escapement1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/escapement1.jpg"  />
@@ -231,7 +251,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/sae3.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/sae3.jpg"  />
@@ -247,7 +267,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/sae2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/sae2.jpg"  />
@@ -263,7 +283,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/sae1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/sae1.jpg"  />
@@ -279,7 +299,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/maze2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/maze2.jpg"  />
@@ -295,7 +315,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/teg6.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/teg6.jpg"  />
@@ -311,7 +331,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" style="background-color:gold">
                             <a href="images/escaperooms/full/questtavern1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/questtavern1.jpg"  />
@@ -327,7 +347,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" style="background-color:gold">
                             <a href="images/escaperooms/full/mop1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/mop1.jpg"  />
@@ -343,7 +363,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/teg5.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/teg5.jpg"  />
@@ -359,7 +379,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/studioescape2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/studioescape2.jpg"  />
@@ -375,7 +395,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/studioescape1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/studioescape1.jpg"  />
@@ -391,7 +411,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/reg1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/reg1.jpg"  />
@@ -407,7 +427,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/maze1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/maze1.jpg"  />
@@ -423,7 +443,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/breakingpoint3.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/breakingpoint3.jpg"  />
@@ -439,7 +459,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/breakingpoint2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/breakingpoint2.jpg"  />
@@ -455,7 +475,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/breakingpoint1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/breakingpoint1.jpg"  />
@@ -471,7 +491,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/infinity1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/infinity1.jpg"  />
@@ -487,7 +507,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/confusion2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/confusion2.jpg"  />
@@ -503,7 +523,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/confusion1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/confusion1.jpg"  />
@@ -519,7 +539,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/unlocked3.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/unlocked3.jpg"  />
@@ -535,7 +555,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/kingseye1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/kingseye1.jpg"  />
@@ -551,7 +571,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/era1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/era1.jpg"  />
@@ -567,7 +587,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/teg4.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/teg4.jpg"  />
@@ -583,7 +603,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/hiddendonkey1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/hiddendonkey1.jpg"  />
@@ -599,7 +619,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/cubic2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/cubic2.jpg"  />
@@ -615,7 +635,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/edscapade1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/edscapade1.jpg"  />
@@ -631,7 +651,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/cubic1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/cubic1.jpg"  />
@@ -647,7 +667,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/831_2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/831_2.jpg"  />
@@ -663,7 +683,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/831_1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/831_1.jpg"  />
@@ -679,7 +699,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/trapped1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/trapped1.jpg"  />
@@ -695,7 +715,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/teg3.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/teg3.jpg"  />
@@ -711,7 +731,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/chambers1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/chambers1.jpg"  />
@@ -727,7 +747,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/breakout1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/breakout1.jpg"  />
@@ -743,7 +763,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/backintime8.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/backintime8.jpg"  />
@@ -759,7 +779,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/cinema2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/cinema2.jpg"  />
@@ -775,7 +795,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/mindtrap3.jpeg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/mindtrap3.jpeg"  />
@@ -791,7 +811,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/mindtrap2.jpeg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/mindtrap2.jpeg"  />
@@ -807,7 +827,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/erla1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/erla1.jpg"  />
@@ -823,7 +843,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/scenario2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/scenario2.jpg"  />
@@ -839,7 +859,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/naer2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/naer2.jpg"  />
@@ -855,7 +875,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/naer1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/naer1.jpg"  />
@@ -871,7 +891,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/maine1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/maine1.jpg"  />
@@ -887,7 +907,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/cooperstown1.gif" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/cooperstown1.gif"  />
@@ -903,7 +923,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" style="background-color:gold">
                             <a href="images/escaperooms/full/boxaroo1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/boxaroo1.jpg"  />
@@ -919,7 +939,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/trapology1.png" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/trapology1.jpg"  />
@@ -935,7 +955,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/no1_1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/no1_1.jpg"  />
@@ -951,7 +971,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/cinema1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/cinema1.jpg"  />
@@ -967,7 +987,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" style="background-color:gold">
                             <a href="images/escaperooms/full/palace4.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/palace4.jpg"  />
@@ -983,7 +1003,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/palace3.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/palace3.jpg"  />
@@ -999,7 +1019,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/omescape1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/omescape1.jpg"  />
@@ -1015,7 +1035,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/unlocked2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/unlocked2.jpg"  />
@@ -1031,7 +1051,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/unlocked1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/unlocked1.jpg"  />
@@ -1047,7 +1067,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/teg2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/teg2.jpg"  />
@@ -1063,7 +1083,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/mindfox2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/mindfox2.jpg"  />
@@ -1079,7 +1099,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/mindfox1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/mindfox1.jpg"  />
@@ -1095,7 +1115,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/planetescape3.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/planetescape3.jpg"  />
@@ -1111,7 +1131,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/mission1.png" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/mission1.jpg"  />
@@ -1127,7 +1147,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/redlantern1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/redlantern1.jpg"  />
@@ -1143,7 +1163,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/scenario1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/scenario1.jpg"  />
@@ -1159,7 +1179,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/teg1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/teg1.jpg"  />
@@ -1175,7 +1195,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/ter1.png" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/ter1.jpg"  />
@@ -1191,7 +1211,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/palace2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/palace2.jpg"  />
@@ -1207,7 +1227,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" style="background-color:gold">
                             <a href="images/escaperooms/full/palace1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/palace1.jpg"  />
@@ -1223,7 +1243,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/crossroads2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/crossroads2.jpg"  />
@@ -1239,7 +1259,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/crossroads1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/crossroads1.jpg"  />
@@ -1255,7 +1275,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/questroom1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/questroom1.jpg"  />
@@ -1271,7 +1291,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/stash1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/stash1.jpg"  />
@@ -1287,7 +1307,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/mysterymaui2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/mysterymaui2.jpg"  />
@@ -1303,7 +1323,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/mysterymaui1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/mysterymaui1.jpg"  />
@@ -1319,7 +1339,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/limitless1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/limitless1.jpg"  />
@@ -1335,7 +1355,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" style="background-color:gold">
                             <a href="images/escaperooms/full/trivium1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/trivium1.jpg"  />
@@ -1351,7 +1371,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/backintime7.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/backintime7.jpg"  />
@@ -1367,7 +1387,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/backintime6.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/backintime6.jpg"  />
@@ -1383,7 +1403,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/backintime5.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/backintime5.jpg"  />
@@ -1399,7 +1419,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/otc2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/otc2.jpg"  />
@@ -1415,7 +1435,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/otc1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/otc1.jpg"  />
@@ -1431,7 +1451,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/otc1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/otc1.jpg"  />
@@ -1447,7 +1467,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/otc1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/otc1.jpg"  />
@@ -1463,7 +1483,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/nwescape1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/nwescape1.jpg"  />
@@ -1479,7 +1499,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/escapex2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/escapex2.jpg"  />
@@ -1495,7 +1515,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/exit1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/exit1.jpg"  />
@@ -1511,7 +1531,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/escapechronicles2.gif" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/escapechronicles2.gif"  />
@@ -1527,7 +1547,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/escapechronicles1.gif" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/escapechronicles1.gif"  />
@@ -1543,7 +1563,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/mindtrap1.jpeg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/mindtrap1.jpg"  />
@@ -1559,7 +1579,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/escapex1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/escapex1.jpg"  />
@@ -1575,7 +1595,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/planetescape2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/planetescape2.jpg"  />
@@ -1591,7 +1611,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/nodus1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/nodus1.jpg"  />
@@ -1607,7 +1627,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/backintime4.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/backintime4.jpg"  />
@@ -1623,7 +1643,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/hatch1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/hatch1.jpg"  />
@@ -1639,7 +1659,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                                 <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em">No picture</text></svg>
                             <div class="card-body">
@@ -1653,7 +1673,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/wizardsandwires1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/wizardswires1.jpg"  />
@@ -1669,7 +1689,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/ieescaperoom2.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/ieescaperoom2.jpg"  />
@@ -1685,7 +1705,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/backintime3.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/backintime3.jpg"  />
@@ -1701,7 +1721,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/ieescaperoom1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/ieescaperoom1.jpg"  />
@@ -1717,7 +1737,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/planetescape1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/planetescape1.jpg"  />
@@ -1733,7 +1753,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                                 <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em">No picture</text></svg>
                             <div class="card-body">
@@ -1747,7 +1767,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/backintime1.jpg" target="_blank">
                             <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/backintime1.jpg"  />
@@ -1762,8 +1782,19 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </main>
 </html>
+
+    
+<script>
+    $('.list-room').simpleLoadMore({
+        item:'.item-room',
+        // easing: 'slide',
+        count: 30,
+        btnHTML: '<a href="#" class="btn btn-primary my-2">View 30 More ({showing}/{total})</a>',
+    });
+</script>
