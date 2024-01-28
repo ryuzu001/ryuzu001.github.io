@@ -13,7 +13,7 @@
         <section class="jumbotron jumbotron-fluid text-center mb-0">
             <div class="container">
                 <h1>Ryan's Escape Room Résumé</h1>
-                <p class="lead text-muted">140 Escapes of 146 attempts = <b>95% Escape rate</b></p>
+                <p class="lead text-muted">142 Escapes of 148 attempts = <b>95% Escape rate</b></p>
                 <p class="lead text-muted">Gold = Ryan's Gold Standard </p>
                 <p class="lead text-muted">* = repeat game</p>
                 <a href="/" class="btn btn-primary my-2">Back to main site</a>
@@ -28,6 +28,38 @@
                     <!-- Update your percentage! -->
                     <!-- tinypng -> simpleimageresizer -> tinypng -->
 
+                    <div class="col-md-4 item-room">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="images/escaperooms/full/infinity2.jpg" target="_blank">
+                            <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/infinity2.jpg"  />
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text" align="center" >
+                                    <b >January 27th, 2024 [148]<br />Infinity Escape - Dr. Jorg's Zombie Lab<br />Fullerton, CA</b>
+                                </p>
+                                <p class="card-text">
+                                    Zombies Contained in 55:00, with Ashlyn
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 item-room">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="images/escaperooms/full/braingames1.jpg" target="_blank">
+                            <img class="bd-placeholder-img card-img-top" width="250" dislay="auto" height="auto" src="images/escaperooms/braingames1.webp"  />
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text" align="center" >
+                                    <b >January 27th, 2024 [147]<br />Brain Games - Treasure Island<br />San Pedro, CA</b>
+                                </p>
+                                <p class="card-text">
+                                    Treasure Found in 67:00, with Ashlyn, Roby, Ryan
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
                             <a href="images/escaperooms/full/mission4.jpg" target="_blank">
@@ -371,7 +403,7 @@
                             </a>
                             <div class="card-body">
                                 <p class="card-text" align="center" >
-                                    <b >December 3rd, 2023 [125]<br />Confusion Escapes - Treehouse* [Christmas Rescue]<br />San Bernardino, CA</b>
+                                    <b >December 3rd, 2023 [125]<br />Confusion Escapes - The Treehouse* [Christmas Rescue]<br />San Bernardino, CA</b>
                                 </p>
                                 <p class="card-text">
                                     Elves Found (with bonus) in 1:01:21, with Ashlyn, Susan, Larry
@@ -1075,7 +1107,7 @@
                             </a>
                             <div class="card-body">
                                 <p class="card-text" align="center" >
-                                    <b >February 14th, 2023 [81]<br />Infinity Escape - The Magic Cottage<br />Fullerton, CA</b>
+                                    <b >February 14th, 2023 [81]<br />Infinity Escape - The Magic Cottage: Sister's Curse<br />Fullerton, CA</b>
                                 </p>
                                 <p class="card-text">
                                     Sister Saved in 65:00, with Ashlyn
@@ -1107,7 +1139,7 @@
                             </a>
                             <div class="card-body">
                                 <p class="card-text" align="center" >
-                                    <b >February 10th, 2023 [79]<br />Confusion Escapes - Treehouse<br />San Bernardino, CA</b>
+                                    <b >February 10th, 2023 [79]<br />Confusion Escapes - The Treehouse<br />San Bernardino, CA</b>
                                 </p>
                                 <p class="card-text">
                                     Treehouse Saved in 51:18, with Ashlyn, Dylan, Wilson
@@ -2368,10 +2400,18 @@
 
     
 <script>
+    // $('.list-room').simpleLoadMore({
+    //     item:'.item-room',
+    //     // easing: 'slide',
+    //     count: 30,
+    //     btnHTML: '<a href="#" class="btn btn-primary my-2">View 30 More ({showing}/{total})</a>',
+    // });
+
     $('.list-room').simpleLoadMore({
         item:'.item-room',
         // easing: 'slide',
         count: 30,
-        btnHTML: '<a href="#" class="btn btn-primary my-2">View 30 More ({showing}/{total})</a>',
+        itemsToLoad:1000,
+        btnHTML: '<a href="#" class="btn btn-primary my-2">View All ({total})</a>',
     });
 </script>
