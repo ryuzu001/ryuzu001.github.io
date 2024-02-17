@@ -10,14 +10,12 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <main>
-        <section class="jumbotron jumbotron-fluid text-center mb-0">
+        <section class="jumbotron jumbotron-fluid text-center mb-0 pt-4 pb-4">
             <div class="container">
                 <h1>Ryan's Escape Room Résumé</h1>
                 <p class="lead text-muted">143 Escapes of 149 attempts = <b>96% Escape rate</b></p>
                 <p class="lead text-muted">Gold = Ryan's Gold Standard </p>
                 <p class="lead text-muted">* = repeat game</p>
-                <a href="/" class="btn btn-primary my-2">Back to main site</a>
-                </p>
             </div>
         </section>
 
@@ -2410,27 +2408,20 @@
 
                 </div>
 
-                <a href="https://morty.app/@RyanYuzuki" target="_blank" class="btn btn-primary my-2">Follow me on Morty</a>
-                
+                    <script>
+                        $('.list-room').simpleLoadMore({
+                            item:'.item-room',
+                            // easing: 'slide',
+                            count: 30,
+                            itemsToLoad:1000,
+                            btnHTML: '<a href="#" class="btn btn-block btn-primary my-2 col-md-3">View All ({total})</a>',
+                        });
+                    </script>
+
+                    <a href="https://morty.app/@RyanYuzuki" target="_blank" class="btn btn-block btn-secondary my-2 col-md-3">Follow me on Morty</a>
             </div>
         </div>
     </main>
 </html>
 
     
-<script>
-    // $('.list-room').simpleLoadMore({
-    //     item:'.item-room',
-    //     // easing: 'slide',
-    //     count: 30,
-    //     btnHTML: '<a href="#" class="btn btn-primary my-2">View 30 More ({showing}/{total})</a>',
-    // });
-
-    $('.list-room').simpleLoadMore({
-        item:'.item-room',
-        // easing: 'slide',
-        count: 30,
-        itemsToLoad:1000,
-        btnHTML: '<a href="#" class="btn btn-primary my-2">View All ({total})</a>',
-    });
-</script>
