@@ -97,6 +97,9 @@
         return newHtml
       })
 
+      // Nest
+      $items.length += 1;
+
       var $btn = $thisLoadMore.find( '.' + cssClass + '__btn' );
 
       // Check if button is not present. If not, then attach $btnHTML to the $btn variable.
