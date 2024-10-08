@@ -1,6 +1,6 @@
 /* Based off Bootstrap v4.4.1 (https://getbootstrap.com/) */
 .jumbotron{padding:2rem 1rem;margin-bottom:2rem;background-color:#e9ecef;border-radius:.3rem}.text-center{text-align:center!important}.pj{padding-top:1.5rem!important;padding-bottom:0.3rem!important;margin-bottom:0!important}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media(min-width:576px){.container{max-width:540px}}@media(min-width:768px){.container{max-width:720px}}@media(min-width:992px){.container{max-width:960px}}@media(min-width:1200px){.container{max-width:1140px}}
-.lead{line-height:0.7em;font-size:1.25rem;font-weight:300}.text-muted{color:#525252!important}.py-5{padding-top:3rem!important;padding-bottom:3rem!important}.bg-light{background-color:#f8f9fa!important}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}
+.lead{line-height:1em;font-size:1.25rem;font-weight:300}.text-muted{color:#525252!important}.py-5{padding-top:3rem!important;padding-bottom:3rem!important}.bg-light{background-color:#f8f9fa!important}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}
 @media (min-width:768px)
 {.col-md-3{-ms-flex:0,0,25%;flex:0,0,25%;max-width:25%!important}
 .col-md-4{-ms-flex:0,0,33.333333%;flex:0,0,33.333333%;max-width:33.333333%}
