@@ -86,6 +86,9 @@
         $thisLoadMore.append( $btnHTML );
       }
 
+      // -1 for Nest
+      $items.length -= 1;
+
       // Replace counter with fields
       $btnHTML.add( $counterHTML ).html(function(i, oldHtml) {
         var newHtml = oldHtml.replace('{showing}', '<span class="' + cssClass + '__count ' + cssClass + '__count--showing">' + ( count > $items.length ? $items.length : count ) + '</span>');
