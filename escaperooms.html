@@ -19,19 +19,6 @@ function searchRooms() {
   results = nodes.length - results;
   document.getElementById("demo").innerHTML = " " + results + " result(s)";
 }
-const hideMobileKeyboardOnReturn = (element) => {
-    element.addEventListener('keyup', (keyboardEvent) => {
-        const key = keyboardEvent.code || keyboardEvent.keyCode;
-        if (key === 'Enter' || key === 13) {
-            element.blur();
-        }
-    });
-};
-
-
-document.querySelementectorAll('[type=text]').forEach((element) => {
-    hideMobileKeyboardOnReturn(element);
-}); 
 </script>
 <html lang="en-US">
     <head>
@@ -50,7 +37,7 @@ document.querySelementectorAll('[type=text]').forEach((element) => {
                 <p class="lead text-muted">Gold = Ryan's Gold Standard</p>
                 <p class="lead text-muted">* = repeat game</p>
                 <p>
-                <input type="text" id="Search" onkeyup="searchRooms()" placeholder="Search Rooms..." title="Search Rooms"><span id="demo"></span>
+                <input type="search" id="Search" onkeyup="searchRooms()" placeholder="Search Rooms..." title="Search Rooms"><span id="demo"></span>
                 </p>
             </div>
         </section>
