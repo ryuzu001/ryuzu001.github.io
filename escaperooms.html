@@ -19,15 +19,17 @@ function searchRooms() {
   results = nodes.length - results;
   document.getElementById("demo").innerHTML = " " + results + " result(s)";
 }
-const hideMobileKeyboardOnReturn = (keyboardEvent) => {
+const hideMobileKeyboardOnReturn = (element) => {
     element.addEventListener('keyup', (keyboardEvent) => {
-        if (keyboardEvent.code === 'Enter') {
+        const key = keyboardEvent.code || keyboardEvent.keyCode;
+        if (key === 'Enter' || key === 13) {
             element.blur();
         }
     });
 };
 
-document.querySelementectorAll('input').forEach((element) => {
+
+document.querySelementectorAll('[type=text]').forEach((element) => {
     hideMobileKeyboardOnReturn(element);
 }); 
 </script>
