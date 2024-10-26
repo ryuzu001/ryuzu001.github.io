@@ -25,3 +25,7 @@ a{text-decoration: none;}
 .my-2{margin-top:.5rem!important}
 .col-md-3,.col-md-4{position:relative;width:100%;padding-right:15px;padding-left:15px}
 .col-md-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:100%}
+#Search {border: 3px solid #ddd; padding: 6px 10px; outline: none;transition: 0.5s;}
+#Search:focus {
+    border: 3px solid #555;
+  }
