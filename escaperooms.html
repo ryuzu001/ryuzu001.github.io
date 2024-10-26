@@ -19,6 +19,17 @@ function searchRooms() {
   results = nodes.length - results;
   document.getElementById("demo").innerHTML = " " + results + " result(s)";
 }
+const hideMobileKeyboardOnReturn = (keyboardEvent) => {
+    element.addEventListener('keyup', (keyboardEvent) => {
+        if (keyboardEvent.code === 'Enter') {
+            element.blur();
+        }
+    });
+};
+
+document.querySelementectorAll('input').forEach((element) => {
+    hideMobileKeyboardOnReturn(element);
+}); 
 </script>
 <html lang="en-US">
     <head>
