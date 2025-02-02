@@ -29,3 +29,4 @@ a{text-decoration: none;}
 #Search:focus {
     border: 3px solid #555;
   }
+.gold-text {color:transparent;font-size: 0;}
