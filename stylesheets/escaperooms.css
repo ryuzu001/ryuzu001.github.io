@@ -8,7 +8,7 @@
 .card{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}
 .mb-4,.my-4{margin-bottom:1.5rem!important}
 .shadow-sm{box-shadow:0 .125rem .25rem rgba(0,0,0,.075)!important}
-.card-img-top{-ms-flex-negative:0;flex-shrink:0;width:100%;border-top-left-radius:calc(.25rem - 1px);border-top-right-radius:calc(.25rem - 1px)}
+.card-img-top{-ms-flex-negative:0;flex-shrink:0;width:100%;height:auto;border-top-left-radius:calc(.25rem - 1px);border-top-right-radius:calc(.25rem - 1px)}
 .card-body{-ms-flex:1 1 auto;flex:1 1 auto;min-height:1px;padding:1.25rem}
 .card-text:last-child{margin-bottom:0}
 .card-text{margin-top:0px}
@@ -30,3 +30,37 @@ a{text-decoration: none;}
     border: 3px solid #555;
   }
 .gold-text {color:transparent;font-size: 0;}
+.ar-338{width:100%; aspect-ratio:600/338;}
+.ar-361{width:100%; aspect-ratio:600/361;}
+.ar-362{width:100%; aspect-ratio:600/362;}
+.ar-400{width:100%; aspect-ratio:600/400;}
+.ar-403{width:100%; aspect-ratio:600/403;}
+.ar-404{width:100%; aspect-ratio:600/404;}
+.ar-409{width:100%; aspect-ratio:600/409;}
+.ar-425{width:100%; aspect-ratio:600/425;}
+.ar-432{width:100%; aspect-ratio:600/432;}
+.ar-444{width:100%; aspect-ratio:600/444;}
+.ar-448{width:100%; aspect-ratio:600/448;}
+.ar-449{width:100%; aspect-ratio:600/449;}
+.ar-450{width:100%; aspect-ratio:600/450;}
+.ar-451{width:100%; aspect-ratio:600/451;}
+.ar-452{width:100%; aspect-ratio:600/452;}
+.ar-477{width:100%; aspect-ratio:600/477;}
+.ar-529{width:100%; aspect-ratio:600/529;}
+.ar-555{width:100%; aspect-ratio:600/555;}
+.ar-578{width:100%; aspect-ratio:600/578;}
+.ar-600{width:100%; aspect-ratio:600/600;}
+.ar-653{width:100%; aspect-ratio:600/653;}
+.ar-654{width:100%; aspect-ratio:600/654;}
+.ar-675{width:100%; aspect-ratio:600/675;}
+.ar-717{width:100%; aspect-ratio:600/717;}
+.ar-766{width:100%; aspect-ratio:600/766;}
+.ar-797{width:100%; aspect-ratio:600/797;}
+.ar-800{width:100%; aspect-ratio:600/800;}
+.ar-802{width:100%; aspect-ratio:600/802;}
+.ar-851{width:100%; aspect-ratio:600/851;}
+.ar-890{width:100%; aspect-ratio:600/890;}
+.ar-901{width:100%; aspect-ratio:600/901;}
+.ar-905{width:100%; aspect-ratio:600/905;}
+.ar-981{width:100%; aspect-ratio:600/981;}
+.ar-1067{width:100%; aspect-ratio:600/1067;}
