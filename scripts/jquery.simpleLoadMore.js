@@ -87,7 +87,7 @@
       }
 
       // -1 for Nest
-      $items.length -= 1;
+      $items.length -= 2;
 
       // Replace counter with fields
       $btnHTML.add( $counterHTML ).html(function(i, oldHtml) {
@@ -98,7 +98,7 @@
       })
 
       // Nest
-      $items.length += 1;
+      $items.length += 2;
 
       var $btn = $thisLoadMore.find( '.' + cssClass + '__btn' );
 
