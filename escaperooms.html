@@ -29,6 +29,7 @@ document.addEventListener('keydown', function(event) {
     closeKeyboard();
   }
 });
+
 </script>
 <html lang="en-US">
     <head>
@@ -43,11 +44,11 @@ document.addEventListener('keydown', function(event) {
         <section class="jumbotron jumbotron-fluid text-center pj">
             <div class="container">
                 <h1>Ryan's Escape Room Résumé</h1>
-                <p class="lead text-muted">419 Escapes of <b>427 Rooms</b> = 98% Escape Rate</p>
+                <p class="lead text-muted">421 Escapes of <b>429 Rooms</b> = 98% Escape Rate</p>
                 <p class="lead text-muted">Gold = Ryan's Gold Standard</p>
                 <p class="lead text-muted">* = repeat game</p>
                 <p>
-                <input type="search" id="Search" onkeyup="searchRooms()" placeholder="Search Rooms..." title="Search Rooms"><span id="demo"></span>
+                <input type="search" autocomplete="off" id="Search" onkeyup="searchRooms()" placeholder="Search Rooms..." title="Search Rooms"><span id="demo"></span>
                 </p>
             </div>
         </section>
@@ -58,6 +59,38 @@ document.addEventListener('keydown', function(event) {
 
                     <!-- Update your percentage! -->
                     <!-- https://squoosh.app -->
+
+                    <div class="col-md-4 item-room">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="images/escaperooms/full/questroom9.jpg" target="_blank" class="ar-448">
+                            <img loading="lazy" class="card-img-top" alt="Escape Room Photo for Polar Station" dislay="auto" height="auto" src="images/escaperooms/questroom9.avif"onmouseover="this.src='images/escaperooms/hover/questroom9-h.avif';" onmouseout="this.src='images/escaperooms/questroom9.avif';"/>
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    <b>March 28th, 2026 [429]<br />Quest Room - Polar Station<br />Redondo Beach, CA</b>
+                                </p>
+                                <p class="card-text">
+                                    Rescued in 35:00, with Ivan, Marisa
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 item-room">
+                        <div class="card mb-4 shadow-sm">
+                            <a href="images/escaperooms/full/questroom8.jpg" target="_blank" class="ar-448">
+                            <img loading="lazy" class="card-img-top" alt="Escape Room Photo for Kablam" dislay="auto" height="auto" src="images/escaperooms/questroom8.avif"onmouseover="this.src='images/escaperooms/hover/questroom8-h.avif';" onmouseout="this.src='images/escaperooms/questroom8.avif';"/>
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    <b>March 28th, 2026 [428]<br />Quest Room - Kablam<br />Redondo Beach, CA</b>
+                                </p>
+                                <p class="card-text">
+                                    Candy Kablamed in 35:00, with Ivan, Marisa
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm">
@@ -1570,7 +1603,7 @@ document.addEventListener('keydown', function(event) {
                                     <b>August 17th, 2025 [335]<br />Appleseed Avenue - Election Day<br />Santa Clarita, CA</b>
                                 </p>
                                 <p class="card-text">
-                                    Case Solved in 62:00, with Jason, Keilyn, Marisa, Wilson
+                                    Case Solved [Detective] in 62:00, with Jason, Keilyn, Marisa, Wilson
                                 </p>
                             </div>
                         </div>
