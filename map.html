@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Globe.gl Starter</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    #globeViz {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .title {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      z-index: 10;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="title">My Globe</div>
+  <div id="globeViz"></div>
+
+  <!-- Globe.gl -->
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+
+  <script>
+    // Sample locations
+    const locations = [
+      {
+        lat: 34.05,
+        lng: -118.24,
+        size: 0.3,
+        color: "red",
+        label: "Los Angeles"
+      },
+      {
+        lat: 35.68,
+        lng: 139.69,
+        size: 0.3,
+        color: "cyan",
+        label: "Tokyo"
+      }
+    ];
+
+    // Arc between locations
+    const arcs = [
+      {
+        startLat: 34.05,
+        startLng: -118.24,
+        endLat: 35.68,
+        endLng: 139.69,
+        color: ["orange", "yellow"]
+      }
+    ];
+
+    // Create globe
+    const globe = Globe()
+      (document.getElementById("globeViz"));
+
+    // Globe appearance
+    globe
+      .globeImageUrl("//unpkg.com/three-globe/example/img/earth-blue-marble.jpg")
+      .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png")
+      .backgroundImageUrl("//unpkg.com/three-globe/example/img/night-sky.png")
+
+      // Atmosphere
+      .showAtmosphere(true)
+      .atmosphereColor("lightskyblue")
+      .atmosphereAltitude(0.15)
+
+      // Points
+      .pointsData(locations)
+      .pointLat(d => d.lat)
+      .pointLng(d => d.lng)
+      .pointAltitude(0.02)
+      .pointColor(d => d.color)
+      .pointRadius(d => d.size)
+      .pointLabel(d => d.label)
+
+      // Arcs
+      .arcsData(arcs)
+      .arcColor(d => d.color)
+      .arcDashLength(0.4)
+      .arcDashGap(2)
+      .arcDashAnimateTime(2000);
+
+    // Camera position
+    globe.pointOfView(
+      { lat: 20, lng: 0, altitude: 2.5 },
+      1000
+    );
+
+    // Auto rotate
+    globe.controls().autoRotate = true;
+    globe.controls().autoRotateSpeed = 0.5;
+  </script>
+</body>
+</html>
