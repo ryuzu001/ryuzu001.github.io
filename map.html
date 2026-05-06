@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Globe.gl Starter</title>
+  <title>Escape Map</title>
 
   <style>
     html, body {
@@ -33,42 +33,42 @@
 </head>
 
 <body>
-  <div class="title">My Globe</div>
+  <div class="title"></div>
   <div id="globeViz"></div>
 
   <!-- Globe.gl -->
-  <script src="https://unpkg.com/three"></script>
   <script src="https://unpkg.com/globe.gl"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
 
   <script>
     // Sample locations
-    const locations = [
-      {
-        lat: 34.05,
-        lng: -118.24,
-        size: 0.3,
-        color: "red",
-        label: "Los Angeles"
-      },
-      {
-        lat: 35.68,
-        lng: 139.69,
-        size: 0.3,
-        color: "cyan",
-        label: "Tokyo"
-      }
-    ];
+    // const locations = [
+    //   {
+    //     lat: 34.05,
+    //     lng: -118.24,
+    //     size: 0.3,
+    //     color: "red",
+    //     label: "Los Angeles"
+    //   },
+    //   {
+    //     lat: 35.68,
+    //     lng: 139.69,
+    //     size: 0.3,
+    //     color: "cyan",
+    //     label: "Tokyo"
+    //   }
+    // ];
 
-    // Arc between locations
-    const arcs = [
-      {
-        startLat: 34.05,
-        startLng: -118.24,
-        endLat: 35.68,
-        endLng: 139.69,
-        color: ["orange", "yellow"]
-      }
-    ];
+    // // Arc between locations
+    // const arcs = [
+    //   {
+    //     startLat: 34.05,
+    //     startLng: -118.24,
+    //     endLat: 35.68,
+    //     endLng: 139.69,
+    //     color: ["orange", "yellow"]
+    //   }
+    // ];
 
     // Create globe
     const globe = Globe()
@@ -76,40 +76,123 @@
 
     // Globe appearance
     globe
-      .globeImageUrl("//unpkg.com/three-globe/example/img/earth-blue-marble.jpg")
-      .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png")
+    //   .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-dark.jpg')
+    //   .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png")
       .backgroundImageUrl("//unpkg.com/three-globe/example/img/night-sky.png")
 
+      // Load country polygons
+      .polygonsData([])
+
+    // fetch("https://unpkg.com/world-atlas/countries-110m.json")
+    //   .then(res => res.json())
+    //   .then(worldData => {
+
+    //     // Convert topojson -> geojson
+    //     const countries = topojson.feature(
+    //       worldData,
+    //       worldData.objects.countries
+    //     ).features;
+    
+    // globe
+    //     .polygonsData(countries)
+
+    //     .polygonCapColor(() => "rgba(0,0,0,0)")
+
+    //               .polygonSideColor(() => "rgba(0,0,0,0)")
+    //       .polygonStrokeColor(() => "#ffffff")
+
+    //       // Thin outlines
+    //       .polygonAltitude(0.003)
+    //  });
+
+    // --------------------
+// 1. COUNTRIES LAYER
+// --------------------
+fetch("https://unpkg.com/world-atlas@2/countries-110m.json")
+  .then(res => res.json())
+  .then(world => {
+    const countries = topojson.feature(
+      world,
+      world.objects.countries
+    ).features;
+
+    globe
+      .polygonsData(countries)
+      .polygonCapColor(() => "rgba(0,0,0,0)")
+      .polygonStrokeColor(() => "#666")
+      .polygonAltitude(0.002);
+  });
+
+// --------------------
+// 2. US STATES LAYER
+// --------------------
+fetch("https://unpkg.com/us-atlas/states-10m.json")
+  .then(res => res.json())
+  .then(us => {
+    const states = topojson.feature(
+      us,
+      us.objects.states
+    ).features;
+
+    globe
+      .polygonsData([
+        ...(globe.polygonsData() || []),
+        ...states
+      ])
+
+      // Style states differently
+      .polygonCapColor(d =>
+        d.properties && d.properties.name
+          ? "rgba(0,0,0,0)"
+          : "rgba(0,0,0,0)"
+      )
+      .polygonStrokeColor(d =>
+        d.properties && d.properties.name
+          ? "#808080" // states white
+          : "#444"
+      );
+  });
+
+     
+
+     globe
       // Atmosphere
-      .showAtmosphere(true)
-      .atmosphereColor("lightskyblue")
+      .showGlobe(true)
+      .showAtmosphere(false)
+    //   .atmosphereColor("lightskyblue")
       .atmosphereAltitude(0.15)
 
-      // Points
-      .pointsData(locations)
-      .pointLat(d => d.lat)
-      .pointLng(d => d.lng)
-      .pointAltitude(0.02)
-      .pointColor(d => d.color)
-      .pointRadius(d => d.size)
-      .pointLabel(d => d.label)
+    //   // Points
+    //   .pointsData(locations)
+    //   .pointLat(d => d.lat)
+    //   .pointLng(d => d.lng)
+    //   .pointAltitude(0.02)
+    //   .pointColor(d => d.color)
+    //   .pointRadius(d => d.size)
+    //   .pointLabel(d => d.label)
 
-      // Arcs
-      .arcsData(arcs)
-      .arcColor(d => d.color)
-      .arcDashLength(0.4)
-      .arcDashGap(2)
-      .arcDashAnimateTime(2000);
+    //   // Arcs
+    //   .arcsData(arcs)
+    //   .arcColor(d => d.color)
+    //   .arcDashLength(0.4)
+    //   .arcDashGap(2)
+    //   .arcDashAnimateTime(2000);
 
     // Camera position
     globe.pointOfView(
-      { lat: 20, lng: 0, altitude: 2.5 },
+      { lat: 35, lng: -110, altitude: 0.5 },
       1000
     );
 
-    // Auto rotate
-    globe.controls().autoRotate = true;
-    globe.controls().autoRotateSpeed = 0.5;
+globe.globeMaterial(
+  new THREE.MeshBasicMaterial({
+    color: "#000000",
+    transparent: true,
+    opacity: 0.8
+  })
+);
+
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
 </body>
 </html>
