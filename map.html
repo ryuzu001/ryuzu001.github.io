@@ -20,6 +20,27 @@
       height: 100vh;
     }
 
+        #infoBox {
+
+        display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      width: 250px;
+      min-height: 120px;
+
+      background: rgba(0,0,0,0.85);
+      border: 1px solid white;
+
+      color: white;
+
+      padding: 16px;
+      border-radius: 12px;
+
+      z-index: 100;
+    }
+
     .title {
       position: absolute;
       top: 20px;
@@ -35,21 +56,32 @@
 <body>
   <div class="title"></div>
   <div id="globeViz"></div>
+  <div id="infoBox">WAAAAAAAAAAAAAAAAAAA</div>
 
   <!-- Globe.gl -->
   <script src="https://unpkg.com/globe.gl"></script>
   <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
 
   <script>
+
     // Sample locations
-    // const locations = [
-    //   {
-    //     lat: 34.05,
-    //     lng: -118.24,
-    //     size: 0.3,
-    //     color: "red",
-    //     label: "Los Angeles"
-    //   },
+    const locations = [
+      {
+        lat: 33.941089,
+        lng: -118.409335,
+        size: 0.01,
+        color: "red",
+        name: "Los Angeles International Airport",
+        description: "Population: 3.8 million"
+      },
+      {
+        lat: 33.767662,
+        lng: -118.392392,
+        size: 0.01,
+        color: "red",
+        name: "Fred Hesse Community Park",
+        description: "Population: 0 rn lmao"
+      },
     //   {
     //     lat: 35.68,
     //     lng: 139.69,
@@ -57,7 +89,7 @@
     //     color: "cyan",
     //     label: "Tokyo"
     //   }
-    // ];
+    ];
 
     // // Arc between locations
     // const arcs = [
@@ -76,7 +108,7 @@
 
     // Globe appearance
     globe
-    //   .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-dark.jpg')
+      // .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-dark.jpg')
     //   .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png")
       .backgroundImageUrl("//unpkg.com/three-globe/example/img/night-sky.png")
 
@@ -118,9 +150,13 @@ fetch("https://unpkg.com/world-atlas@2/countries-110m.json")
 
     globe
       .polygonsData(countries)
-      .polygonCapColor(() => "rgba(0,0,0,0)")
-      .polygonStrokeColor(() => "#666")
-      .polygonAltitude(0.002);
+  .polygonCapColor("rgba(0,0,0,0.5)"
+)
+
+  .polygonStrokeColor(() => "#ffffff"
+  )
+.polygonSideColor(() => "rgba(0,0,0,0)")
+        .polygonAltitude(0.000);
   });
 
 // --------------------
@@ -153,7 +189,7 @@ fetch("https://unpkg.com/us-atlas/states-10m.json")
       );
   });
 
-     
+     const infoBox = document.getElementById("infoBox")
 
      globe
       // Atmosphere
@@ -163,12 +199,39 @@ fetch("https://unpkg.com/us-atlas/states-10m.json")
       .atmosphereAltitude(0.15)
 
     //   // Points
-    //   .pointsData(locations)
-    //   .pointLat(d => d.lat)
-    //   .pointLng(d => d.lng)
-    //   .pointAltitude(0.02)
-    //   .pointColor(d => d.color)
-    //   .pointRadius(d => d.size)
+      .pointsData(locations)
+      .pointLat(d => d.lat)
+      .pointLng(d => d.lng)
+      .pointAltitude(0.01)
+      .pointColor(d => d.color)
+      .pointRadius(d => d.size)
+        .pointLabel(d => `
+          <b>${d.name}</b><br/>
+          ${d.description}
+        `)
+
+          // Click handler
+          // 
+          
+
+
+.onPointClick(point => {
+
+  
+
+  infoBox.style.display = "block";
+
+  infoBox.innerHTML = `
+    <h2>${point.name}</h2>
+    <p>${point.description}</p>
+  `;
+})
+
+.controls().addEventListener("start", () => {
+
+  infoBox.style.display = "none";
+
+})
     //   .pointLabel(d => d.label)
 
     //   // Arcs
@@ -180,7 +243,7 @@ fetch("https://unpkg.com/us-atlas/states-10m.json")
 
     // Camera position
     globe.pointOfView(
-      { lat: 35, lng: -110, altitude: 0.5 },
+      { lat: 34, lng: -118.2, altitude: 0.5 },
       1000
     );
 
@@ -188,9 +251,27 @@ globe.globeMaterial(
   new THREE.MeshBasicMaterial({
     color: "#000000",
     transparent: true,
-    opacity: 0.8
+    opacity: 0.9
   })
 );
+
+globe.pointsTransitionDuration(0);
+
+function updatePointSize() {
+
+  const altitude = globe.pointOfView().altitude;
+
+let size = Math.sqrt(altitude) * 0.08;
+
+  size = Math.max(0.01, size);
+  size = Math.min(0.1, size);
+
+  globe.pointRadius(size);
+}
+
+updatePointSize();
+
+globe.controls().addEventListener("change", updatePointSize);
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
