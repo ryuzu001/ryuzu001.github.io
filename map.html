@@ -108,7 +108,7 @@
 
     // Globe appearance
     globe
-      // .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-dark.jpg')
+      .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-dark.jpg')
     //   .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png")
       .backgroundImageUrl("//unpkg.com/three-globe/example/img/night-sky.png")
 
@@ -140,12 +140,12 @@
     // --------------------
 // 1. COUNTRIES LAYER
 // --------------------
-fetch("https://unpkg.com/world-atlas@2/countries-110m.json")
+fetch("assets/land-110m.json")
   .then(res => res.json())
   .then(world => {
     const countries = topojson.feature(
       world,
-      world.objects.countries
+      world.objects.land
     ).features;
 
     globe
@@ -162,32 +162,32 @@ fetch("https://unpkg.com/world-atlas@2/countries-110m.json")
 // --------------------
 // 2. US STATES LAYER
 // --------------------
-fetch("https://unpkg.com/us-atlas/states-10m.json")
-  .then(res => res.json())
-  .then(us => {
-    const states = topojson.feature(
-      us,
-      us.objects.states
-    ).features;
+// fetch("https://unpkg.com/us-atlas/states-10m.json")
+//   .then(res => res.json())
+//   .then(us => {
+//     const states = topojson.feature(
+//       us,
+//       us.objects.states
+//     ).features;
 
-    globe
-      .polygonsData([
-        ...(globe.polygonsData() || []),
-        ...states
-      ])
+//     globe
+//       .polygonsData([
+//         ...(globe.polygonsData() || []),
+//         ...states
+//       ])
 
-      // Style states differently
-      .polygonCapColor(d =>
-        d.properties && d.properties.name
-          ? "rgba(0,0,0,0)"
-          : "rgba(0,0,0,0)"
-      )
-      .polygonStrokeColor(d =>
-        d.properties && d.properties.name
-          ? "#808080" // states white
-          : "#444"
-      );
-  });
+//       // Style states differently
+//       .polygonCapColor(d =>
+//         d.properties && d.properties.name
+//           ? "rgba(0,0,0,0)"
+//           : "rgba(0,0,0,0)"
+//       )
+//       .polygonStrokeColor(d =>
+//         d.properties && d.properties.name
+//           ? "#808080" // states white
+//           : "#444"
+//       );
+//   });
 
      const infoBox = document.getElementById("infoBox")
 
