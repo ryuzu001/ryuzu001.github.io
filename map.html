@@ -72,7 +72,9 @@
         size: 0.01,
         color: "red",
         name: "Los Angeles International Airport",
-        description: "Population: 3.8 million"
+        description: "Population: 3.8 million",
+        photo: "images/escaperooms/13throom1.avif",
+        photo2: "images/escaperooms/cityscape2.avif"
       },
       {
         lat: 33.767662,
@@ -80,7 +82,8 @@
         size: 0.01,
         color: "red",
         name: "Fred Hesse Community Park",
-        description: "Population: 0 rn lmao"
+        description: "Population: 0 rn lmao",
+        photo: "images/escaperooms/mission5.avif"
       },
     //   {
     //     lat: 35.68,
@@ -215,14 +218,26 @@ fetch("assets/land-110m.json")
           
 
 
-.onPointClick(point => {
+globe.onPointClick(point => {
 
-  
+  const infoBox = document.getElementById("infoBox");
 
   infoBox.style.display = "block";
 
   infoBox.innerHTML = `
     <h2>${point.name}</h2>
+
+    <div class="photoContainer">
+
+      <img src="${point.photo}" style="width: 100%; height:auto;"/>
+
+      ${
+        point.photo2
+          ? `<img src="${point.photo2}" style="width: 100%; height:auto;"/>`
+          : ""
+      }
+
+    </div>
     <p>${point.description}</p>
   `;
 })
