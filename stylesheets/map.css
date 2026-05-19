@@ -1,0 +1,138 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#rangeSlider {
+  width: 80%;
+}
+
+#rangeSliderContainer {
+  position: absolute;
+  z-index: 2;
+  bottom: 48px;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  #rangeSliderContainer {
+    bottom: 24px;
+  }
+}
+
+input[type="range"] {
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-container {
+  background: #000;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 30%;
+  height: 12px;
+  background: #000;
+  border-radius: 10px;
+  border: 1px #777 solid;
+}
+
+/* タッチの場合は2倍 */
+.touch input[type="range"]::-webkit-slider-runnable-track {
+  height: 32px;
+  border-radius: 32px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 30%;
+  border-radius: 10px;
+  border: 1px #000 solid;
+  background: #777;
+}
+
+.touch input[type="range"]::-webkit-slider-thumb {
+  height: 30px;
+  border-radius: 30px;
+}
+
+input[type="range"]:focus {
+  outline: rgba(255, 255, 255, 0.2) solid 2px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #222;
+}
+
+canvas {
+  background: #000000;
+}
+
+
+.embla { --slide-size: 50%;}
+.embla__viewport {  height: 60%;overflow: hidden;}
+.embla__container {  display: flex;  touch-action: pan-y pinch-zoom;}
+.embla__slide {  flex: 0 0 var(--slide-size);  min-width: 0;}
+
+
+.embla__controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  /* -webkit-appearance: none; */
+  /* appearance: none; */
+  background-color: rgba(255, 255, 255, 0.1);
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid black!important;
+  padding: 0;
+  margin: 0;
+  border: 0.2rem solid var(--detail-medium-contrast);
+  width: 2.6rem;
+  height: 2.6rem;
+
+  z-index: 1;
+  border-radius: 50%;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg);
+}
+
+.embla__button--disabled {
+  color: var(--detail-high-contrast);
+}
+
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
+}
