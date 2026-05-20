@@ -82,7 +82,7 @@ canvas {
 }
 
 
-.embla { --slide-size: 50%;}
+.embla { --slide-size: 50%;overflow:hidden;}
 .embla__viewport {  height: 60%;overflow: hidden;}
 .embla__container {  display: flex;  touch-action: pan-y pinch-zoom;}
 .embla__slide {  flex: 0 0 var(--slide-size);  min-width: 0;}

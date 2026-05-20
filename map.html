@@ -11,6 +11,7 @@
     <!-- Also load GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/embla-carousel@8.6.0/embla-carousel.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
     <!-- Adjust CSS -->
     <link rel="stylesheet" href="stylesheets/map.css">
 
@@ -38,7 +39,7 @@ position: absolute;
   right: 20px;
 
   width: 400px;
-  height:400px;
+  height:450px;
   max-height: 50vh;
 
   overflow: visible;
@@ -99,47 +100,15 @@ position: absolute;
   <div id="globeViz"></div>
   <!-- <div id="infoBox">WAAAAAAAAAAAAAAAAAAA</div> -->
   <div id="infoBox">
+    <div id="infoBoxTitle"></div>
     <div class="embla">
       <div class="embla__viewport">
-        <div class="embla__container">
-<div class="embla__slide">
-            <img
-              class="embla__slide__img"
-              src="https://picsum.photos/600/350?v=1"
-              alt="Your alt text"
-            />
-          </div>
-          <div class="embla__slide">
-            <img
-              class="embla__slide__img"
-              src="https://picsum.photos/600/350?v=2"
-              alt="Your alt text"
-            />
-          </div>
-          <div class="embla__slide">
-            <img
-              class="embla__slide__img"
-              src="https://picsum.photos/600/350?v=3"
-              alt="Your alt text"
-            />
-          </div>
-          <div class="embla__slide">
-            <img
-              class="embla__slide__img"
-              src="https://picsum.photos/600/350?v=4"
-              alt="Your alt text"
-            />
-          </div>
-          <div class="embla__slide">
-            <img
-              class="embla__slide__img"
-              src="https://picsum.photos/600/350?v=5"
-              alt="Your alt text"
-            />
-          </div>
+        <div class="embla__container" id="embla_slides">
+
         </div>
       </div>
-      <div class="embla__controls">
+      <div id="descr"></div>
+      <!-- <div class="embla__controls">
         <div class="embla__buttons">
   <button
             class="embla__button embla__prev  embla__button--disabled"
@@ -163,7 +132,7 @@ position: absolute;
             </svg>
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
 </div>
 
@@ -179,23 +148,53 @@ position: absolute;
     // Sample locations
     const locations = [
       {
-        lat: 33.941089,
-        lng: -118.409335,
+        lat: 34.03929054041106, 
+        lng: -118.32032562275671,
         size: 0.01,
         color: "red",
-        name: "Los Angeles International Airport",
-        description: "Population: 3.8 million",
-        photo: "images/escaperooms/13throom1.avif",
-        photo2: "images/escaperooms/cityscape2.avif"
+        name: "Hatch Escapes",
+        description: "Lab Rat, Lab Rat*, The Nest, The Ladder, The Nest*",
+        photos: [ 
+          "./images/escaperooms/hatch1.avif",
+          "./images/escaperooms/hatch2.avif",
+          "./images/escaperooms/hatch3.avif",
+          "./images/escaperooms/hatch4.avif",
+          "./images/escaperooms/hatch5.avif",
+        ]
       },
       {
-        lat: 33.767662,
-        lng: -118.392392,
+        lat: 33.805306388301986, 
+        lng: -117.91176992339383,
         size: 0.01,
         color: "red",
-        name: "Fred Hesse Community Park",
-        description: "Population: 0 rn lmao",
-        photo: "images/escaperooms/mission5.avif"
+        name: "Mission Escape Games",
+        description: "Operation: End of Days, Escape the Darkest Hour, Escape the Hydeout, Ultimate Bank Heist, Escape the Nemesis",
+        photos: [
+          "./images/escaperooms/mission1.avif",
+          "./images/escaperooms/mission2.avif",
+          "./images/escaperooms/mission3.avif",
+          "./images/escaperooms/mission4.avif",
+          "./images/escaperooms/mission5.avif",
+      ]
+
+
+      
+      },
+      {
+        lat: 37.8302581228411,
+        lng: -122.27935550417024,
+        size: 0.01,
+        color: "red",
+        name: "Trivium Games",
+        description: "Ghost Patrol, Ghost Patrol* Ghost Patrol*",
+        photos: [
+          "./images/escaperooms/trivium1.avif",
+          "./images/escaperooms/trivium2.avif",
+          "./images/escaperooms/trivium3.avif",
+      ]
+
+
+      
       },
     //   {
     //     lat: 35.68,
@@ -333,17 +332,34 @@ fetch("assets/map.json")
 // infoBox.style.opacity = "1";
 // infoBox.style.visibility = "visible";
 
+let emblaApi = null;
+
 requestAnimationFrame(() => {
 
-  const emblaNode = document.querySelector('.embla');
+  if (emblaApi) {
+    emblaApi.destroy();
+  }
 
-  EmblaCarousel(emblaNode);
+  const emblaNode =
+    infoBox.querySelector(".embla__viewport");
 
+emblaApi = EmblaCarousel(
+  emblaNode,
+  { loop: true },
+
+  [
+    EmblaCarouselAutoplay({
+      delay: 1000
+    })
+  ]
+);
 })
+
+
 
 const emblaNode = document.querySelector('.embla')
 
-const embla = EmblaCarousel(emblaNode)
+const embla = EmblaCarousel(emblaNode,{duration:60})
 
 globe.onPointClick(point => {
 
@@ -353,6 +369,27 @@ globe.onPointClick(point => {
   infoBox.style.opacity = "1";
 infoBox.style.visibility = "visible";
 
+const infoBoxTitle = document.getElementById("infoBoxTitle");
+infoBoxTitle.innerHTML = `<h2>${point.name}</h2>`
+
+const emblaSlides = document.getElementById("embla_slides");
+const descr = document.getElementById("descr");
+
+const slidesHTML = point.photos.map(photo => `
+  <div class="embla__slide"><img class="embla__slide__img" src="${photo}"></div>
+`).join("");
+
+emblaSlides.innerHTML = `${slidesHTML}`
+// descr.innerHTML = `${point.description}`
+
+requestAnimationFrame(() => {
+
+    const emblaNode =
+      infoBox.querySelector(".embla");
+
+    EmblaCarousel(emblaNode);
+
+  })
 
 })
 
