@@ -136,3 +136,11 @@ canvas {
   width: 35%;
   height: 35%;
 }
+
+#globeViz canvas {
+  -webkit-tap-highlight-color: transparent;
+
+  touch-action: manipulation;
+
+  outline: none;
+}

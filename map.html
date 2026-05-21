@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/embla-carousel@8.6.0/embla-carousel.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
     <!-- Adjust CSS -->
     <link rel="stylesheet" href="stylesheets/map.css">
 
@@ -98,7 +99,6 @@ position: absolute;
 <body>
   <div class="title"></div>
   <div id="globeViz"></div>
-  <!-- <div id="infoBox">WAAAAAAAAAAAAAAAAAAA</div> -->
   <div id="infoBox">
     <div id="infoBoxTitle"></div>
     <div class="embla">
@@ -107,32 +107,7 @@ position: absolute;
 
         </div>
       </div>
-      <div id="descr"></div>
-      <!-- <div class="embla__controls">
-        <div class="embla__buttons">
-  <button
-            class="embla__button embla__prev  embla__button--disabled"
-            type="button"
-          >
-            <svg class="embla__button__svg" viewBox="0 0 532 532">
-              <path
-                fill="currentColor"
-                d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
-              ></path>
-            </svg></button
-          ><button
-            class="embla__button embla__next  embla__button--disabled"
-            type="button"
-          >
-            <svg class="embla__button__svg" viewBox="0 0 532 532">
-              <path
-                fill="currentColor"
-                d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div> -->
+      <div class="embla__slide__desc"></div>
     </div>
 </div>
 
@@ -153,13 +128,12 @@ position: absolute;
         size: 0.01,
         color: "red",
         name: "Hatch Escapes",
-        description: "Lab Rat, Lab Rat*, The Nest, The Ladder, The Nest*",
-        photos: [ 
-          "./images/escaperooms/hatch1.avif",
-          "./images/escaperooms/hatch2.avif",
-          "./images/escaperooms/hatch3.avif",
-          "./images/escaperooms/hatch4.avif",
-          "./images/escaperooms/hatch5.avif",
+        rooms: [ 
+          { photo: "./images/escaperooms/hatch1.avif", name: "Lab Rat" },
+          { photo: "./images/escaperooms/hatch2.avif", name: "Lab Rat" },
+          { photo: "./images/escaperooms/hatch3.avif", name: "The Nest" },
+          { photo: "./images/escaperooms/hatch4.avif", name: "The Ladder" },
+          { photo: "./images/escaperooms/hatch5.avif", name: "The Nest" }
         ]
       },
       {
@@ -168,17 +142,13 @@ position: absolute;
         size: 0.01,
         color: "red",
         name: "Mission Escape Games",
-        description: "Operation: End of Days, Escape the Darkest Hour, Escape the Hydeout, Ultimate Bank Heist, Escape the Nemesis",
-        photos: [
-          "./images/escaperooms/mission1.avif",
-          "./images/escaperooms/mission2.avif",
-          "./images/escaperooms/mission3.avif",
-          "./images/escaperooms/mission4.avif",
-          "./images/escaperooms/mission5.avif",
-      ]
-
-
-      
+        rooms: [
+          { photo: "./images/escaperooms/mission1.avif", name: "Operation: End of Days" },
+          { photo: "./images/escaperooms/mission2.avif", name: "Escape the Darkest Hour" },
+          { photo: "./images/escaperooms/mission3.avif", name: "Escape the Hydeout" },
+          { photo: "./images/escaperooms/mission4.avif", name: "Ultimate Bank Heist" },
+          { photo: "./images/escaperooms/mission5.avif", name: "Escape the Nemesis" }
+        ]
       },
       {
         lat: 37.8302581228411,
@@ -186,35 +156,34 @@ position: absolute;
         size: 0.01,
         color: "red",
         name: "Trivium Games",
-        description: "Ghost Patrol, Ghost Patrol* Ghost Patrol*",
-        photos: [
-          "./images/escaperooms/trivium1.avif",
-          "./images/escaperooms/trivium2.avif",
-          "./images/escaperooms/trivium3.avif",
+        rooms: [
+          { photo: "./images/escaperooms/trivium1.avif", name: "Ghost Patrol" },
+          { photo: "./images/escaperooms/trivium2.avif", name: "Ghost Patrol" },
+          { photo: "./images/escaperooms/trivium3.avif", name: "Ghost Patrol" }
       ]
-
-
-      
       },
-    //   {
-    //     lat: 35.68,
-    //     lng: 139.69,
-    //     size: 0.3,
-    //     color: "cyan",
-    //     label: "Tokyo"
-    //   }
+      {
+        lat: 33.6762402714731,
+        lng: -111.9654508795286,
+        size: 0.01,
+        color: "red",
+        name: "The Nemesis Club",
+        rooms: [
+          { photo: "./images/escaperooms/nemesis1.avif", name: "Mogollon Monster" },
+          { photo: "./images/escaperooms/nemesis2.avif", name: "EVIL Robots" }
+      ]
+      },
+      {
+        lat: 40.76314055001625, 
+        lng: -111.89444665300861,
+        size: 0.01,
+        color: "red",
+        name: "Himitsu Station",
+        rooms: [
+          { photo: "./images/escaperooms/himitsu1.avif", name: "The Forgotten Markets" }
+      ]
+      },
     ];
-
-    // // Arc between locations
-    // const arcs = [
-    //   {
-    //     startLat: 34.05,
-    //     startLng: -118.24,
-    //     endLat: 35.68,
-    //     endLng: 139.69,
-    //     color: ["orange", "yellow"]
-    //   }
-    // ];
 
     // Create globe
     const globe = Globe()
@@ -223,39 +192,12 @@ position: absolute;
     // Globe appearance
     globe
       .globeImageUrl('images/earth-dark.avif')
-    //   .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png")
       .backgroundImageUrl("images/night-sky.avif")
+      .polygonsTransitionDuration(0)
 
       // Load country polygons
       .polygonsData([])
 
-    // fetch("https://unpkg.com/world-atlas/countries-110m.json")
-    // fetch("assets/countries-110m.json")
-    //   .then(res => res.json())
-    //   .then(worldData => {
-
-    //     // Convert topojson -> geojson
-    //     const countries = topojson.feature(
-    //       worldData,
-    //       worldData.objects.countries
-    //     ).features;
-    
-    // globe
-    //     .polygonsData(countries)
-
-    //     .polygonCapColor(() => "rgba(0,0,0,0)")
-
-    //               .polygonSideColor(() => "rgba(0,0,0,0)")
-    //       .polygonStrokeColor(() => "#ffffff")
-
-    //       // Thin outlines
-    //       .polygonAltitude(0.003)
-    //  });
-
-    // --------------------
-// 1. COUNTRIES LAYER
-// --------------------
-// fetch("assets/countries-110m.json")
 fetch("assets/map.json")
   .then(res => res.json())
   .then(world => {
@@ -275,91 +217,30 @@ fetch("assets/map.json")
         .polygonAltitude(0.001);
   });
 
-// // --------------------
-// // 2. US STATES LAYER
-// // --------------------
-// fetch("assets/states-10m.json")
-//   .then(res => res.json())
-//   .then(us => {
-//     const states = topojson.feature(
-//       us,
-//       us.objects.states
-//     ).features;
-
-//     globe
-//       .polygonsData([
-//         ...(globe.polygonsData() || []),
-//         ...states
-//       ])
-
-//       // Style states differently
-//       .polygonCapColor(d =>
-//         d.properties && d.properties.name
-//           ? "rgba(0,0,0,0)"
-//           : "rgba(0,0,0,0)"
-//       )
-//       .polygonStrokeColor(d =>
-//         d.properties && d.properties.name
-//           ? "#808080" // states white
-//           : "#444"
-//       );
-//   });
-
      const infoBox = document.getElementById("infoBox")
 
-     globe
-      // Atmosphere
-      .showGlobe(true)
-      .showAtmosphere(false)
-    //   .atmosphereColor("lightskyblue")
-      .atmosphereAltitude(0.15)
+globe
+  // Atmosphere
+  .showGlobe(true)
+  .showAtmosphere(false)
+  .atmosphereAltitude(0.15)
 
-    //   // Points
-      .pointsData(locations)
-      .pointLat(d => d.lat)
-      .pointLng(d => d.lng)
-      .pointAltitude(0.01)
-      .pointColor(d => d.color)
-      .pointRadius(d => d.size)
-        .pointLabel(d => `
-          <b>${d.name}</b><br/>
-          ${d.description}
-        `)
+  // Points
+  .pointsData(locations)
+  .pointLat(d => d.lat)
+  .pointLng(d => d.lng)
+  .pointAltitude(0.01)
+  .pointColor(d => d.color)
+  .pointRadius(d => d.size)
+  .pointLabel(d => `
+  <b>${d.name}</b>
+  `)
 
-          // Click handler
-          // 
-          
-// infoBox.style.opacity = "1";
-// infoBox.style.visibility = "visible";
 
 let emblaApi = null;
 
-requestAnimationFrame(() => {
-
-  if (emblaApi) {
-    emblaApi.destroy();
-  }
-
-  const emblaNode =
-    infoBox.querySelector(".embla__viewport");
-
-emblaApi = EmblaCarousel(
-  emblaNode,
-  { loop: true },
-
-  [
-    EmblaCarouselAutoplay({
-      delay: 1000
-    })
-  ]
-);
-})
 
 
-
-const emblaNode = document.querySelector('.embla')
-
-const embla = EmblaCarousel(emblaNode,{duration:60})
 
 globe.onPointClick(point => {
 
@@ -372,25 +253,39 @@ infoBox.style.visibility = "visible";
 const infoBoxTitle = document.getElementById("infoBoxTitle");
 infoBoxTitle.innerHTML = `<h2>${point.name}</h2>`
 
-const emblaSlides = document.getElementById("embla_slides");
-const descr = document.getElementById("descr");
+void infoBox.offsetWidth;
 
-const slidesHTML = point.photos.map(photo => `
-  <div class="embla__slide"><img class="embla__slide__img" src="${photo}"></div>
+const emblaSlides = document.getElementById("embla_slides");
+
+const slidesHTML = point.rooms.map(room => `
+  <div class="embla__slide"><img class="embla__slide__img" src="${room.photo}" width="600"></div>
 `).join("");
 
 emblaSlides.innerHTML = `${slidesHTML}`
-// descr.innerHTML = `${point.description}`
+
 
 requestAnimationFrame(() => {
+    if (emblaApi) {
+    emblaApi.destroy();
+  }
+  void document.querySelector('.embla').offsetWidth;
+  const wrapperNode = document.querySelector('.embla')
+  const viewportNode = wrapperNode.querySelector('.embla__viewport')
+  emblaApi = EmblaCarousel(viewportNode, { loop: true,align: 'center',duration: 15 },[
+    EmblaCarouselAutoplay({
+      delay: 1000
+    })
+  ])
+    const updateDesc = () => {
+    const index = emblaApi.selectedScrollSnap();
+    document.querySelector('.embla__slide__desc').innerHTML = `${point.rooms[index].name}`;
+  };
 
-    const emblaNode =
-      infoBox.querySelector(".embla");
-
-    EmblaCarousel(emblaNode);
-
-  })
-
+  // Attach listener before reInit
+  emblaApi.on('select', updateDesc);
+  
+  requestAnimationFrame(() => emblaApi.reInit());updateDesc();
+})
 })
 
 
@@ -400,16 +295,7 @@ requestAnimationFrame(() => {
   infoBox.style.display = "none";
 
 })
-    //   .pointLabel(d => d.label)
-
-    //   // Arcs
-    //   .arcsData(arcs)
-    //   .arcColor(d => d.color)
-    //   .arcDashLength(0.4)
-    //   .arcDashGap(2)
-    //   .arcDashAnimateTime(2000);
-
-    // Camera position
+    // start Camera position
     globe.pointOfView(
       { lat: 34, lng: -118.2, altitude: 0.5 },
       1000
@@ -423,13 +309,13 @@ globe.globeMaterial(
   })
 );
 
+
 globe.pointsTransitionDuration(0);
 
 function updatePointSize() {
 
   const altitude = globe.pointOfView().altitude;
-
-let size = Math.sqrt(altitude) * 0.08;
+  let size = Math.sqrt(altitude) * 0.08;
 
   size = Math.max(0.01, size);
   size = Math.min(0.1, size);
@@ -437,12 +323,18 @@ let size = Math.sqrt(altitude) * 0.08;
   globe.pointRadius(size);
 }
 
-updatePointSize();
-
-globe.controls().addEventListener("change", updatePointSize);
+let rafPending = false;
+globe.controls().addEventListener("change", () => {
+  if (!rafPending) {
+    rafPending = true;
+    requestAnimationFrame(() => {
+      updatePointSize();
+      rafPending = false;
+    });
+  }
+});
 
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script type="module" src="scripts/map.js"></script>
+  
 </body>
 </html>
