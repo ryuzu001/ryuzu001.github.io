@@ -1,0 +1,202 @@
+
+<style>
+  .scale-wrap { padding: 1.5rem 0; max-width: 680px; }
+  .controls { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 2rem; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 13px; color: var(--color-text-secondary); }
+  .grade-btn { padding: 8px 20px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); background: var(--color-background-primary); color: var(--color-text-secondary); cursor: pointer; font-size: 14px; transition: all 0.15s; }
+  .grade-btn.active { background: #185FA5; border-color: #185FA5; color: #E6F1FB; font-weight: 500; }
+  .grade-btn:hover:not(.active) { background: var(--color-background-secondary); }
+  .ok-btn { padding: 8px 24px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); background: var(--color-background-primary); color: var(--color-text-primary); cursor: pointer; font-size: 14px; }
+  .ok-btn:hover { background: var(--color-background-secondary); }
+  .ok-btn:active { transform: scale(0.98); }
+  .viz { display: flex; gap: 40px; align-items: flex-start; justify-content: center; padding-top: 0.5rem; }
+  .level-label { display: flex; flex-direction: column; justify-content: space-around; height: 420px; text-align: right; min-width: 70px; }
+  .lv { font-size: 13px; font-weight: 500; display: flex; align-items: center; justify-content: flex-end; }
+  .scale-area { position: relative; width: 60px; }
+  .scale-bar { width: 60px; height: 420px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); overflow: hidden; position: relative; }
+  .seg { position: absolute; width: 100%; left: 0; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; border-top: 0.5px solid var(--color-border-secondary); transition: background 0.3s; }
+  .seg:last-child { border-top: none; }
+  .seg-4 { background: #E6F1FB; color: #0C447C; }
+  .seg-3 { background: #B5D4F4; color: #0C447C; }
+  .seg-2 { background: #85B7EB; color: #042C53; }
+  .seg-1 { background: #378ADD; color: #E6F1FB; }
+  .arrow-area { position: absolute; right: -36px; top: 0; height: 420px; pointer-events: none; }
+  .arrow { position: absolute; right: 0; display: flex; align-items: center; gap: 4px; transition: top 0.5s cubic-bezier(0.34,1.56,0.64,1); opacity: 0; }
+  .arrow.visible { opacity: 1; }
+  .arrow-line { width: 20px; height: 1px; background: #E24B4A; }
+  .arrow-head { width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-right: 8px solid #E24B4A; }
+  .tick-labels { position: absolute; left: -52px; top: 0; height: 420px; pointer-events: none; }
+  .tick { position: absolute; right: 0; font-size: 11px; color: var(--color-text-tertiary); transform: translateY(-50%); white-space: nowrap; }
+  .result-box { margin-top: 1.5rem; text-align: center; padding: 14px 20px; border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); min-height: 52px; }
+  .result-level { font-size: 22px; font-weight: 500; color: var(--color-text-primary); }
+  .result-sub { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; }
+  .error { color: var(--color-text-danger); font-size: 13px; margin-top: 6px; min-height: 18px; }
+  @media (prefers-color-scheme: dark) {
+    .seg-4 { background: #042C53; color: #B5D4F4; }
+    .seg-3 { background: #0C447C; color: #B5D4F4; }
+    .seg-2 { background: #185FA5; color: #E6F1FB; }
+    .seg-1 { background: #378ADD; color: #042C53; }
+  }
+</style>
+
+<h2 class="sr-only">Reading level scale — enter a score to see which level it falls into for 6th or 7th grade.</h2>
+
+<div class="scale-wrap">
+  <div class="controls">
+    <div class="field">
+      <label>Grade level</label>
+      <div style="display:flex;gap:8px;">
+        <button class="grade-btn active" id="btn6" onclick="setGrade(6)">6th grade</button>
+        <button class="grade-btn" id="btn7" onclick="setGrade(7)">7th grade</button>
+      </div>
+    </div>
+    <div class="field">
+      <label>Score</label>
+      <input type="number" id="scoreInput" placeholder="e.g. 2400" style="width:130px;" />
+    </div>
+    <div class="field" style="justify-content:flex-end;">
+      <button class="ok-btn" onclick="evaluate()">OK</button>
+    </div>
+  </div>
+  <div id="error" class="error"></div>
+
+  <div class="viz">
+    <div style="position:relative;">
+      <div class="tick-labels" id="ticks"></div>
+      <div class="scale-bar" id="scaleBar">
+        <div class="seg seg-4" id="seg4"></div>
+        <div class="seg seg-3" id="seg3"></div>
+        <div class="seg seg-2" id="seg2"></div>
+        <div class="seg seg-1" id="seg1"></div>
+      </div>
+      <div class="arrow-area">
+        <div class="arrow" id="arrow">
+          <div class="arrow-head"></div>
+          <div class="arrow-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="level-label" id="levelLabels"></div>
+  </div>
+
+  <div class="result-box" id="resultBox">
+    <div class="result-level" id="resultLevel" style="color:var(--color-text-secondary);font-size:15px;">Enter a score above</div>
+    <div class="result-sub" id="resultSub"></div>
+  </div>
+</div>
+
+<script>
+const GRADES = {
+  6: { min: 2235, max: 2780, segs: [2235, 2472, 2551, 2609, 2780] },
+  7: { min: 2250, max: 2820, segs: [2250, 2483, 2566, 2634, 2820] }
+};
+let currentGrade = 6;
+
+function setGrade(g) {
+  currentGrade = g;
+  document.getElementById('btn6').className = 'grade-btn' + (g===6?' active':'');
+  document.getElementById('btn7').className = 'grade-btn' + (g===7?' active':'');
+  document.getElementById('error').textContent = '';
+  renderScale();
+  clearResult();
+}
+
+function pct(val, min, max) { return (val - min) / (max - min); }
+
+function renderScale() {
+  const g = GRADES[currentGrade];
+  const {min, max, segs} = g;
+  const totalH = 420;
+
+  const bar = document.getElementById('scaleBar');
+  const ticks = document.getElementById('ticks');
+  const labels = document.getElementById('levelLabels');
+
+  const segEls = [
+    document.getElementById('seg1'),
+    document.getElementById('seg2'),
+    document.getElementById('seg3'),
+    document.getElementById('seg4')
+  ];
+
+  for (let i = 0; i < 4; i++) {
+    const bottom = segs[i];
+    const top = segs[i+1];
+    const h = pct(top - bottom, 0, max - min) * totalH;
+    const fromTop = pct(max - top, 0, max - min) * totalH;
+    segEls[i].style.height = h + 'px';
+    segEls[i].style.top = fromTop + 'px';
+    segEls[i].style.position = 'absolute';
+  }
+
+  ticks.innerHTML = '';
+  segs.forEach(v => {
+    const t = document.createElement('div');
+    t.className = 'tick';
+    t.style.top = (pct(max - v, 0, max - min) * totalH) + 'px';
+    t.textContent = v;
+    ticks.appendChild(t);
+  });
+
+  labels.innerHTML = '';
+  for (let i = 3; i >= 0; i--) {
+    const bottom = segs[i];
+    const top = segs[i+1];
+    const midPct = pct(max - (bottom + top)/2, 0, max - min);
+    const lv = document.createElement('div');
+    lv.className = 'lv';
+    lv.style.position = 'absolute';
+    lv.style.top = (midPct * totalH) + 'px';
+    lv.style.transform = 'translateY(-50%)';
+    lv.style.right = '0';
+    lv.textContent = 'Level ' + (i+1);
+    labels.style.position = 'relative';
+    labels.style.height = totalH + 'px';
+    labels.appendChild(lv);
+  }
+}
+
+function clearResult() {
+  document.getElementById('arrow').className = 'arrow';
+  document.getElementById('resultLevel').textContent = 'Enter a score above';
+  document.getElementById('resultLevel').style.color = 'var(--color-text-secondary)';
+  document.getElementById('resultLevel').style.fontSize = '15px';
+  document.getElementById('resultSub').textContent = '';
+}
+
+function evaluate() {
+  const val = parseInt(document.getElementById('scoreInput').value);
+  const g = GRADES[currentGrade];
+  const err = document.getElementById('error');
+  err.textContent = '';
+
+  if (isNaN(val)) { err.textContent = 'Please enter a valid number.'; return; }
+  if (val < g.segs[0] || val > g.segs[4]) {
+    err.textContent = `Score must be between ${g.segs[0]} and ${g.segs[4]} for ${currentGrade}th grade.`;
+    return;
+  }
+
+  let level = 0;
+  for (let i = 0; i < 4; i++) {
+    if (val >= g.segs[i] && val <= g.segs[i+1]) { level = i+1; break; }
+  }
+
+  const totalH = 420;
+  const topPct = pct(g.segs[4] - val, 0, g.segs[4] - g.segs[0]);
+  const arrowTop = topPct * totalH;
+
+  const arrow = document.getElementById('arrow');
+  arrow.style.top = (arrowTop - 5) + 'px';
+  arrow.className = 'arrow visible';
+
+  const lvEl = document.getElementById('resultLevel');
+  lvEl.textContent = 'Level ' + level;
+  lvEl.style.color = 'var(--color-text-primary)';
+  lvEl.style.fontSize = '22px';
+  document.getElementById('resultSub').textContent = `Score ${val} falls in Level ${level} for ${currentGrade}th grade (${g.segs[level-1]}–${g.segs[level]})`;
+}
+
+renderScale();
+</script>
