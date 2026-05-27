@@ -139,6 +139,6 @@ canvas {
 
 #globeViz canvas {
   -webkit-tap-highlight-color: transparent;
-
+touch-action: pinch-zoom;
   outline: none;
 }
