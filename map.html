@@ -178,6 +178,28 @@ position: absolute;
           { photo: "./images/escaperooms/himitsu1.avif", name: "The Forgotten Markets" }
       ]
       },
+      {
+        lat: 40.74196815934961, 
+        lng: -111.90179454137224,
+        size: 0.01,
+        color: "red",
+        name: "Escape on 13th",
+        rooms: [
+          { photo: "./images/escaperooms/on13th_1.avif", name: "Arcadia" },
+          { photo: "./images/escaperooms/on13th_2.avif", name: "Species Unknown" }
+      ]
+      },
+      {
+        lat: 45.534979434669424,
+        lng: -122.62076148983225,
+        size: 0.01,
+        color: "red",
+        name: "In Search of An Exit",
+        rooms: [
+          { photo: "./images/escaperooms/insearch1.avif", name: "Lombino's Casino" },
+          { photo: "./images/escaperooms/insearch2.avif", name: "Operation Gryaznayavoda" }
+      ]
+      },
     ];
 
     // Create globe
@@ -200,7 +222,7 @@ globe.globeMaterial(
       // Load country polygons
       .polygonsData([])
 
-fetch("assets/map.json")
+fetch("assets/map122.json")
   .then(res => res.json())
   .then(world => {
     const countries = topojson.feature(
