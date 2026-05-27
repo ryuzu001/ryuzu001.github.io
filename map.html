@@ -8,11 +8,11 @@
 
     <!-- Load Libraries -->
 
-    <!-- Also load GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/embla-carousel@8.6.0/embla-carousel.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+
+<script src="https://unpkg.com/globe.gl"></script><script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
     <!-- Adjust CSS -->
     <link rel="stylesheet" href="stylesheets/map.css">
 
@@ -113,11 +113,6 @@ position: absolute;
 
 
 </div>
-
-  <!-- Globe.gl -->
-  <script src="https://unpkg.com/globe.gl"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
-
   <script>
 
     // Sample locations
@@ -189,6 +184,13 @@ position: absolute;
     const globe = Globe()
       (document.getElementById("globeViz"));
 
+globe.globeMaterial(
+  new THREE.MeshBasicMaterial({
+    color: "#000000",
+    transparent: true,
+    opacity: 0.9
+  })
+);
     // Globe appearance
     globe
       .globeImageUrl('images/earth-dark.avif')
@@ -258,7 +260,7 @@ void infoBox.offsetWidth;
 const emblaSlides = document.getElementById("embla_slides");
 
 const slidesHTML = point.rooms.map(room => `
-  <div class="embla__slide"><img class="embla__slide__img" src="${room.photo}" width="600"></div>
+  <div class="embla__slide"><img class="embla__slide__img" src="${room.photo}" loading="lazy"></div>
 `).join("");
 
 emblaSlides.innerHTML = `${slidesHTML}`
@@ -301,13 +303,7 @@ requestAnimationFrame(() => {
       1000
     );
 
-globe.globeMaterial(
-  new THREE.MeshBasicMaterial({
-    color: "#000000",
-    transparent: true,
-    opacity: 0.9
-  })
-);
+
 
 
 globe.pointsTransitionDuration(0);
