@@ -140,7 +140,5 @@ canvas {
 #globeViz canvas {
   -webkit-tap-highlight-color: transparent;
 
-  touch-action: manipulation;
-
   outline: none;
 }
