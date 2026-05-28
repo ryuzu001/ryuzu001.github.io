@@ -11,6 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/embla-carousel@8.6.0/embla-carousel.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+<script src="scripts/rooms.js"></script>
 
 <script src="https://unpkg.com/globe.gl"></script><script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
     <!-- Adjust CSS -->
@@ -92,21 +93,72 @@ position: absolute;
       font-size: 24px;
       font-weight: bold;
     }
+
+#loadingScreen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease;
+}
+
+#loadingScreen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#loadingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255,255,255,0.2);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+
   </style>
   
 </head>
 
 <body>
+
+<div id="loadingScreen">
+  <div id="loadingContent">
+    <div id="loadingSpinner"></div>
+    <div id="loadingText">Loading...</div>
+  </div>
+</div>
+
+
   <div class="title"></div>
   <div id="globeViz"></div>
   <div id="infoBox">
     <div id="infoBoxTitle"></div>
     <div class="embla">
+      <a id="link" href="" target="_blank">
       <div class="embla__viewport">
         <div class="embla__container" id="embla_slides">
-
         </div>
       </div>
+      </a>
       <div class="embla__slide__desc"></div>
     </div>
 </div>
@@ -114,97 +166,11 @@ position: absolute;
 
 </div>
   <script>
-
-    // Sample locations
-    const locations = [
-      {
-        lat: 34.03929054041106, 
-        lng: -118.32032562275671,
-        size: 0.01,
-        color: "red",
-        name: "Hatch Escapes",
-        rooms: [ 
-          { photo: "./images/escaperooms/hatch1.avif", name: "Lab Rat" },
-          { photo: "./images/escaperooms/hatch2.avif", name: "Lab Rat" },
-          { photo: "./images/escaperooms/hatch3.avif", name: "The Nest" },
-          { photo: "./images/escaperooms/hatch4.avif", name: "The Ladder" },
-          { photo: "./images/escaperooms/hatch5.avif", name: "The Nest" }
-        ]
-      },
-      {
-        lat: 33.805306388301986, 
-        lng: -117.91176992339383,
-        size: 0.01,
-        color: "red",
-        name: "Mission Escape Games",
-        rooms: [
-          { photo: "./images/escaperooms/mission1.avif", name: "Operation: End of Days" },
-          { photo: "./images/escaperooms/mission2.avif", name: "Escape the Darkest Hour" },
-          { photo: "./images/escaperooms/mission3.avif", name: "Escape the Hydeout" },
-          { photo: "./images/escaperooms/mission4.avif", name: "Ultimate Bank Heist" },
-          { photo: "./images/escaperooms/mission5.avif", name: "Escape the Nemesis" }
-        ]
-      },
-      {
-        lat: 37.8302581228411,
-        lng: -122.27935550417024,
-        size: 0.01,
-        color: "red",
-        name: "Trivium Games",
-        rooms: [
-          { photo: "./images/escaperooms/trivium1.avif", name: "Ghost Patrol" },
-          { photo: "./images/escaperooms/trivium2.avif", name: "Ghost Patrol" },
-          { photo: "./images/escaperooms/trivium3.avif", name: "Ghost Patrol" }
-      ]
-      },
-      {
-        lat: 33.6762402714731,
-        lng: -111.9654508795286,
-        size: 0.01,
-        color: "red",
-        name: "The Nemesis Club",
-        rooms: [
-          { photo: "./images/escaperooms/nemesis1.avif", name: "Mogollon Monster" },
-          { photo: "./images/escaperooms/nemesis2.avif", name: "EVIL Robots" }
-      ]
-      },
-      {
-        lat: 40.76314055001625, 
-        lng: -111.89444665300861,
-        size: 0.01,
-        color: "red",
-        name: "Himitsu Station",
-        rooms: [
-          { photo: "./images/escaperooms/himitsu1.avif", name: "The Forgotten Markets" }
-      ]
-      },
-      {
-        lat: 40.74196815934961, 
-        lng: -111.90179454137224,
-        size: 0.01,
-        color: "red",
-        name: "Escape on 13th",
-        rooms: [
-          { photo: "./images/escaperooms/on13th_1.avif", name: "Arcadia" },
-          { photo: "./images/escaperooms/on13th_2.avif", name: "Species Unknown" }
-      ]
-      },
-      {
-        lat: 45.534979434669424,
-        lng: -122.62076148983225,
-        size: 0.01,
-        color: "red",
-        name: "In Search of An Exit",
-        rooms: [
-          { photo: "./images/escaperooms/insearch1.avif", name: "Lombino's Casino" },
-          { photo: "./images/escaperooms/insearch2.avif", name: "Operation Gryaznayavoda" }
-      ]
-      },
-    ];
-
     // Create globe
     const globe = Globe()
       (document.getElementById("globeViz"));
+
+
 
 globe.globeMaterial(
   new THREE.MeshBasicMaterial({
@@ -222,7 +188,7 @@ globe.globeMaterial(
       // Load country polygons
       .polygonsData([])
 
-fetch("assets/map122.json")
+const mapReady = fetch("assets/map122.json")
   .then(res => res.json())
   .then(world => {
     const countries = topojson.feature(
@@ -235,7 +201,7 @@ fetch("assets/map122.json")
   .polygonCapColor("rgba(0,0,0,0.5)"
 )
 
-  .polygonStrokeColor(() => "#ffffff"
+  .polygonStrokeColor(() => "#666666"
   )
 .polygonSideColor(() => "rgba(0,0,0,0)")
         .polygonAltitude(0.001);
@@ -250,7 +216,7 @@ globe
   .atmosphereAltitude(0.15)
 
   // Points
-  .pointsData(locations)
+  .pointsData(rooms)
   .pointLat(d => d.lat)
   .pointLng(d => d.lng)
   .pointAltitude(0.01)
@@ -282,10 +248,12 @@ void infoBox.offsetWidth;
 const emblaSlides = document.getElementById("embla_slides");
 
 const slidesHTML = point.rooms.map(room => `
-  <div class="embla__slide"><img class="embla__slide__img" src="${room.photo}" loading="lazy"></div>
+  <div class="embla__slide"><img class="embla__slide__img" src="./images/escaperooms/${room.photo}.avif" loading="lazy"></div>
 `).join("");
 
 emblaSlides.innerHTML = `${slidesHTML}`
+
+document.getElementById("link").href = `escaperooms?search=${point.name}`
 
 
 requestAnimationFrame(() => {
@@ -297,7 +265,7 @@ requestAnimationFrame(() => {
   const viewportNode = wrapperNode.querySelector('.embla__viewport')
   emblaApi = EmblaCarousel(viewportNode, { loop: true,align: 'center',duration: 15 },[
     EmblaCarouselAutoplay({
-      delay: 1000
+      delay: 1000, stopOnInteraction: false
     })
   ])
     const updateDesc = () => {
@@ -310,6 +278,7 @@ requestAnimationFrame(() => {
   
   requestAnimationFrame(() => emblaApi.reInit());updateDesc();
 })
+
 })
 
 
@@ -319,11 +288,7 @@ requestAnimationFrame(() => {
   infoBox.style.display = "none";
 
 })
-    // start Camera position
-    globe.pointOfView(
-      { lat: 34, lng: -118.2, altitude: 0.5 },
-      1000
-    );
+
 
 
 
@@ -352,6 +317,31 @@ globe.controls().addEventListener("change", () => {
   }
 });
 
+
+const loadingScreen = document.getElementById("loadingScreen");
+
+const dismissLoader = () => {
+  loadingScreen.classList.add("fade-out");
+  loadingScreen.addEventListener("transitionend", () => {
+    loadingScreen.remove();
+  }, { once: true });
+};
+
+
+
+// Globe ready callback wrapped in a promise
+const globeReady = new Promise(resolve => globe.onGlobeReady(resolve));
+
+
+
+// Dismiss loader when both resolve
+Promise.all([mapReady, globeReady]).then(dismissLoader);
+
+    // start Camera position
+    globe.pointOfView(
+      { lat: 34, lng: -118.2, altitude: 0.3 },
+      2300
+    );
   </script>
   
 </body>
