@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="scripts/jquery-3.7.0.min.js"></script>
 <script src="scripts/jquery.simpleLoadMore.js"></script>
 <script>
 function searchRooms() {
@@ -29,6 +29,15 @@ document.addEventListener('keydown', function(event) {
     closeKeyboard();
   }
 });
+
+function searchFromURL() {
+    const nameValue = new URLSearchParams(window.location.search).get('search');
+
+    if (nameValue) {
+        document.getElementById("Search").value = nameValue;
+        searchRooms();
+    }
+}
 
 </script>
 <html lang="en-US">
@@ -7362,6 +7371,8 @@ document.addEventListener('keydown', function(event) {
     </main>
 </html>
 
-
+<script>
+searchFromURL()
+</script>
 
 

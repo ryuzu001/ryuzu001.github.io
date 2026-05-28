@@ -1,10 +1,7 @@
 /* Based off Bootstrap v4.4.1 (https://getbootstrap.com/) */
 .jumbotron{padding:2rem 1rem;margin-bottom:2rem;background-color:#e9ecef;border-radius:.3rem}.text-center{text-align:center!important}.pj{padding-top:1.5rem!important;padding-bottom:0.3rem!important;margin-bottom:0!important}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media(min-width:576px){.container{max-width:540px}}@media(min-width:768px){.container{max-width:720px}}@media(min-width:992px){.container{max-width:960px}}@media(min-width:1200px){.container{max-width:1140px}}
 .lead{line-height:1em;font-size:1.25rem;font-weight:300}.text-muted{color:#525252!important}.py-5{padding-top:3rem!important;padding-bottom:3rem!important}.bg-light{background-color:#f8f9fa!important}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}
-@media (min-width:768px)
-{.col-md-3{-ms-flex:0,0,25%;flex:0,0,25%;max-width:25%!important}
-.col-md-4{-ms-flex:0,0,33.333333%;flex:0,0,33.333333%;max-width:33.333333%}
-}
+@media (min-width:768px){.col-md-3{-ms-flex:0,0,25%;flex:0,0,25%;max-width:25%!important}.col-md-4{-ms-flex:0,0,33.333333%;flex:0,0,33.333333%;max-width:33.333333%}}
 .card{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}
 .mb-4,.my-4{margin-bottom:1.5rem!important}
 .shadow-sm{box-shadow:0 .125rem .25rem rgba(0,0,0,.075)!important}
@@ -26,9 +23,7 @@ a{text-decoration: none;}
 .col-md-3,.col-md-4{position:relative;width:100%;padding-right:15px;padding-left:15px}
 .col-md-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:100%}
 #Search {border: 3px solid #ddd; padding: 6px 10px; outline: none;transition: 0.5s;}
-#Search:focus {
-    border: 3px solid #555;
-  }
+#Search:focus {border: 3px solid #555;  }
 .gold-text {color:transparent;font-size: 0;}
 .ar-338{width:100%; aspect-ratio:600/338;}
 .ar-361{width:100%; aspect-ratio:600/361;}
