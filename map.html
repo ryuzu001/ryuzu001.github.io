@@ -248,10 +248,8 @@ void infoBox.offsetWidth;
 const emblaSlides = document.getElementById("embla_slides");
 
 const slidesHTML = point.rooms.map((room, i) => {
-
-  slide=`<div class="embla__slide"><img class="embla__slide__img" loading="lazy" src="./images/escaperooms/${point.photoname}`
   index=room.index ? `${room.index}` : `${i+1}`
-  return slide+index+`.avif" ></div>`
+  return `<div class="embla__slide"><img class="embla__slide__img" loading="lazy" src="./images/escaperooms/${point.photoname}`+index+`.avif" ></div>`
 }).join("");
 
 emblaSlides.innerHTML = `${slidesHTML}`
