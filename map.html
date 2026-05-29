@@ -220,8 +220,8 @@ globe
   .pointLat(d => d.lat)
   .pointLng(d => d.lng)
   .pointAltitude(0.01)
-  .pointColor(d => d.color)
-  .pointRadius(d => d.size)
+  .pointColor(() => 'red')
+  .pointRadius(0.01)
   .pointLabel(d => `
   <b>${d.name}</b>
   `)
@@ -247,9 +247,12 @@ void infoBox.offsetWidth;
 
 const emblaSlides = document.getElementById("embla_slides");
 
-const slidesHTML = point.rooms.map(room => `
-  <div class="embla__slide"><img class="embla__slide__img" src="./images/escaperooms/${room.photo}.avif" loading="lazy"></div>
-`).join("");
+const slidesHTML = point.rooms.map((room, i) => {
+
+  slide=`<div class="embla__slide"><img class="embla__slide__img" loading="lazy" src="./images/escaperooms/${point.photoname}`
+  index=room.index ? `${room.index}` : `${i+1}`
+  return slide+index+`.avif" ></div>`
+}).join("");
 
 emblaSlides.innerHTML = `${slidesHTML}`
 
@@ -269,8 +272,7 @@ requestAnimationFrame(() => {
     })
   ])
     const updateDesc = () => {
-    const index = emblaApi.selectedScrollSnap();
-    document.querySelector('.embla__slide__desc').innerHTML = `${point.rooms[index].name}`;
+    document.querySelector('.embla__slide__desc').innerHTML = `${point.rooms[emblaApi.selectedScrollSnap()].name}`;
   };
 
   // Attach listener before reInit
