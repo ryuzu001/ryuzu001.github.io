@@ -24,6 +24,170 @@ const rooms = [
     ]
   },
   {
+    name: "60 to Escape",
+    lat: 42.39157489044134, 
+    lng: -87.95835047116668,
+    photoname: "62_",
+    rooms: [
+      { name:"Blast from the Past", index:6 },
+      { name:"Museum Heist", index:7 },
+      { name:"Containment", index:8 },
+      { name:"Duke's Farm", index:9 },
+      { name:"Hidden Temple", index:10 }
+    ]
+  },
+  {
+    name: "60 to Escape",
+    lat: 42.94929211156928,
+    lng: -88.0046402252281,
+    photoname: "62_",
+    rooms: [
+      { name:"INVASION!", index:12 }
+    ]
+  },
+  // melrose
+  {
+    name: "60out",
+    lat: 34.08330181419082,
+    lng: -118.34818307238706,
+    photoname: "60out_",
+    rooms: [
+      { name:"Jumanji: Welcome to the Jungle" }
+    ]
+  },
+  // ktown
+  {
+    name: "60out",
+    lat: 34.072030193497724,
+    lng: -118.30929976259493,
+    photoname: "60out_",
+    rooms: [
+      { name:"Turing Test", index:2 }
+    ]
+  },
+  // hhla
+  {
+    name: "60out",
+    lat: 33.97756254348784,
+    lng: -118.39112081919366,
+    photoname: "60out_",
+    rooms: [
+      { name:"Hotel on Route 66", index:3 },
+      { name:"The Smurfs", index:4 },
+      { name:"Godzilla vs. Kong", index:5 },
+      { name:"Titanic", index:6 }
+    ]
+  },
+  // hollywood
+  {
+    name: "60out",
+    lat: 34.09543182533093,
+    lng: -118.30902156692697,
+    photoname: "60out_",
+    rooms: [
+      { name:"Wizard's Treasure", index:7 },
+      { name:"Big Brain Labs", index:9 }
+    ]
+  },
+  // silver lake
+  {
+    name: "60out",
+    lat: 34.06728216619852,
+    lng: -118.25561734048456,
+    photoname: "60out_",
+    rooms: [
+      { name:"Case '93", index:8 }
+    ]
+  },
+  {
+    name: "Abduction",
+    lat: 43.25795674486781,
+    lng: -2.933984060326666,
+    photoname: "blue",
+    rooms: [
+      { name:"Abduction 3: The Exam" }
+    ]
+  },
+  {
+    name: "Appleseed Avenue",
+    lat: 34.37906617325972,
+    lng: -118.545165387459,
+    photoname: "appleseed",
+    rooms: [
+      { name:"Election Day" }
+    ]
+  },
+  {
+    name: "Arcane Escape Room",
+    lat: 34.37902946154018,
+    lng: -118.54515372880611,
+    photoname: "arcane",
+    rooms: [
+      { name:"The Hideout" },
+      { name:"The Ghost of Mentryville" }
+    ]
+  },
+  {
+    name: "Arcanum",
+    lat: 41.430430657358116,
+    lng: 1.7856098562015057,
+    photoname: "arcanum",
+    rooms: [
+      { name:"The Possession" }
+    ]
+  },
+  {
+    name: "Atrium Mortis",
+    lat: 50.99996966503671,
+    lng: 4.141436623251342,
+    photoname: "atrium",
+    rooms: [
+      { name:"In Flander's Field" }
+    ]
+  },
+  {
+    name: "Back in Time",
+    lat: 33.8101415610792,
+    lng: -118.30802706468371,
+    photoname: "backintime",
+    rooms: [
+      { name:"Inside Area 51" },
+      { name:"The Sword of Hattori Hanzo", svg:1 },
+      { name:"Salem Witch Hunt" }
+    ]
+  },
+  {
+    name: "Back in Time",
+    lat: 33.84114808937347,
+    lng: -118.2895763730477,
+    photoname: "backintime",
+    rooms: [
+      { name:"Blackbeard's Lost Treasure", index:4 },
+      { name:"The Vampire Slayers", index:5 },
+      { name:"Special Ops: Fate of Agent Smith", index:8 }
+    ]
+  },
+  {
+    name: "Back in Time",
+    lat: 33.82921240315172,
+    lng: -118.34967175844896,
+    photoname: "backintime",
+    rooms: [
+      { name:"Wanted: Dead or Alive?", index:6 },
+      { name:"Operation: Santa's List", index:7 },
+      { name:"Cabin 13", index:9 }
+    ]
+  },
+  {
+    name: "Baker Street Escapes",
+    lat: 35.47588483144888,
+    lng: -97.51262440675654,
+    photoname: "bakerstreet",
+    rooms: [
+      { name:"The Time Travelers"}
+    ]
+  },
+  {
     name: "Cityscape Games",
     lat: 47.20715775723151,
     lng: -122.48262601897335,
@@ -164,16 +328,6 @@ const rooms = [
 ]
 
 
-// 303 Escape
-// 60 to Escape
-// 60out
-// Abduction
-// Appleseed Avenue
-// Arcane Escape Room
-// Arcanum
-// Atrium Mortis
-// Back in Time
-// Baker Street Escapes
 // Bite The Fly
 // Black Lake Escape Room
 // Boss Play
