@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Escape Map</title>
-  
+
 
     <!-- Load Libraries -->
 
@@ -135,7 +135,7 @@ position: absolute;
 
 
   </style>
-  
+
 </head>
 
 <body>
@@ -248,10 +248,15 @@ void infoBox.offsetWidth;
 const emblaSlides = document.getElementById("embla_slides");
 
 const slidesHTML = point.rooms.map((room, i) => {
-  index=room.index ? `${room.index}` : `${i+1}`
-  return room.svg ? `<div class="embla__slide"><svg width="100%" height="100%"><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#eceeef">No picture</text></svg></div>`
-  : 
-  `<div class="embla__slide"><img class="embla__slide__img" loading="lazy" src="./images/escaperooms/${point.photoname}`+index+`.avif"></div>`
+  var emblaslide = `<div class="embla__slide">`;
+  const index = room.index ?? (i + 1);
+
+  if (room.svg) emblaslide+=`<svg width="100%" height="100%"><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#eceeef">No picture</text></svg>`;
+  else if (room.webm) emblaslide+=`<video width="100%" autoplay loop muted playsinline><source src="./images/escaperooms/${point.photoname}${index}.webm"></video>`;
+  else emblaslide+=`<img class="embla__slide__img" loading="lazy" src="./images/escaperooms/${point.photoname}${index}.avif">`;
+
+  emblaslide+=`</div>`;
+  return emblaslide;
 }).join("");
 
 emblaSlides.innerHTML = `${slidesHTML}`
@@ -277,7 +282,7 @@ requestAnimationFrame(() => {
 
   // Attach listener before reInit
   emblaApi.on('select', updateDesc);
-  
+
   requestAnimationFrame(() => emblaApi.reInit());updateDesc();
 })
 
@@ -345,6 +350,6 @@ Promise.all([mapReady, globeReady]).then(dismissLoader);
       2300
     );
   </script>
-  
+
 </body>
 </html>
