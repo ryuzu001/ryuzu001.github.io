@@ -1,7 +1,7 @@
 const rooms = [
   {
     name: "303 Escape",
-    lat: 39.857120087493335, 
+    lat: 39.857120087493335,
     lng: -104.99476994404374,
     photoname: "303_",
     rooms: [
@@ -11,7 +11,7 @@ const rooms = [
   },
   {
     name: "60 to Escape",
-    lat: 42.04647380178185, 
+    lat: 42.04647380178185,
     lng: -88.03721495633631,
     photoname: "62_",
     rooms: [
@@ -25,7 +25,7 @@ const rooms = [
   },
   {
     name: "60 to Escape",
-    lat: 42.39157489044134, 
+    lat: 42.39157489044134,
     lng: -87.95835047116668,
     photoname: "62_",
     rooms: [
@@ -184,7 +184,107 @@ const rooms = [
     lng: -97.51262440675654,
     photoname: "bakerstreet",
     rooms: [
-      { name:"The Time Travelers"}
+      { name:"The Time Travelers" }
+    ]
+  },
+  {
+    name: "Bite The Fly",
+    lat: 40.379539296591965,
+    lng: -3.628728443019064,
+    photoname: "btf",
+    rooms: [
+      { name:"Bites Motel" },
+      { name:"Tao Room Escape: Japanese Massage Parlor" }
+    ]
+  },
+  {
+    name: "Black Lake Escape Room",
+    lat: 40.549393310676045,
+    lng: -3.628649771437778,
+    photoname: "blacklake",
+    rooms: [
+      { name:"The Bride" },
+    ]
+  },
+  {
+    name: "Boss Play",
+    lat: 33.18609463123403,
+    lng: -117.32731670121001,
+    photoname: "bossplay",
+    rooms: [
+      { name:"Prohibition Ransom" },
+      { name:"Chocolate Factory" }
+    ]
+  },
+  {
+    name: "Boxaroo",
+    lat: 42.3593240861043,
+    lng: -71.05902854441122,
+    photoname: "boxaroo",
+    rooms: [
+      { name:"The Storyteller's Secret" }
+    ]
+  },
+  {
+    name: "Brain Games",
+    lat: 33.73577692436871,
+    lng: -118.29360960040654,
+    photoname: "braingames",
+    rooms: [
+      { name:"Treasure Island" },
+      { name:"20 Ghosts [of Christmas]" },
+      { name:"Flynn's Arcade" }
+    ]
+  },
+  {
+    name: "Breaking Point Escape Rooms",
+    lat: 34.108724696635505,
+    lng: -117.57358680095075,
+    photoname: "breakingpoint",
+    rooms: [
+      { name:"The Secret of Whitmore Estate" },
+      { name:"Headcase" },
+      { name:"Christmas: Help Wanted" },
+      { name:"The Crystal Cave" }
+    ]
+  },
+  {
+    name: "Breakout Waikiki",
+    lat: 21.2791756690241,
+    lng: -157.83070915844297,
+    photoname: "breakout",
+    rooms: [
+      { name:"Armory Ambush" }
+    ]
+  },
+  {
+    name: "Can Bruna",
+    lat: 41.348174941880686,
+    lng: 1.7045921864807403,
+    photoname: "canbruna",
+    rooms: [
+      { name:"Cellular Odyssey" }
+    ]
+  },
+  {
+    name: "Chambers Escape Games",
+    lat: 21.3027238690949,
+    lng: -157.8604001716374,
+    photoname: "chambers",
+    rooms: [
+      { name:"The Temple" }
+    ]
+  },
+  {
+    name: "Cinema Escape Room",
+    lat: 33.80254248556098,
+    lng: -118.057605701221,
+    photoname: "cinema",
+    rooms: [
+      { name:"Ark of the Covenant" },
+      { name:"Office Escape" },
+      { name:"Strange Thing" },
+      { name:"Home All Alone" }
     ]
   },
   {
@@ -195,6 +295,67 @@ const rooms = [
     rooms: [
       { name:"Zookeeper" },
       { name:"Rockstar" }
+    ]
+  },
+  {
+    name: "Cloud Escape",
+    lat: 33.86042474578805,
+    lng: -117.78771781352232,
+    photoname: "cloudescape",
+    rooms: [
+      { name:"Edeline" },
+      { name:"Cold Case" }
+    ]
+  },
+  {
+    name: "Code 258 Escape Room",
+    lat: 40.279304287759714,
+    lng: -3.7940625010664646,
+    photoname: "code258_",
+    rooms: [
+      { name:"The Wine Cellar" }
+    ]
+  },
+  {
+    name: "Colors Escape Room",
+    lat: 40.43612574745829,
+    lng: -3.645692297170522,
+    photoname: "colors",
+    rooms: [
+      { name:"The Mine" }
+    ]
+  },
+  {
+    name: "Confusion Escapes",
+    lat: 34.062571857808095,
+    lng: -117.28096614267346,
+    photoname: "confusion",
+    rooms: [
+      { name:"The Treehouse" },
+      { name:"The Last Job" },
+      { name:"The Treehouse [Christmas Rescue]" },
+      { name:"45 Lampkin Lane" },
+      { name:"Undercooked - Kitchen Chaos" },
+      { name:"A.R.I" }
+    ]
+  },
+  {
+    name: "Conundrum Escape Rooms",
+    lat: 39.81208706040545,
+    lng: -105.08091060075444,
+    photoname: "conundrum",
+    rooms: [
+      { name:"Path of the Gods" },
+      { name:"Experiment C-73" }
+    ]
+  },
+  {
+    name: "Cooperstown Escape Rooms",
+    lat: 42.700206918545334,
+    lng: -74.92428520176374,
+    photoname: "cooperstown",
+    rooms: [
+      { name:"Curse of the Bambino", webm:1 }
     ]
   },
   {
@@ -211,7 +372,7 @@ const rooms = [
   },
   {
     name: "Escape on 13th",
-    lat: 40.74196815934961, 
+    lat: 40.74196815934961,
     lng: -111.90179454137224,
     photoname: "on13th_",
     rooms: [
@@ -221,10 +382,10 @@ const rooms = [
   },
   {
     name: "Hatch Escapes",
-    lat: 34.03929054041106, 
+    lat: 34.03929054041106,
     lng: -118.32032562275671,
     photoname: "hatch",
-    rooms: [ 
+    rooms: [
       { name:"Lab Rat" },
       { name:"Lab Rat" },
       { name:"The Nest" },
@@ -234,7 +395,7 @@ const rooms = [
   },
   {
     name: "Himitsu Station",
-    lat: 40.76314055001625, 
+    lat: 40.76314055001625,
     lng: -111.89444665300861,
     photoname: "himitsu",
     rooms: [
@@ -283,7 +444,7 @@ const rooms = [
   },
   {
     name: "Mission Escape Games",
-    lat: 33.805306388301986, 
+    lat: 33.805306388301986,
     lng: -117.91176992339383,
     photoname: "mission",
     rooms: [
@@ -328,24 +489,8 @@ const rooms = [
 ]
 
 
-// Bite The Fly
-// Black Lake Escape Room
-// Boss Play
-// Boxaroo
-// Brain Games
-// Breaking Point Escape Rooms
-// Breakout Waikiki
-// Can Bruna
-// Chambers Escape Games
-// Cinema Escape Room
-// Cityscape Games
-// Cloud Escape
-// Code 258 Escape Room
-// Colors Escape Room
-// Confusion Escapes
-// Confusion Escapes [Saber Room Escape]
-// Conundrum Escape Rooms
-// Cooperstown Escape Rooms
+
+
 // Cross Roads Escape Games
 // CruPont Legacy
 // Cryogenic
