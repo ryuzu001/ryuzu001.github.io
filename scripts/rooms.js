@@ -359,6 +359,17 @@ const rooms = [
     ]
   },
   {
+    name: "Cross Roads Escape Games",
+    lat: 33.85975558203144,
+    lng: -117.8239304600006,
+    photoname: "crossroads",
+    rooms: [
+      { name:"The Hex Room" },
+      { name:"The Fun House" },
+      { name:"The Weeping Witch" }
+    ]
+  },
+  {
     name: "Deadline Escape Rooms",
     lat: 39.46156738372914,
     lng: -119.78329468670667,
@@ -491,7 +502,6 @@ const rooms = [
 
 
 
-// Cross Roads Escape Games
 // CruPont Legacy
 // Cryogenic
 // CU Adventures in Time & Space
