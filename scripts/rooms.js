@@ -370,6 +370,24 @@ const rooms = [
     ]
   },
   {
+    name: "CruPont Legacy",
+    lat: 41.53157569218075,
+    lng: 2.1116408950250243,
+    photoname: "crupont",
+    rooms: [
+      { name:"NightShift" }
+    ]
+  },
+  {
+    name: "Cryogenic",
+    lat: 40.430272059060535,
+    lng: -3.718858303745491,
+    photoname: "cryogenic",
+    rooms: [
+      { name:"Cryogenic" }
+    ]
+  },
+  {
     name: "Deadline Escape Rooms",
     lat: 39.46156738372914,
     lng: -119.78329468670667,
@@ -443,7 +461,8 @@ const rooms = [
       { name:"Dragon Alley" }
     ]
   },
-  {    name: "Locurio",
+  {
+    name: "Locurio",
     lat: 47.65015781338505,
     lng: -122.35026413920069,
 
