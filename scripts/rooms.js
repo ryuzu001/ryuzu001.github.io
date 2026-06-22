@@ -388,6 +388,59 @@ const rooms = [
     ]
   },
   {
+    name: "CU Adventures in Time & Space",
+    lat: 40.11542153178706, 
+    lng: -88.2062576178847,
+    photoname: "cu_",
+    rooms: [
+      { name:"Wizard's Curse" },
+      { name:"Game Night" },
+      { name:"The Forest of Fables" },
+      { name:"Scrooge's Christmas Trap" },
+      { name:"Revenge of the Cabin" },
+      { name:"Calling All Villians" },
+      { name:"Rise of the Icarus" }
+    ]
+  },
+  {
+    name: "CubicEscape",
+    lat: 37.385617095078864, 
+    lng: -121.86139525872935,
+    photoname: "cubic",
+    rooms: [
+      { name:"Room 2217" },
+      { name:"Memento" }
+    ]
+  },
+  {
+    name: "Cubick Escape Room",
+    lat: 41.53290235382192, 
+    lng: 2.4440235418892566,
+    photoname: "cubick",
+    rooms: [
+      { name:"The Interview" }
+    ]
+  },
+  {
+    name: "Dare 2 Escape",
+    lat: 28.333602664608946,
+    lng: -81.48618520081963,
+    photoname: "D2E",
+    rooms: [
+      { name:"At the Hop Ice Cream Shoppe" }
+    ]
+  },
+  {
+    name: "De Gouden Kooi",
+    lat: 51.02641972913938,
+    lng: 4.475530513087133,
+    photoname: "goudenkooi",
+    rooms: [
+      { name:"The Secret of Saint Rumoldus" },
+      { name:"Han's Revenge" }
+    ]
+  },
+  {
     name: "Deadline Escape Rooms",
     lat: 39.46156738372914,
     lng: -119.78329468670667,
@@ -397,6 +450,92 @@ const rooms = [
       { name:"Dead Silence" },
       { name:"Witch Doctor" },
       { name:"Noir [Ep. 1]" }
+    ]
+  },
+  {
+    name: "Deceptive Games",
+    lat: 33.67579058886421,
+    lng: -117.67247818545991,
+    photoname: "dg",
+    rooms: [
+      { name:"Return to Coulrophobia" },
+      { name:"The Butcher" },
+      { name:"SEV3N" }
+    ]
+  },
+  {
+    name: "Doldrick's Escape Room",
+    lat: 28.33513250825666,
+    lng: -81.47839300059266,
+    photoname: "doldricks",
+    rooms: [
+      { name:"Crazy Train: The Ballad of Skeemin' Plotz" },
+      { name:"Captain Spoopy Bones and the Magnificent Quest For Some Other Pirate's Treasure" }
+    ]
+  },
+  {
+    name: "Dragonborn Escape Room",
+    lat: 42.846935644483885,
+    lng: -2.6843540591424166,
+    photoname: "dragonborn",
+    rooms: [
+      { name:"The Innkeeper's Son" }
+    ]
+  },
+  {
+    name: "EDscapade Games",
+    lat: 37.38228489361553,
+    lng: -121.8950713721245,
+    photoname: "edscapade",
+    rooms: [
+      { name:"Hostage" }
+    ]
+  },
+  {
+    name: "Elements Escape Room",
+    lat: 41.37022947072293,
+    lng: 2.135730691858175,
+    photoname: "elements",
+    rooms: [
+      { name:"Exodus" }
+    ]
+  },
+  {
+    name: "Eleventh Hour Enigma",
+    lat: 36.15226705602854, 
+    lng: -95.97426373012377,
+    photoname: "11thhour",
+    rooms: [
+      { name:"Winchester's Widow" },
+      { name:"Tulsa Time" },
+      { name:"The Cairo Connection" }
+    ]
+  },
+  {
+    name: "Enigmik",
+    lat: 41.40983385033988,
+    lng: 2.1795700834764946,
+    photoname: "enigmik",
+    rooms: [
+      { name:"The Brewery" }
+    ]
+  },
+  {
+    name: "Entangled Escape Room",
+    lat: 33.80592339117554,
+    lng: -117.86671439957861,
+    photoname: "entangled",
+    rooms: [
+      { name:"The Manor" }
+    ]
+  },
+  {
+    name: "Entered",
+    lat: 51.00554619256848,
+    lng: 5.602888970297285,
+    photoname: "entered",
+    rooms: [
+      { name:"Demise of the Gricers [Extended]" }
     ]
   },
   {
@@ -521,23 +660,6 @@ const rooms = [
 
 
 
-// CruPont Legacy
-// Cryogenic
-// CU Adventures in Time & Space
-// CubicEscape
-// Cubick Escape Room
-// Dare 2 Escape
-// De Gouden Kooi
-// Deadline Escape Rooms
-// Deceptive Games
-// Doldrick's Escape Room
-// Dragonborn Escape Room
-// EDscapade Games
-// Elements Escape Room
-// Eleventh Hour Enigma
-// Enigmik
-// Entangled Escape Room
-// Entered
 // Escapade Games
 // Escaparium
 // Escape Again
@@ -546,6 +668,7 @@ const rooms = [
 // Escape Factor
 // Escape Hour
 // Escape on 13th
+
 // Escape Room 66
 // Escape Room 831
 // Escape Room Era
