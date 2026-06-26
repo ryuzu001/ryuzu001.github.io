@@ -1386,26 +1386,236 @@ const rooms = [
       { name:"Witchly Ever After", index:9 }
     ]
   },
+  {
+    name: "Open Door Escape Games",
+    lat: 34.06571046516934,
+    lng: -117.20495374835643,
+    photoname: "opendoor",
+    rooms: [
+      { name:"Far-Fetched" },
+      { name:"Pillow Palace" },
+      { name:"Inheritance" },
+      { name:"The Trials" }
+    ]
+  },
+  {
+    name: "Open Mind Room Escape",
+    lat: 41.363531403793246,
+    lng: 2.0752354106971924,
+    photoname: "openmind",
+    rooms: [
+      { name:"11S" },
+      { name:"Sweneey Tott" }
+    ]
+  },
+  {
+    name: "Outline Escape Room",
+    lat: 41.355796265038435,
+    lng: 2.0832538284731337,
+    photoname: "outline",
+    rooms: [
+      { name:"Outline" }
+    ]
+  },
+  {
+    name: "Palace Games",
+    lat: 37.80323546438481,
+    lng: -122.44931083290925,
+    photoname: "palace",
+    rooms: [
+      { name:"The Edison Escape Room" },
+      { name:"The Roosevelt Escape Room" },
+      { name:"The Great Houdini Escape Room" },
+      { name:"The Attraction" },
+      { name:"The Attraction" },
+      { name:"The Edison Escape Room" },
+    ]
+  },
+  {
+    name: "PanIQ",
+    lat: 33.771086864054126,
+    lng: -118.19259016239928,
+    photoname: "paniq",
+    rooms: [
+      { name:"Pirates of Tortuga" }
+    ]
+  },
+  {
+    name: "Paradiso Escape Room",
+    lat: 40.328654592438745,
+    lng: -3.7644185120964995,
+    photoname: "paradiso",
+    rooms: [
+      { name:"Project DCrisis" }
+    ]
+  },
+  {
+    name: "Paragon Escape Games",
+    lat: 33.28388849453015,
+    lng: -111.6409845145584,
+    photoname: "paragon",
+    rooms: [
+      { name:"Return of the Pharaohs" }
+    ]
+  },
+  {
+    name: "Petra Escape Room",
+    lat: 43.25473380785946,
+    lng: -2.918620692250591,
+    photoname: "petra",
+    rooms: [
+      { name:"Petra, The Lost Kingdom [Full Expedition]" }
+    ]
+  },
+  {
+    name: "Planet Escape Room",
+    lat: 33.80464550710915,
+    lng: -118.32601621061762,
+    photoname: "planetescape",
+    rooms: [
+      { name:"Wise Guys" },
+      { name:"Game of Swords" },
+      { name:"Ctrl-Alt-Reality" },
+      { name:"Black Cat" }
+    ]
+  },
+  {
+    name: "Pop Up Escape",
+    lat: 33.8389886350355,
+    lng: -117.95871960064491,
+    photoname: "popup",
+    rooms: [
+      { name:"Death and Taxes" }
+    ]
+  },
+  {
+    name: "Project Omega",
+    lat: 41.55958910913814,
+    lng: 2.0141571844414874,
+    photoname: "projectomega",
+    rooms: [
+      { name:"Project Omega" }
+    ]
+  },
+  {
+    name: "Puzzle Corp",
+    lat: 28.438574992152716,
+    lng: -81.47025494213455,
+    photoname: "puzzlecorp",
+    rooms: [
+      { name:"Bigfoot: Secrets of the Swamp" }
+    ]
+  },
+  {
+    name: "Quest Room",
+    lat: 34.09114129103195,
+    lng: -118.30989918110745,
+    photoname: "questroom",
+    rooms: [
+      { name:"Red Giant" },
+      { name:"Perfumer", index:5 },
+      { name:"Project Minotaur", index:6 },
+      { name:"Cannibal's Den", index:7 }
+    ]
+  },
+  {
+    name: "Quest Room",
+    lat: 34.0716707900312,
+    lng: -118.30897481375156,
+    photoname: "questroom",
+    rooms: [
+      { name:"Da Vinci's Challenge", index:2 }
+    ]
+  },
+  {
+    name: "Quest Room",
+    lat: 34.03271248293171,
+    lng: -118.3563095682502,
+    photoname: "questroom",
+    rooms: [
+      { name:"Amnesia", index:10 },
+      { name:"Pirates: Wanted!", index:11 },
+      { name:"Greedy", index:12 },
+    ]
+  },
+  {
+    name: "Quest Room",
+    lat: 33.871702653731624,
+    lng: -118.35605809522471,
+    photoname: "questroom",
+    rooms: [
+      { name:"Resurrection", index:3 },
+      { name:"Warlocked", index:4 },
+      { name:"Kablam", index:8 },
+      { name:"Polar Station", index:9 },
+    ]
+  },
+  {
+    name: "Quest Tavern",
+    lat: 34.10817524000258,
+    lng: -117.74775578651075,
+    photoname: "questtavern",
+    rooms: [
+      { name:"The Last Supper" },
+      { name:"The Witch's Cauldron" },
+      { name:"The Bridge Between" },
+      { name:"Through the Sugar Glass" },
+    ]
+  },
+  {
+    name: "Quicksand Escape Games",
+    lat: 32.797172032838674,
+    lng: -117.25145287124799,
+    photoname: "quicksand",
+    rooms: [
+      { name:"Speakeasy Nouveau" },
+      { name:"Chinatown" },
+      { name:"The Diner" },
+      { name:"The Family Cabin" }
+    ]
+  },
+  {
+    name: "Rabbit Hole Recreation Services",
+    lat: 39.96077389359148,
+    lng: -105.16667682263319,
+    photoname: "rabbithole",
+    rooms: [
+      { name:"Ruins of the Mystic Temple" },
+      { name:"Paradox | The Incredible Time Machine" },
+      { name:"Frost Base Z" }
+    ]
+  },
+  {
+    name: "Rare Moon Escape Room",
+    lat: 34.11972247895865,
+    lng: -117.51277800885615,
+    photoname: "raremoon",
+    rooms: [
+      { name:"The Grinch" },
+      { name:"Rave Escape" }
+    ]
+  },
+  {
+    name: "Real Escape Game [SCRAP]",
+    lat: 35.70887942949726,
+    lng: 139.80032765872525,
+    photoname: "reg",
+    rooms: [
+      { name:"Escape from The RED ROOM" },
+      { name:"A Challenge from the Crafting Genius" }
+    ]
+  },
+  {
+    name: "Real Escape Game [SCRAP]",
+    lat: 35.72757550484229,
+    lng: 139.7122598653584,
+    photoname: "reg",
+    rooms: [
+      { name:"Escape from The BLUE ROOM", index:3 }
+    ]
+  },
 
 
-// Open Door Escape Games
-// Open Mind Room Escape
-// Outline Escape Room
-// Palace Games
-// PanIQ
-// Paradiso Escape Room
-// Paragon Escape Games
-// Petra Escape Room
-// Planet Escape Room
-// Pop Up Escape
-// Project Omega
-// Puzzle Corp
-// Quest Room
-// Quest Tavern
-// Quicksand Escape Games
-// Rabbit Hole Recreation Services
-// Rare Moon Escape Room
-// Real Escape Game [SCRAP]
 // Red Door Escape Room
 // Red Lantern Escape Room
 // Rätselraum Ruhrpott
