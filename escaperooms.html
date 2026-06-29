@@ -7644,7 +7644,34 @@ function searchFromURL() {
                         });
                     </script>
 
-                    <a href="https://morty.app/@RyanYuzuki" target="_blank" class="btn btn-block btn-secondary my-2 col-md-3">Follow me on Morty!</a>
+                    <a href="https://morty.app/@RyanYuzuki" target="_blank" id="mortybutton" class="btn btn-block btn-secondary my-2 col-md-3">Follow me on Morty!</a>
+
+                    <button class="sticky-cta" id="stickyCta" onclick="window.open('map', '_blank')">
+                    <img style="max-width:70%; max-height:70%" src="images/map.png">
+                    </button>
+
+                    <script>
+                        const btn = document.getElementById('stickyCta');
+
+                        const observer = new IntersectionObserver(
+                        ([entry]) => {
+                            btn.classList.toggle('hidden', entry.isIntersecting);
+                        },
+                        { rootMargin: '0px 0px 50px 0px' }
+                        );
+
+                        // simpleLoadMore appends .load-more__btn-wrap after init
+                        // so we wait for it to exist in the DOM
+                        const waitForLoadMore = setInterval(() => {
+                        // const loadMoreBtn = document.querySelector('.load-more__btn-wrap');
+                        const loadMoreBtn = document.getElementById('mortybutton');
+                        if (loadMoreBtn) {
+                            clearInterval(waitForLoadMore);
+                            observer.observe(loadMoreBtn);
+                        }
+                        }, 100);
+
+                </script>
             </div>
         </div>
     </main>

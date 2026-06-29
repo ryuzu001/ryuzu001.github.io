@@ -26,6 +26,36 @@ a{text-decoration: none;}
 html {scroll-behavior: smooth;}
 #Search:focus {border: 3px solid #555;  }
 .gold-text {color:transparent;font-size: 0;}
+.sticky-cta {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  transform: translateX(-50%);
+  z-index: 999;
+
+    width: 56px;
+  height: 56px;
+  background: green;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sticky-cta.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(12px);
+}
+
+
 .ar-338{width:100%; aspect-ratio:600/338;}
 .ar-361{width:100%; aspect-ratio:600/361;}
 .ar-362{width:100%; aspect-ratio:600/362;}
