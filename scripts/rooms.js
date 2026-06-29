@@ -388,6 +388,16 @@ const rooms = [
     ]
   },
   {
+    name: "Crypto Escape Rooms",
+    lat: 44.07714792829319,
+    lng: -79.42700706811641,
+    photoname: "crypto",
+    rooms: [
+      { name:"The Lost Shipwreck" },
+      { name:"The Sorcerer's Secret" }
+    ]
+  },
+  {
     name: "CU Adventures in Time & Space",
     lat: 40.11542153178706, 
     lng: -88.2062576178847,
@@ -428,6 +438,15 @@ const rooms = [
     photoname: "D2E",
     rooms: [
       { name:"At the Hop Ice Cream Shoppe" }
+    ]
+  },
+  {
+    name: "Daydream Adventures",
+    lat: 43.6842938814502,
+    lng: -79.31865199316137,
+    photoname: "daydream",
+    rooms: [
+      { name:"Botanica Greenhouse" }
     ]
   },
   {
@@ -565,6 +584,15 @@ const rooms = [
       { name:"Magnifico", index:9 }
     ]
   },
+    {
+    name: "Escaparium",
+    lat: 45.48225243023845,
+    lng: -73.78551482892904,
+    photoname: "escaparium",
+    rooms: [
+      { name:"Escape Plan", index:8 }
+    ]
+  },
   {
     name: "Escape Again",
     lat: 29.588086420538254,
@@ -591,6 +619,15 @@ const rooms = [
     rooms: [
       { name:"Testing Facility", webm:1 },
       { name:"Smugglers Tunnels", webm:1 }
+    ]
+  },
+  {
+    name: "Escape City Buffalo",
+    lat: 43.00363460214816,
+    lng: -78.85846657218556,
+    photoname: "city",
+    rooms: [
+      { name:"Jurassic Island" }
     ]
   },
   {
@@ -658,16 +695,17 @@ const rooms = [
     lng: -121.90184200841824,
     photoname: "831_",
     rooms: [
-      { name:"Alice's Dream" }
+      { name:"Alice's Dream" },
+      { name:"Submergency" }
     ]
   },
   {
-    name: "Escape Room 831",
-    lat: 36.61612433737992,
-    lng: -121.90177758823899,
-    photoname: "831_",
+    name: "Escape Room Coventry",
+    lat: 41.510745633795466,
+    lng: -81.58011233392199,
+    photoname: "coventry",
     rooms: [
-      { name:"Submergency", index:2 }
+      { name:"Al Capone's Speakeasy" }
     ]
   },
   {
@@ -854,6 +892,15 @@ const rooms = [
     ]
   },
   {
+    name: "EZKAPAZ",
+    lat: 45.51648611556655,
+    lng: -73.578099312482,
+    photoname: "ezkapaz",
+    rooms: [
+      { name:"Opus Memori" }
+    ]
+  },
+  {
     name: "FRIKI Escape Room",
     lat: 40.37979602426114,
     lng: -3.6049626013626934,
@@ -970,6 +1017,15 @@ const rooms = [
       { name:"Project R.E.S.E.T." },
       { name:"Salutem Medicina Institute" },
       { name:"The Grand Immersia Hotel" }
+    ]
+  },
+{
+    name: "Improbable Escapes",
+    lat: 44.23541347431218,
+    lng: -76.56674922183548,
+    photoname: "improbable",
+    rooms: [
+      { name:"The Mysterious Miseries of Franklin N. Stein" }
     ]
   },
   {
@@ -1256,6 +1312,15 @@ const rooms = [
     photoname: "mysteryave",
     rooms: [
       { name:"Houdini's Workshop" }
+    ]
+  },
+  {
+    name: "Mystery Escapes",
+    lat: 42.233194834389685,
+    lng: -83.18117159841032,
+    photoname: "mystery",
+    rooms: [
+      { name:"Lincoln Park Prison" }
     ]
   },
   {
@@ -1614,36 +1679,381 @@ const rooms = [
       { name:"Escape from The BLUE ROOM", index:3 }
     ]
   },
-
-
-// Red Door Escape Room
-// Red Lantern Escape Room
-// Rätselraum Ruhrpott
-// Saga Escape Rooms
-// Salzufler Unterwelt
-// Scenario Escape Room
-// Shock Creations
-// Side Quest Escape Games
-// Solve The Sherlock Home
-// Stash House
-// Steal and Escape
-// Strange Bird Immersive
-// Studio Escape
-// Surf City Escapes
-// Tales of Torchdale
-// Terror Stories
-// The 13th Room
-// The Bureau
-// The City Escape Room
-// The Code Agency
-// The Escape Game
-// The Escape Revolution
-// The Escape Ventures
-// The Exit Games
-// The Experience Machine
-// The Immersive Machine
-// The Ministry Of Peculiarities
-// The Missing Link
+  {
+    name: "Red Door Escape Room",
+    lat: 40.509664553349275,
+    lng: -111.99937924635216,
+    photoname: "reddoor",
+    rooms: [
+      { name:"Fair Game" }
+    ]
+  },
+  {
+    name: "Red Lantern Escape Room",
+    lat: 33.92543245666687,
+    lng: -117.90158871761376,
+    photoname: "redlantern",
+    rooms: [
+      { name:"Midnight on the Bayou" }
+    ]
+  },
+  {
+    name: "Revo Escape",
+    lat: 43.759889757791406,
+    lng: -79.22764799155456,
+    photoname: "revo",
+    rooms: [
+      { name:"The Tomb: Raiders of the Sword" }
+    ]
+  },
+  {
+    name: "Rätselraum Ruhrpott",
+    lat: 51.47965833691168,
+    lng: 7.21682322728578,
+    photoname: "ruhrpott",
+    rooms: [
+      { name:"The Alley" }
+    ]
+  },
+  {
+    name: "Saga Escape Rooms",
+    lat: 41.49527616200824,
+    lng: 2.1806162660239563,
+    photoname: "saga",
+    rooms: [
+      { name:"Londium" }
+    ]
+  },
+  {
+    name: "Salzufler Unterwelt",
+    lat: 52.0817020386088,
+    lng: 8.74070559635926,
+    photoname: "salzufler",
+    rooms: [
+      { name:"The Hidden Chamber" },
+      { name:"The Alchemist's Workshop and the Crystals of Power" },
+      { name:"Ghost Hunter Brandon Darkmoor: The Strange Case of the African Idol" }
+    ]
+  },
+  {
+    name: "Sauve Qui Peut",
+    lat: 45.30483010499661,
+    lng: -73.25097455741503,
+    photoname: "sqp",
+    rooms: [
+      { name:"The Castle of Eternal Suffering" }
+    ]
+  },
+  {
+    name: "Scenario Escape Room",
+    lat: 33.91918921384738,
+    lng: -117.86459673274462,
+    photoname: "scenario",
+    rooms: [
+      { name:"Mad Rapper" },
+      { name:"Dr. Hader Loses!" }
+    ]
+  },
+  {
+    name: "Shock Creations",
+    lat: 40.34242377107582,
+    lng: -3.535078684077646,
+    photoname: "shock",
+    rooms: [
+      { name:"The Saint" }
+    ]
+  },
+  {
+    name: "Side Quest Escape Games",
+    lat: 45.4736915072252,
+    lng: -122.66190746565553,
+    photoname: "sidequest",
+    rooms: [
+      { name:"Shaky Grounds Cafe" }
+    ]
+  },
+  {
+    name: "Solve The Sherlock Home",
+    lat: 29.598552858308345,
+    lng: -98.46549181873073,
+    photoname: "sherlockhome",
+    rooms: [
+      { name:"The Sherlock Home" }
+    ]
+  },
+  {
+    name: "Stash House",
+    lat: 34.069140707437654,
+    lng: -118.30732814800045,
+    photoname: "stash",
+    rooms: [
+      { name:"Stash House" }
+    ]
+  },
+  {
+    name: "Steal and Escape",
+    lat: 32.659647596118205,
+    lng: -117.10253173873178,
+    photoname: "sae",
+    rooms: [
+      { name:"The Neighbor" },
+      { name:"The Lost Expedition" },
+      { name:"The Missing Season" }
+    ]
+  },
+  {
+    name: "Strange Bird Immersive",
+    lat: 29.78517574757988,
+    lng: -95.44520276848553,
+    photoname: "strangebird",
+    rooms: [
+      { name:"The Man From Beyond" }
+    ]
+  },
+  {
+    name: "Studio Escape",
+    lat: 34.66056147802308,
+    lng: 135.50678641486888,
+    photoname: "studioescape",
+    rooms: [
+      { name:"The Dame and the Diamond" },
+      { name:"For Queen and Country" },
+      { name:"Madame LeClaire and the Seance of Death", index:4 }
+    ]
+  },
+  {
+    name: "Studio Escape",
+    lat: 34.65916723774805,
+    lng: 135.49579253945097,
+    photoname: "studioescape",
+    rooms: [
+      { name:"Shadow Zen", index:3 }
+    ]
+  },
+  {
+    name: "Surf City Escapes",
+    lat: 33.65455780114899,
+    lng: -117.99693151824665,
+    photoname: "surfcity",
+    rooms: [
+      { name:"The Winery Infiltration" },
+      { name:"Surf's Up" },
+      { name:"Specter Inspectors [Spooky]" },
+      { name:"Sherlock Mystery" }
+    ]
+  },
+  {
+    name: "Tales of Torchdale",
+    lat: 51.26767437899551,
+    lng: 4.716371998121403,
+    photoname: "torchdale",
+    rooms: [
+      { name:"The Toy Factory" }
+    ]
+  },
+  {
+    name: "Terror Stories",
+    lat: 41.42970036234421,
+    lng: 2.1938113441831204,
+    photoname: "terrorstories",
+    rooms: [
+      { name:"Exorcist" }
+    ]
+  },
+  {
+    name: "Terror Stories",
+    lat: 40.427283452449764,
+    lng: -3.7092390909492368,
+    photoname: "terrorstories",
+    rooms: [
+      { name:"The Darkness", index:2 },
+      { name:"Diamond of Souls", index:3 }
+    ]
+  },
+  {
+    name: "The 13th Room",
+    lat: 34.05717036740195,
+    lng: -117.74965413485255,
+    photoname: "13throom",
+    rooms: [
+      { name:"Exorcism" }
+    ]
+  },
+  {
+    name: "The Bureau",
+    lat: 28.461852522428767,
+    lng: -81.45261628481042,
+    photoname: "thebureau",
+    rooms: [
+      { name:"Puppet Heist: The Hand of Life" }
+    ]
+  },
+  {
+    name: "The City Escape Room",
+    lat: 41.54711328943353,
+    lng: 2.0286498014449275,
+    photoname: "thecity",
+    rooms: [
+      { name:"The Tavern" }
+    ]
+  },
+  {
+    name: "The Code Agency",
+    lat: 51.21919742232413,
+    lng: 6.7885487007821546,
+    photoname: "codeagency",
+    rooms: [
+      { name:"The Search for the Scepter of Light" },
+      { name:"The Poltergeist" },
+      { name:"IT IS BACK" }
+    ]
+  },
+  {
+    name: "The Escape Game",
+    lat: 33.65080123092903,
+    lng: -117.74430576659122,
+    photoname: "teg",
+    rooms: [
+      { name:"Gold Rush" },
+      { name:"Prison Break" },
+      { name:"Playground", index:4 },
+      { name:"The Depths", index:5 },
+      { name:"Special Ops: Mysterious Market", index:7 },
+      { name:"Gold Rush", index:8 },
+      { name:"Prison Break", index:9 },
+      { name:"The Heist", index:11 },
+      { name:"Legend of the Yeti", index:15 }
+    ]
+  },
+  {
+    name: "The Escape Game",
+    lat: 36.11922548620698,
+    lng: -115.17820209087176,
+    photoname: "teg",
+    rooms: [
+      { name:"Rugrats: Search for the Losted Toys", index:3 }
+    ]
+  },
+  {
+    name: "The Escape Game",
+    lat: 34.11188754763831,
+    lng: -117.53165045880954,
+    photoname: "teg",
+    rooms: [
+      { name:"Timeliner: Train Through Time", index:6 }
+    ]
+  },
+  {
+    name: "The Escape Game",
+    lat: 30.264762478393376,
+    lng: -97.73756429556957,
+    photoname: "teg",
+    rooms: [
+      { name:"Classified", index:10 }
+    ]
+  },
+  {
+    name: "The Escape Game",
+    lat: 33.784340824788096,
+    lng: -117.89298107665361,
+    photoname: "teg",
+    rooms: [
+      { name:"Cosmic Crisis", index:12 }
+    ]
+  },
+  {
+    name: "The Escape Game",
+    lat: 32.869279546008684,
+    lng: -117.21175129419129,
+    photoname: "teg",
+    rooms: [
+      { name:"Playground", index:13 },
+      { name:"Ruins: Forbidden Treasure", index:14 }
+    ]
+  },
+  {
+    name: "The Escape Revolution",
+    lat: 34.08325629455912,
+    lng: -118.34495287664377,
+    photoname: "ter",
+    rooms: [
+      { name:"Escobar" },
+      { name:"Chernobyl Disaster: Moments After" },
+      { name:"Prison Break: Wrongfully Convicted" }
+    ]
+  },
+  {
+    name: "The Escape Ventures",
+    lat: 28.5544314569407,
+    lng: -81.20895417203049,
+    photoname: "tev",
+    rooms: [
+      { name:"Operation Arctic Storm: The Final Meltdown" },
+      { name:"Neighborhood Watcher" },
+      { name:"Bros for Life: Fraternity Heist" },
+      { name:"Cornstalkers: Lost in the Maize" }
+    ]
+  },
+  {
+    name: "The Escape Ventures",
+    lat: 26.986298155000128,
+    lng: -82.10120261557574,
+    photoname: "tev",
+    rooms: [
+      { name:"Nightfall: Creature at Camp Deadwood", index:5 },
+      { name:"Click 'N Glitch", index:6 },
+      { name:"Phantom Files: The Investigation of Lockturne Manor", index:7 }
+    ]
+  },
+  {
+    name: "The Exit Games",
+    lat: 27.94898290340064,
+    lng: -82.79816066801587,
+    photoname: "exitgamesfl",
+    rooms: [
+      { name:"Pins & Needles Tattoo Parlor" },
+      { name:"Servants of Sleight" }
+    ]
+  },
+  {
+    name: "The Experience Machine",
+    lat: 34.10063295991885,
+    lng: -117.69025590962136,
+    photoname: "experiencemachine",
+    rooms: [
+      { name:"The Shack" },
+      { name:"The Lost Treasure of El Capitan" },
+      { name:"All Aboard the Amazing Argo!" }
+    ]
+  },
+  {
+    name: "The Immersive Machine",
+    lat: 33.4649653287525,
+    lng: -111.98746369966008,
+    photoname: "immersivemachine",
+    rooms: [
+      { name:"Sal's Cybernetics" }
+    ]
+  },
+  {
+    name: "The Ministry Of Peculiarities",
+    lat: 34.12636933468896,
+    lng: -117.88963903700697,
+    photoname: "mop",
+    rooms: [
+      { name:"Hope End" },
+      { name:"Hope End" }
+    ]
+  },
+  {
+    name: "The Missing Link",
+    lat: 51.147444275444904,
+    lng: 4.959036067678293,
+    photoname: "missinglink",
+    rooms: [
+      { name:"Henry's Birthday" }
+    ]
+  },
   {
     name: "The Nemesis Club",
     lat: 33.6762402714731,
@@ -1654,14 +2064,108 @@ const rooms = [
       { name:"EVIL Robots" }
     ]
   },
-// The Push Mystery Rooms
-// The Sanctuary Escape Games
-// TheStart
-// TIMEBREAK
-// Tokyo Mystery Circus [SCRAP]
-// Top Tier Escape Room
-// Trapology Boston
-// Trapped! Escape Room
+  {
+    name: "The Push Mystery Rooms",
+    lat: 51.275266392384886,
+    lng: 3.2318069702272183,
+    photoname:"push",
+    rooms: [
+      { name:"The Movies Experience" }
+    ]
+  },
+  {
+    name: "The Sanctuary Escape Games",
+    lat: 35.46151189498016,
+    lng: -97.6489065984079,
+    photoname:"sanctuary",
+    rooms: [
+      { name:"La Famiglia" },
+      { name:"The Lakehouse" },
+      { name:"The Seed of Hope"},
+      { name:"The Lost Duchman's Mine [v2]" }
+    ]
+  },
+  {
+    name: "TheStart",
+    lat: 51.150106613267084,
+    lng: 4.577855873270832,
+    photoname:"TheStart",
+    rooms: [
+      { name:"Harbor Hotel" },
+      { name:"Chernobyl" }
+    ]
+  },
+  {
+    name: "TIMEBREAK",
+    lat: 51.19484771355465,
+    lng: 6.429282524723276,
+    photoname:"timebreak",
+    rooms: [
+      { name:"Dr. Brown Boyd's Mental Hospital" },
+      { name:"Dark Machinations in Zagini's Magic Store" }
+    ]
+  },
+  {
+    name: "Tokyo Mystery Circus [SCRAP]",
+    lat: 35.69531792582971,
+    lng: 139.70065798113038,
+    photoname:"tmc",
+    rooms: [
+      { name:"Escape from the Runaway Train" }
+    ]
+  },
+  {
+    name: "Top Tier Escape Room",
+    lat: 33.21669640313935,
+    lng: -117.27176700043329,
+    photoname:"toptier",
+    rooms: [
+      { name:"Outside In" },
+      { name:"Pirates of the Mediterranean" },
+      { name:"Atlantis" },
+      { name:"Operation Avalanche" }
+    ]
+  },
+  {
+    name: "Trapology Boston",
+    lat: 42.35302272253234,
+    lng: -71.06423610750629,
+    photoname:"trapology",
+    rooms: [
+      { name:"Crush Depth" }
+    ]
+  },
+  {
+    name: "Trapped! Escape Room",
+    lat: 36.103511296436125,
+    lng: -115.18531976765473,
+    photoname:"trapped",
+    rooms: [
+      { name:"Pandora's Box" }
+    ]
+  },
+  {
+    name: "Trapped! Escape Room",
+    lat: 34.10113787843237,
+    lng: -117.66873278130869,
+    photoname:"trapped",
+    rooms: [
+      { name:"Down the Rabbit Hole", index:2 },
+      { name:"The Menagerie", index:5 },
+      { name:"The Lair of the Puzzlemaster", index:6 },
+      { name:"The Trials of Merlin", index:7 }
+    ]
+  },
+  {
+    name: "Trapped! Escape Room",
+    lat: 34.108987210339905,
+    lng: -117.82203478191697,
+    photoname:"trapped",
+    rooms: [
+      { name:"Operation: X-13", index:3 },
+      { name:"Grandma's Surprise", index:4 }
+    ]
+  },
   {
     name: "Trivium Games",
     lat: 37.8302581228411,
@@ -1673,27 +2177,106 @@ const rooms = [
       { name:"Ghost Patrol" }
     ]
   },
-// Two Trees Escape
-// Unlockables
-// UNLOCKED OC
-// Unreal Room Escape
-// Wild Goose
-// Will to Escape
-// Wizards and Wires
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  {
+    name: "Two Trees Escape",
+    lat: 34.24806805769787,
+    lng: -119.19688102732664,
+    photoname: "twotrees",
+    rooms: [
+      { name:"Vault 805" }
+    ]
+  },
+  {
+    name: "Unlockables",
+    lat: 32.83761073456866,
+    lng: -117.1403513475595,
+    photoname: "unlockables",
+    rooms: [
+      { name:"Sister's Secret" },
+      { name:"The Escape" },
+      { name:"The Informant" }
+    ]
+  },
+  {
+    name: "UNLOCKED OC",
+    lat: 33.67108113218499,
+    lng: -117.91856295513274,
+    photoname: "unlocked",
+    rooms: [
+      { name:"Game On! Arcade" },
+      { name:"Return of the Magician" },
+      { name:"Against Us: Space Team" }
+    ]
+  },
+  {
+    name: "Unreal Room Escape",
+    lat: 41.37153027546077,
+    lng: 2.1327533186304777,
+    photoname: "unreal",
+    rooms: [
+      { name:"The Bar" }
+    ]
+  },
+  {
+    name: "Unreal Room Escape",
+    lat: 41.413621423004244,
+    lng: 2.1964561158671922,
+    photoname: "unreal",
+    rooms: [
+      { name:"District 111", index:2 }
+    ]
+  },
+  {
+    name: "Wild Goose",
+    lat: 33.728948448244715,
+    lng: -117.99416170192656,
+    photoname: "wg",
+    rooms: [
+      { name:"The Secrets of Shadow Point" },
+      { name:"What Happened in Vegas?", index:4 }
+    ]
+  },
+  {
+    name: "Wild Goose",
+    lat: 33.68770096071497,
+    lng: -117.83418036716324,
+    photoname: "wg",
+    rooms: [
+      { name:"The House Next Door", index:2 },
+      { name:"Elevate: Skylounge", index:3 },
+      { name:"Santa's Naughty or Nice List", index:7 }
+    ]
+  },
+  {
+    name: "Wild Goose",
+    lat: 33.87196980432184,
+    lng: -117.92528966812469,
+    photoname: "wg",
+    rooms: [
+      { name:"S.A.S.H.A - Home of the Future", index:5 },
+      { name:"Starship", index:6 }
+    ]
+  },
+  {
+    name: "Will to Escape",
+    lat: 28.43240277087873,
+    lng: -81.4699227402732,
+    photoname: "W2E",
+    rooms: [
+      { name:"Disappearance: Last Location" },
+      { name:"Cinema 7" }
+    ]
+  },
+  {
+    name: "Wizards and Wires",
+    lat: 33.98048247788279,
+    lng: -117.3717918481821,
+    photoname: "wizardsandwires",
+    rooms: [
+      { name:"The Curiosity Shop" },
+      { name:"Ghost Chamber", svg:1 }
+    ]
+  },
 ]
 
 
