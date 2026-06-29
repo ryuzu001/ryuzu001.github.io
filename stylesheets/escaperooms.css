@@ -28,13 +28,12 @@ html {scroll-behavior: smooth;}
 .gold-text {color:transparent;font-size: 0;}
 .sticky-cta {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  transform: translateX(-50%);
+  bottom: 10px;
+  right: 10px;
   z-index: 999;
 
-    width: 56px;
-  height: 56px;
+    width: 50px;
+  height: 50px;
   background: green;
   color: #fff;
   border: none;
