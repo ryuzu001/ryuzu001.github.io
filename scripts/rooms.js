@@ -1831,6 +1831,25 @@ const rooms = [
     ]
   },
   {
+    name: "Sure Lock Escapes",
+    lat: 47.562387319839445,
+    lng: -122.38743335092461,
+    photoname: "surelock",
+    rooms: [
+      { name:"Neon Shadows: The Polybius Files" }
+    ]
+  },
+  {
+    name: "Sure Lock Escapes",
+    lat: 47.44959718443895,
+    lng: -122.18519972597775,
+    photoname: "surelock",
+    rooms: [
+      { name:"Shimmer Reef", index:2 },
+      { name:"Shimmer Reef", index:3 }
+    ]
+  },
+  {
     name: "Surf City Escapes",
     lat: 33.65455780114899,
     lng: -117.99693151824665,
@@ -1839,7 +1858,8 @@ const rooms = [
       { name:"The Winery Infiltration" },
       { name:"Surf's Up" },
       { name:"Specter Inspectors [Spooky]" },
-      { name:"Sherlock Mystery" }
+      { name:"Sherlock Mystery" },
+      { name:"Specter Inspectors [Lite]" }
     ]
   },
   {
