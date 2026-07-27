@@ -7757,26 +7757,10 @@ function searchFromURL() {
 
 <script>
 searchFromURL()
-// window.addEventListener('DOMContentLoaded', () => {
-//   // Check if the URL contains an anchor hash
-//   if (window.location.hash) {
-//     // Remove '#' to get the pure string name
-//     const rawId = window.location.hash.substring(1);
+// Remove all query parameters without reloading the page again
+const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
 
-//     // Bypasses CSS syntax parsing entirely
-//     const targetElement = document.getElementById(rawId);
-
-//     if (targetElement) {
-//       // 1. Instantly reset scroll to top before the user notices
-//       window.scrollTo(0, 0);
-
-//       // 2. Allow the DOM to settle, then trigger the smooth scroll
-//       setTimeout(() => {
-//         targetElement.scrollIntoView({ behavior: 'smooth' });
-//       }, 50);
-//     }
-//   }
-// });
 
 </script>
 

@@ -1846,7 +1846,7 @@ const rooms = [
     photoname: "surelock",
     rooms: [
       { name:"Shimmer Reef", index:2 },
-      { name:"Shimmer Reef", index:3 }
+      { name:"Guardian's Grove", index:3 }
     ]
   },
   {
