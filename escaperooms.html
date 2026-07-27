@@ -132,7 +132,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/surfcity3.jpg" target="_blank" class="ar-800">
@@ -148,7 +148,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/mystery1.jpg" target="_blank" class="ar-450">
@@ -164,7 +164,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/coventry1.jpg" target="_blank" class="ar-797">
@@ -180,7 +180,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/city1.jpg" target="_blank" class="ar-797">
@@ -196,7 +196,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="" style="background-color:gold">
                             <a href="images/escaperooms/full/revo1.jpg" target="_blank" class="ar-797">
@@ -213,7 +213,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/daydream1.jpg" target="_blank" class="ar-800">
@@ -229,7 +229,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/crypto2.jpg" target="_blank" class="ar-600">
@@ -245,7 +245,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="" style="background-color:gold">
                             <a href="images/escaperooms/full/crypto1.jpg" target="_blank" class="ar-600">
@@ -262,7 +262,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/improbable1.jpg" target="_blank" class="ar-452">
@@ -278,7 +278,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="" style="background-color:gold">
                             <a href="images/escaperooms/full/escaparium9.jpg" target="_blank" class="ar-450">
@@ -295,7 +295,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/escaparium8.jpg" target="_blank" class="ar-450">
@@ -311,7 +311,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="" style="background-color:gold">
                             <a href="images/escaperooms/full/sqp1.jpg" target="_blank" class="ar-338">
@@ -328,7 +328,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="" style="background-color:gold">
                             <a href="images/escaperooms/full/escaparium7.jpg" target="_blank" class="ar-450">
@@ -345,7 +345,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="" style="background-color:gold">
                             <a href="images/escaperooms/full/escaparium6.jpg" target="_blank" class="ar-450">
@@ -362,7 +362,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="" style="background-color:gold">
                             <a href="images/escaperooms/full/escaparium5.jpg" target="_blank" class="ar-450">
@@ -379,7 +379,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/ezkapaz1.jpg" target="_blank" class="ar-797">
@@ -395,7 +395,7 @@ function searchFromURL() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/mission5.jpg" target="_blank" class="ar-797">
@@ -7699,25 +7699,39 @@ function searchFromURL() {
                     </button>
 
                     <script>
-                        const btn = document.getElementById('stickyCta');
+                        let mortyVisible = false;
+                        let scrollTimer = null;
 
                         const observer = new IntersectionObserver(
                         ([entry]) => {
-                            btn.classList.toggle('hidden', entry.isIntersecting);
+                            mortyVisible = entry.isIntersecting;
+                            updateButton();
                         },
-                        { rootMargin: '0px 0px 50px 0px' }
+                        { rootMargin: '0px 0px 70px 0px' }
                         );
 
-                        // simpleLoadMore appends .load-more__btn-wrap after init
-                        // so we wait for it to exist in the DOM
-                        const waitForLoadMore = setInterval(() => {
-                        // const loadMoreBtn = document.querySelector('.load-more__btn-wrap');
-                        const loadMoreBtn = document.getElementById('mortybutton');
-                        if (loadMoreBtn) {
-                            clearInterval(waitForLoadMore);
-                            observer.observe(loadMoreBtn);
+                        const mortyBtn = document.getElementById('mortybutton');
+                        if (mortyBtn) observer.observe(mortyBtn);
+
+                        window.addEventListener('scroll', () => {
+                        clearTimeout(scrollTimer);
+                        scrollTimer = setTimeout(() => {
+                            scrollTimer = null; // reset so updateButton knows scrolling stopped
+                            updateButton();
+                        }, 1000);
+                        updateButton(); // hide immediately when scrolling starts
+                        });
+
+                        function updateButton() {
+                        const btn = document.getElementById('stickyCta');
+                        if (mortyVisible || scrollTimer !== null) {
+                            btn.classList.add('hidden');
+                        } else {
+                            btn.classList.remove('hidden');
                         }
-                        }, 100);
+                        }
+
+
 
                 </script>
             </div>
