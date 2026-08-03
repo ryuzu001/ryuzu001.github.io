@@ -958,7 +958,8 @@ const rooms = [
       { name:"Lab Rat" },
       { name:"The Nest" },
       { name:"The Ladder" },
-      { name:"The Nest" }
+      { name:"The Nest" },
+      { name:"The Ladder" }
     ]
   },
   {
