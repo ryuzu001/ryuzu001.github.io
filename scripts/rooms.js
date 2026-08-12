@@ -1344,6 +1344,15 @@ const rooms = [
     ]
   },
   {
+    name: "Mystic Escape Room",
+    lat: 39.73061331651089,
+    lng: -104.99907901061111,
+    photoname: "mystic",
+    rooms: [
+      { name:"The Tears of Freya", index:2 }
+    ]
+  },
+  {
     name: "Nerdy By Nature",
     lat: 33.61438083195932,
     lng: -117.68094304924256,
@@ -2104,6 +2113,15 @@ const rooms = [
       { name:"The Lakehouse" },
       { name:"The Seed of Hope"},
       { name:"The Lost Duchman's Mine [v2]" }
+    ]
+  },
+  {
+    name: "The Wreck Room Escape Game",
+    lat: 39.63721107157532,
+    lng: -104.79187232119774,
+    photoname:"wreck",
+    rooms: [
+      { name:"The Mummy's Tomb" }
     ]
   },
   {
