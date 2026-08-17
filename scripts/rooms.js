@@ -1001,6 +1001,17 @@ const rooms = [
     ]
   },
   {
+    name: "Hypnotic Escape Rooms",
+    lat: 34.18626933730746,
+    lng: -118.44906342883552,
+    photoname: "hypnotic",
+    rooms: [
+      { name:"Atlantis: The Forgotten City" },
+      { name:"Escape L.A." },
+      { name:"Project 5150" }
+    ]
+  },
+  {
     name: "Illusion Escape Room",
     lat: 40.28295880798009,
     lng: -3.78858615168538,

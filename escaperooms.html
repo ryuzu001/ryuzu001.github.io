@@ -4,19 +4,19 @@
 <script>
 function searchRooms() {
   var input = document.getElementById("Search");
-  var filter = input.value.toLowerCase();
+  var filter = input.value.toLowerCase().trim();
   var nodes = document.getElementsByClassName('item-room');
   var results = 0;
 
   for (let i = 0; i < nodes.length; i++) {
-    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+    if (nodes[i].textContent.toLowerCase().includes(filter)) {
       nodes[i].style.display = "";
+      results += 1;
     } else {
       nodes[i].style.display = "none";
-      results += 1;
     }
   }
-  results = nodes.length - results;
+
   document.getElementById("demo").innerHTML = " " + results + " result(s)";
 }
 function closeKeyboard() {
@@ -53,7 +53,7 @@ function searchFromURL() {
         <section class="jumbotron jumbotron-fluid text-center pj">
             <div class="container">
                 <h1>Ryan's Escape Room Résumé</h1>
-                <p class="lead text-muted">460 Escapes of <b>470 Rooms</b> = 98% Escape Rate</p>
+                <p class="lead text-muted">463 Escapes of <b>473 Rooms</b> = 98% Escape Rate</p>
                 <p class="lead text-muted">Gold = Ryan's Gold Standard</p>
                 <p class="lead text-muted">* = repeat game</p>
                 <p>
@@ -69,6 +69,54 @@ function searchFromURL() {
                     <!-- Update your percentage! -->
                     <!-- https://squoosh.app -->
 
+                    <div class="col-md-4 item-room">
+                        <div class="card mb-4 shadow-sm" id="">
+                            <a href="images/escaperooms/full/hypnotic3.jpg" target="_blank" class="ar-797">
+                            <img loading="lazy" class="card-img-top" alt="Escape Room Photo for Project 5150" dislay="auto" height="auto" src="images/escaperooms/hypnotic3.avif"/>
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    <b>August 16th, 2026 [473]<br />Hypnotic Escape Rooms - Project 5150<br /> Van Nuys, CA</b>
+                                </p>
+                                <p class="card-text">
+                                    Insane but Alive in 32:17, with Jason, Marisa, Wilson
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 item-room">
+                        <div class="card mb-4 shadow-sm" id="">
+                            <a href="images/escaperooms/full/hypnotic2.jpg" target="_blank" class="ar-452">
+                            <img loading="lazy" class="card-img-top" alt="Escape Room Photo for Escape L.A." dislay="auto" height="auto" src="images/escaperooms/hypnotic2.avif"/>
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    <b>August 16th, 2026 [472]<br />Hypnotic Escape Rooms - Escape L.A.<br /> Van Nuys, CA</b>
+                                </p>
+                                <p class="card-text">
+                                    L.A. Escaped in 35:39, with Jason, Marisa, Wilson
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 item-room">
+                        <div class="card mb-4 shadow-sm" id="">
+                            <a href="images/escaperooms/full/hypnotic1.jpg" target="_blank" class="ar-797">
+                            <img loading="lazy" class="card-img-top" alt="Escape Room Photo for Atlantis: The Forgotten City" dislay="auto" height="auto" src="images/escaperooms/hypnotic1.avif"/>
+                            </a>
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    <b>August 16th, 2026 [471]<br />Hypnotic Escape Rooms - Atlantis: The Forgotten City<br /> Van Nuys, CA</b>
+                                </p>
+                                <p class="card-text">
+                                    Atlantis Resurfaced in 37:34, with Jason, Marisa, Wilson
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="col-md-4 item-room">
                         <div class="card mb-4 shadow-sm" id="">
                             <a href="images/escaperooms/full/mystic2.jpg" target="_blank" class="ar-450">
