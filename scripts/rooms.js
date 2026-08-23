@@ -399,7 +399,7 @@ const rooms = [
   },
   {
     name: "CU Adventures in Time & Space",
-    lat: 40.11542153178706, 
+    lat: 40.11542153178706,
     lng: -88.2062576178847,
     photoname: "cu_",
     rooms: [
@@ -414,7 +414,7 @@ const rooms = [
   },
   {
     name: "CubicEscape",
-    lat: 37.385617095078864, 
+    lat: 37.385617095078864,
     lng: -121.86139525872935,
     photoname: "cubic",
     rooms: [
@@ -424,7 +424,7 @@ const rooms = [
   },
   {
     name: "Cubick Escape Room",
-    lat: 41.53290235382192, 
+    lat: 41.53290235382192,
     lng: 2.4440235418892566,
     photoname: "cubick",
     rooms: [
@@ -521,7 +521,7 @@ const rooms = [
   },
   {
     name: "Eleventh Hour Enigma",
-    lat: 36.15226705602854, 
+    lat: 36.15226705602854,
     lng: -95.97426373012377,
     photoname: "11thhour",
     rooms: [
@@ -744,7 +744,7 @@ const rooms = [
   },
   {
     name: "Escape Room Witten [Gloomworks Department]",
-    lat: 51.44055038089808, 
+    lat: 51.44055038089808,
     lng: 7.336280398400906,
     photoname: "witten",
     rooms: [
@@ -1188,7 +1188,7 @@ const rooms = [
   },
   {
     name: "Mad Land",
-    lat: 40.59505512328402, 
+    lat: 40.59505512328402,
     lng: -3.5444494633662047,
     photoname: "madland",
     rooms: [
@@ -2283,7 +2283,8 @@ const rooms = [
     photoname: "wg",
     rooms: [
       { name:"The Secrets of Shadow Point" },
-      { name:"What Happened in Vegas?", index:4 }
+      { name:"What Happened in Vegas?", index:4 },
+      { name:"Echos of the Tiki Temple", index:8 }
     ]
   },
   {
