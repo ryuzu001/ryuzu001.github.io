@@ -641,6 +641,33 @@ const rooms = [
     ]
   },
   {
+    name: "Escape Games at the River",
+    lat: 33.74039383914601,
+    lng: -116.40911742882106,
+    photoname: "attheriver",
+    rooms: [
+      { name:"80's Radical Radio Rampage" },
+      { name:"Endangered" },
+      { name:"The Great Candy Challenge" },
+      { name:"Mutiny: Skull Island" },
+      { name:"Tomb Raiders: Scepter of Egypt" },
+      { name:"The Secret of Dragon's Spire" }
+    ]
+  },
+  {
+    name: "Escape Games La Quinta",
+    lat: 33.678741657631285,
+    lng: -116.29531016086543,
+    photoname: "lq",
+    rooms: [
+      { name:"Tiki Island" },
+      { name:"The Last Vampire" },
+      { name:"Alien Virus" },
+      { name:"Alice in Wonderland" },
+      { name:"The Cabin: Lost in the Woods " }
+    ]
+  },
+  {
     name: "Escape Hour",
     lat: 30.435994042420738,
     lng: -97.68518360743106,
