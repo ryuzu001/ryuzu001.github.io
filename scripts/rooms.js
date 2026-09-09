@@ -493,6 +493,18 @@ const rooms = [
     ]
   },
   {
+    name: "Doors of Divergence",
+    lat: 35.224805179741736,
+    lng: -80.82073533198141,
+    photoname: "dod",
+    rooms: [
+      { name:"Heresy: 1897 [Paradox Cycle]" },
+      { name:"Madness: 1917 [Paradox Cycle]", index:1 },
+      { name:"Heresy: 1897 [Paradox Cycle]", index:1 },
+      { name:"Madness: 1917 [Paradox Cycle]", index:1 }
+    ]
+  },
+  {
     name: "Dragonborn Escape Room",
     lat: 42.846935644483885,
     lng: -2.6843540591424166,
@@ -600,6 +612,28 @@ const rooms = [
     photoname: "escapeagain",
     rooms: [
       { name:"Wizard" }
+    ]
+  },
+  {
+    name: "Escape Artist Greenville",
+    lat: 34.866617491454754,
+    lng: -82.41510991581711,
+    photoname: "eag",
+    rooms: [
+      { name:"Castle Flüffendor [Chimera Corp Saga]" },
+      { name:"Dark Lullaby  [Chimera Corp Saga]", index:1 },
+      { name:"Help Wanted [Chimera Corp Saga]", index:1 }
+    ]
+  },
+  {
+    name: "Escape Artist Greenville",
+    lat: 34.860945124222106,
+    lng: -82.39108215814608,
+    photoname: "eag",
+    rooms: [
+      { name:"The Starlight Motel", index:2 },
+      { name:"Yuletide Magic", index:3 },
+      { name:"Classified: Operation Nine Lives", index:4 }
     ]
   },
   {
@@ -1149,6 +1183,15 @@ const rooms = [
     ]
   },
   {
+    name: "Key to Escape",
+    lat: 35.78200497256001,
+    lng: -80.88441684545681,
+    photoname: "k2e",
+    rooms: [
+      { name:"A Twist of Oz" }
+    ]
+  },
+  {
     name: "Keystone Escape Games",
     lat: 39.52800891817756,
     lng: -119.83499887988916,
@@ -1204,6 +1247,18 @@ const rooms = [
     ]
   },
   {
+    name: "Lock, Clock, and Peril Escape Rooms",
+    lat: 33.95329307726307,
+    lng: -80.49471981667936,
+    photoname: "lcp",
+    rooms: [
+      { name:"Teleporter Trials" },
+      { name:"A Not So Fairytale Ending" },
+      { name:"Tomb Raiders" },
+      { name:"Paranormal Investigators" }
+    ]
+  },
+  {
     name: "Locurio",
     lat: 47.65015781338505,
     lng: -122.35026413920069,
@@ -1229,6 +1284,20 @@ const rooms = [
     photoname: "maine",
     rooms: [
       { name:"Uncle Ned's Cabin" }
+    ]
+  },
+  {
+    name: "Masterpiece Escapes",
+    lat: 35.079621652780666,
+    lng: -80.65505567616361,
+    photoname: "masterpiece",
+    rooms: [
+      { name:"Wrecked" },
+      { name:"Missing" },
+      { name:"Metro Mayhem" },
+      { name:"The Coral Kingdom Aquarium" },
+      { name:"The Deadwood Saloon" },
+      { name:"Breakfast All Day" },
     ]
   },
   {
@@ -1421,6 +1490,16 @@ const rooms = [
       { name:"Battleship: The Pirate Edition" },
       { name:"SEV3N" },
       { name:"The Fortune Teller" }
+    ]
+  },
+  {
+    name: "Nocturne Adventures",
+    lat: 35.797762768525615,
+    lng: -81.25666436079833,
+    photoname: "nocturne",
+    rooms: [
+      { name:"Ripper" },
+      { name:"Nevermore" }
     ]
   },
   {
@@ -2104,6 +2183,17 @@ const rooms = [
     ]
   },
   {
+    name: "The Keepers of Balance",
+    lat: 35.1790453342112,
+    lng: -80.88494683198284,
+    photoname: "kob",
+    rooms: [
+      { name:"System Overlord" },
+      { name:"Quest for the Temple of Light" },
+      { name:"Defenders of the Sunken Realm" }
+    ]
+  },
+  {
     name: "The Ministry Of Peculiarities",
     lat: 34.12636933468896,
     lng: -117.88963903700697,
@@ -2180,6 +2270,18 @@ const rooms = [
     rooms: [
       { name:"Dr. Brown Boyd's Mental Hospital" },
       { name:"Dark Machinations in Zagini's Magic Store" }
+    ]
+  },
+  {
+    name: "Timed Out",
+    lat: 35.06852719513694,
+    lng: -80.84133498780876,
+    photoname:"timedout",
+    rooms: [
+      { name:"51" },
+      { name:"Illusion" },
+      { name:"Precinct" },
+      { name:"Inari" }
     ]
   },
   {
