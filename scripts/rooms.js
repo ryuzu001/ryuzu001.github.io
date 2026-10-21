@@ -1489,7 +1489,8 @@ const rooms = [
       { name:"Devlin Manor" },
       { name:"Battleship: The Pirate Edition" },
       { name:"SEV3N" },
-      { name:"The Fortune Teller" }
+      { name:"The Fortune Teller" },
+      { name:"Battleship: The Pirate Edition" }
     ]
   },
   {
