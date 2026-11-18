@@ -1756,6 +1756,15 @@ const rooms = [
     ]
   },
   {
+    name: "Quest Tavern",
+    lat: 34.10821891254502,
+    lng: -117.65551651654849,
+    photoname: "questtavern",
+    rooms: [
+      { name:"The Buried Prophecy", index:5 }
+    ]
+  },
+  {
     name: "Quicksand Escape Games",
     lat: 32.797172032838674,
     lng: -117.25145287124799,
@@ -2172,6 +2181,15 @@ const rooms = [
       { name:"The Shack" },
       { name:"The Lost Treasure of El Capitan" },
       { name:"All Aboard the Amazing Argo!" }
+    ]
+  },
+  {
+    name: "The Fire Escape",
+    lat: 34.097904520120025,
+    lng: -117.61218583201689,
+    photoname: "fire",
+    rooms: [
+      { name:"Point of Origin" }
     ]
   },
   {
